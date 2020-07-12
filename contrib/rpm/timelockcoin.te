@@ -1,0 +1,81 @@
+policy_module(timelockcoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type timelockcoin_t;
+type timelockcoin_exec_t;
+init_daemon_domain(timelockcoin_t, timelockcoin_exec_t)
+
+permissive timelockcoin_t;
+
+type timelockcoin_initrc_exec_t;
+init_script_file(timelockcoin_initrc_exec_t)
+
+type timelockcoin_conf_t;
+files_type(timelockcoin_conf_t)
+
+type timelockcoin_var_lib_t;
+files_type(timelockcoin_var_lib_t)
+
+type timelockcoin_var_run_t;
+files_type(timelockcoin_var_run_t)
+
+type timelockcoin_port_t;
+corenet_port(timelockcoin_port_t)
+
+########################################
+#
+# timelockcoin local policy
+#
+allow timelockcoin_t self:process { fork };
+
+allow timelockcoin_t self:fifo_file rw_fifo_file_perms;
+allow timelockcoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(timelockcoin_t, timelockcoin_conf_t, timelockcoin_conf_t)
+manage_files_pattern(timelockcoin_t, timelockcoin_conf_t, timelockcoin_conf_t)
+
+manage_dirs_pattern(timelockcoin_t, timelockcoin_var_lib_t, timelockcoin_var_lib_t)
+manage_files_pattern(timelockcoin_t, timelockcoin_var_lib_t, timelockcoin_var_lib_t)
+files_var_lib_filetrans(timelockcoin_t, timelockcoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(timelockcoin_t, timelockcoin_var_run_t, timelockcoin_var_run_t)
+manage_files_pattern(timelockcoin_t, timelockcoin_var_run_t, timelockcoin_var_run_t)
+
+sysnet_dns_name_resolve(timelockcoin_t)
+corenet_all_recvfrom_unlabeled(timelockcoin_t)
+
+allow timelockcoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(timelockcoin_t)
+corenet_tcp_sendrecv_generic_node(timelockcoin_t)
+corenet_tcp_sendrecv_all_ports(timelockcoin_t)
+corenet_tcp_bind_generic_node(timelockcoin_t)
+
+gen_require(`
+    type timelockcoin_port_t;
+')
+allow timelockcoin_t timelockcoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type timelockcoin_port_t;
+')
+allow timelockcoin_t timelockcoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(timelockcoin_t)
+
+files_read_etc_files(timelockcoin_t)
+
+miscfiles_read_localization(timelockcoin_t)
+
+sysnet_dns_name_resolve(timelockcoin_t)
+
+allow timelockcoin_t timelockcoin_exec_t:file execute_no_trans;
+allow timelockcoin_t self:process setsched;
+corecmd_exec_ls(timelockcoin_t)
+corenet_tcp_connect_http_port(timelockcoin_t)
+dev_read_urand(timelockcoin_t)
+fs_getattr_xattr_fs(timelockcoin_t)
+kernel_read_system_state(timelockcoin_t)

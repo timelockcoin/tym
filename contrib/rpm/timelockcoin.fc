@@ -1,0 +1,8 @@
+/usr/bin/timelockcoin-cli		--	gen_context(system_u:object_r:timelockcoin_exec_t,s0)
+/usr/sbin/timelockcoind		--	gen_context(system_u:object_r:timelockcoin_exec_t,s0)
+/usr/lib(64)?/timelockcoin/timelockcoind		--	gen_context(system_u:object_r:timelockcoin_exec_t,s0)
+
+/etc/timelockcoin(/.*)?		gen_context(system_u:object_r:timelockcoin_conf_t,s0)
+/var/lib/timelockcoin(/.*)?		gen_context(system_u:object_r:timelockcoin_var_lib_t,s0)
+
+(/var)?/run/timelockcoind(/.*)?   gen_context(system_u:object_r:timelockcoin_var_run_t,s0)
