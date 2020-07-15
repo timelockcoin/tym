@@ -283,7 +283,7 @@ public:
 
         nPoolMaxTransactions = 3;
         nBudgetCycleBlocks = 43200; //!< Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
-        strSporkPubKey = "04d850de818b977efa912ab089cc11955d76d976543f503afe1a74fda07888ac98dca18409daa8d04800f40b2789a67f78e00e2ec30fa277f89bcaad0364044460";
+        strSporkPubKey = "04ba3ee49bbc935213d3834d635eb06546c41a250e0a907b37de8c683738011182f3bf18be4365beea8302a63c30fb823e3e8f760b6d8110809cbd429ce80c1aaa";
         strSporkPubKeyOld = "0485126a36740117077d8c3b7a503a79b6d696d0626c1d929b4242344fe3bf7dde8377dc19679466e28fffd1aad4e6b2b3ee74de1d96de5fdb5a4bdd5ba3dd6ebe";
         strObfuscationPoolDummyAddress = "";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
