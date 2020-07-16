@@ -17,6 +17,11 @@ CAmount CollateralRequired(int nHeight);
 bool IsValidCollateral(CAmount nAmountToCheck, int nHeight);
 
 /**
+ * Return the number of blocks remaining for collateral to be unlocked
+ */
+int GetCollateralLockEstimate(int nChainHeight, int nCoinsHeight);
+
+/**
  * Determine whether the collateral TX is immature to be spent or not
  */
 bool IsImmatureCollateral(int nChainHeight, int nCoinsHeight);

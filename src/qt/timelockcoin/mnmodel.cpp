@@ -6,6 +6,7 @@
 #include "masternode-sync.h"
 #include "masternodeman.h"
 #include "activemasternode.h"
+#include "collateral.h"
 #include "sync.h"
 #include "uint256.h"
 #include "wallet/wallet.h"
@@ -108,6 +109,19 @@ QVariant MNModel::data(const QModelIndex &index, int role) const
                     return txAccepted;
                 }
                 return true;
+            }
+            case COLLATERAL_LOCK_REMAINING: {
+                if (!isAvailable) return "...";
+                QString remaining = "...";
+                {
+                    LOCK2(cs_main, pwalletMain->cs_wallet);
+                    const CWalletTx *walletTx = pwalletMain->GetWalletTx(rec->vin.prevout.hash);
+                    if (walletTx) {
+                        int nCoinsHeight = chainActive.Height() - walletTx->GetDepthInMainChain();
+                        remaining = QString::number(GetCollateralLockEstimate(chainActive.Height(), nCoinsHeight));
+                    }
+                }
+                return remaining;
             }
         }
     }
