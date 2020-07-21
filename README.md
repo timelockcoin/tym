@@ -20,6 +20,7 @@ More information at [timelockcoin.com](http://www.timelockcoin.com).
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
 <tr><td>Premine</td><td>750,000 TYM*</td></tr>
 </table>
+
 ### Reward Distribution
 
 <table>
