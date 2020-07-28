@@ -3,12 +3,9 @@ TimelockCoin Core integration/staging repository
 
 [![Build Status](https://travis-ci.org/TimelockCoin-Project/TimelockCoin.svg?branch=master)](https://travis-ci.org/TimelockCoin-Project/TimelockCoin) [![GitHub version](https://badge.fury.io/gh/TimelockCoin-Project%2FTimelockCoin.svg)](https://badge.fury.io/gh/TimelockCoin-Project%2FTimelockCoin)
 
-TimelockCoin is an open source crypto-currency focused on fast private transactions using the Zerocoin protocol, with low transaction fees & environmental footprint.  It utilizes the first ever anonymous proof of stake protocol(regular PoS), masternodes and collateral block timelock functionality for securing its network.
-The goal of TimelockCoin is to achieve a decentralized sustainable crypto currency with near instant full-time private transactions, fair governance and community intelligence.
-- Anonymized transactions & consensus using the [_Zerocoin Protocol_](http://www.timelockcoin.org/zpiv) and [zPoS](https://timelockcoin.org/zpos/).
-- Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftX_.
-- Decentralized blockchain governance utilizing Masternode technology.
-
+TimelockCoin is an open source crypto-currency focused on fast private transactions using the Zerocoin protocol, with low transaction fees & environmental footprint.  It utilizes proof of stake protocol(regular PoS), masternodes and collateral block timelock functionality for securing its network.
+The goal of TimelockCoin is to achieve a decentralized sustainable crypto currency that timelock masternode collaterals and funds on the platform for a specific target duration or over a chosen block range.
+The first starting masternode collateral of 200.0001234TYM will lock through the block range 501-30000 blocks.It will unlock after blockheight 30000. While the final collateral of 400.0001234TYM will be locked for a 180days duration.
 More information at [timelockcoin.com](http://www.timelockcoin.com).
 ### Coin Specs
 <table>
