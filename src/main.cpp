@@ -2010,10 +2010,30 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 800000 * COIN;
     } else if (nHeight <= 500) {        // 0 - 500:     2.0 TYM
         nSubsidy = 2 * COIN;            
-    } else if (nHeight <= 30000) {      // 501 - 30000: 0.5 TYM
+    } else if (nHeight <= 30000) {      // 501 - 30000: 0.5 TYM, ...
         nSubsidy = 0.5 * COIN;
-    } else {                            // 30001 - max: 0.85 TYM
+    } else if (nHeight <= 195000) { 
         nSubsidy = 0.85 * COIN;
+    } else if (nHeight <= 240000) {
+        nSubsidy = 1.60 * COIN;
+    } else if (nHeight <= 280000) {
+        nSubsidy = 2.0 * COIN;
+    } else if (nHeight <= 330000) {
+        nSubsidy = 2.5 * COIN;
+    } else if (nHeight <= 380000) {
+        nSubsidy = 3.0 * COIN;
+    } else if (nHeight <= 420000) {
+        nSubsidy = 3.5 * COIN;
+    } else if (nHeight <= 450000) {
+        nSubsidy = 4.0 * COIN;
+    } else if (nHeight <= 500000) {
+        nSubsidy = 4.5 * COIN;
+    } else if (nHeight <= 550000) {
+        nSubsidy = 6.5 * COIN;
+    } else if (nHeight <= 600000) {
+        nSubsidy = 8.0 * COIN;
+    } else {
+        nSubsidy = 10.0 * COIN;
     }
 
     // Check if we reached the coin max supply
@@ -2034,10 +2054,30 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         
     if (nHeight <= 500) {           // 0 - 500:     Masternodes not enabled
         ret = 0;
-    } else if (nHeight <= 30000) {  // 501 - 30000: 0.4995 TYM 
+    } else if (nHeight <= 30000) {  // 501 - 30000: 0.4995 TYM, ...
         ret = 0.4995 * COIN;
-    } else {                        // 30001 - max: 0.8495 TYM
+    } else if (nHeight <= 195000) {
         ret = 0.8495 * COIN;
+    } else if (nHeight <= 240000) {
+        ret = 1.595 * COIN;
+    } else if (nHeight <= 280000) {
+        ret = 1.995 * COIN;
+    } else if (nHeight <= 330000) {
+        ret = 2.495 * COIN;
+    } else if (nHeight <= 380000) {
+        ret = 2.995 * COIN;
+    } else if (nHeight <= 420000) {
+        ret = 3.495 * COIN;
+    } else if (nHeight <= 450000) {
+        ret = 3.995 * COIN;
+    } else if (nHeight <= 500000) {
+        ret = 4.495 * COIN;
+    } else if (nHeight <= 550000) {
+        ret = 6.450 * COIN;
+    } else if (nHeight <= 600000) {
+        ret = 7.950 * COIN;
+    } else {
+        ret = 9.950 * COIN;
     }
     return ret;
 }
