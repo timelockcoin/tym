@@ -5,7 +5,7 @@ TimelockCoin Core integration/staging repository
 
 TimelockCoin is an open source crypto-currency focused on fast private transactions using the Zerocoin protocol, with low transaction fees & environmental footprint.  It utilizes proof of stake protocol(regular PoS), masternodes and collateral block timelock functionality for securing its network.
 The goal of TimelockCoin is to achieve a decentralized sustainable crypto currency that timelock masternode collaterals and funds on the platform for a specific target duration or over a chosen block range.
-The first starting masternode collateral of 200.0001234TYM will lock through the block range 501-30000 blocks.It will unlock after blockheight 30000. While the next collateral of 400.0001234TYM will be locked for a 180days duration. Subsequent masternode logic which will be enforced at blockheight 1950000 will lock each variable collateral over its specified and respective block range. 
+The first starting masternode collateral of 200.0001234TYM will lock through the block range 501-30000 blocks.It will unlock after blockheight 30000. While the next collateral of 400.0001234TYM will be locked for a 180days duration. Subsequent masternode logic which will be enforced at blockheight 195000 will lock each variable collateral over its specified and respective block range. 
 More information at [timelockcoin.com](http://www.timelockcoin.com).
 ### Coin Specs
 <table>
