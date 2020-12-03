@@ -17,10 +17,20 @@ More information at [timelockcoin.com](http://www.timelockcoin.com).
 <tr><td>Premine</td><td>750,000 TYM*</td></tr>
 </table>
 
-### Reward Distribution
+### TYM BLOCK REWARD DISTRIBUTION
 
 <table>
-<th colspan=4>Genesis Block</th>
-<tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
-<tr><td>1</td><td>750,000 TYM</td><td>Initial Pre-mine</a></td></tr>
+<th>Phase</th><th>BLOCK HEIGHT</th><th>COLLATERAL</th><th>BLOCK REWARD</th><th>MASTERNODE REWARD</th><th>STAKING</th>
+<tr><td>Phase 1</td><td>501 - 3000</td><td>200.0001234 TYM</td><td>0.5 TYM</td><td>0.4995 TYM</td><td>0.0005 TYM</td></tr>
+<tr><td>Phase 2</td><td>3001 - 195000</td><td>400.0001234 TYM</td><td>0.85 TYM</td><td>0.8495 TYM</td><td>0.0005 TYM</td></tr>
+<tr><td>Phase 3</td><td>195001 - 240000</td><td>1000.0001234 TYM</td><td>1.60 TYM</td><td>1.595 TYM</td><td>0.005 TYM</td></tr>
+<tr><td>Phase 4</td><td>240001 - 280000</td><td>2000.0001234 TYM</td><td>2.0 TYM</td><td>1.995 TYM</td><td>0.005 TYM</td></tr>
+<tr><td>Phase 5</td><td>280001 - 330000</td><td>3000.0001234 TYM</td><td>2.5 TYM</td><td>2.495 TYM</td><td>0.005 TYM</td></tr>
+<tr><td>Phase 6</td><td>330001 - 380000</td><td>4000.0001234 TYM</td><td>3.0 TYM</td><td>2.995 TYM</td><td>0.005 TYM</td></tr>
+<tr><td>Phase 7</td><td>380001 - 420000</td><td>7000.0001234 TYM</td><td>3.5 TYM</td><td>3.495 TYM</td><td>0.005 TYM</td></tr>
+<tr><td>Phase 8</td><td>420001 - 450000</td><td>8000.0001234 TYM</td><td>4.0 TYM</td><td>3.995 TYM</td><td>0.005 TYM</td></tr>
+<tr><td>Phase 9</td><td>450001 - 500000</td><td>9000.0001234 TYM</td><td>4.5 TYM</td><td>4.495 TYM</td><td>0.005 TYM</td></tr>
+<tr><td>Phase 10</td><td>500001 - 550000</td><td>13000.0001234 TYM</td><td>6.5 TYM</td><td>6.450 TYM</td><td>0.05 TYM</td></tr>
+<tr><td>Phase 11</td><td>550001 - 600000</td><td>15000.0001234 TYM</td><td>8.0 TYM</td><td>7.950 TYM</td><td>0.05 TYM</td></tr>
+<tr><td>Phase 12</td><td>600001 - ∞</td><td>20000.0001234 TYM</td><td>10.0 TYM</td><td>9.950 TYM</td><td>0.05 TYM</td></tr>
 </table>
