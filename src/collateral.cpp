@@ -4,7 +4,8 @@
  
 #include <amount.h>
 #include <util.h>
-#include "chainparams.h"
+#include <chainparams.h>
+#include <spork.h>
 
 /**
  * The number of blocks that both new and old MN collateral value will
@@ -130,5 +131,9 @@ int GetCollateralLockEstimate(int nChainHeight, int nCoinsHeight)
  */
 bool IsImmatureCollateral(int nChainHeight, int nCoinsHeight)
 {
-    return (GetCollateralLockEstimate(nChainHeight, nCoinsHeight) > 0);
+    if (nChainHeight >= sporkManager.GetSporkValue(SPORK_19_DISABLE_COLLATERAL_LOCK)) { 
+        return false;
+    } else {
+        return (GetCollateralLockEstimate(nChainHeight, nCoinsHeight) > 0);
+    }
 }
