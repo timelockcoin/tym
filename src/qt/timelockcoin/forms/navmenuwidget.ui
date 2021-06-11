@@ -115,8 +115,8 @@ background-color:transparent;
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>102</width>
-           <height>617</height>
+           <width>100</width>
+           <height>640</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -167,7 +167,8 @@ background-color:transparent;
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>HOME
+</string>
             </property>
             <property name="iconSize">
              <size>
@@ -195,7 +196,8 @@ background-color:transparent;
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>SEND
+</string>
             </property>
             <property name="iconSize">
              <size>
@@ -220,7 +222,8 @@ background-color:transparent;
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>RECEIVE
+</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -239,7 +242,8 @@ background-color:transparent;
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>CONTACTS
+</string>
             </property>
             <property name="iconSize">
              <size>
@@ -264,7 +268,8 @@ background-color:transparent;
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>MASTER
+NODES</string>
             </property>
             <property name="iconSize">
              <size>
@@ -289,7 +294,8 @@ background-color:transparent;
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>COLD
+STAKING</string>
             </property>
             <property name="iconSize">
              <size>
@@ -314,7 +320,8 @@ background-color:transparent;
              </size>
             </property>
             <property name="text">
-             <string/>
+             <string>SETTINGS
+</string>
             </property>
             <property name="iconSize">
              <size>

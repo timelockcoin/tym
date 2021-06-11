@@ -1,12 +1,13 @@
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2015-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef MASTERNODEMAN_H
 #define MASTERNODEMAN_H
 
+#include "activemasternode.h"
 #include "base58.h"
 #include "key.h"
 #include "main.h"
@@ -20,8 +21,12 @@
 
 
 class CMasternodeMan;
+class CActiveMasternode;
 
 extern CMasternodeMan mnodeman;
+extern CActiveMasternode activeMasternode;
+extern std::string strMasterNodePrivKey;
+
 void DumpMasternodes();
 
 /** Access to the MN database (mncache.dat)
@@ -29,7 +34,7 @@ void DumpMasternodes();
 class CMasternodeDB
 {
 private:
-    boost::filesystem::path pathMN;
+    fs::path pathMN;
     std::string strMagicMessage;
 
 public:
@@ -52,10 +57,10 @@ class CMasternodeMan
 {
 private:
     // critical section to protect the inner data structures
-    mutable CCriticalSection cs;
+    mutable RecursiveMutex cs;
 
     // critical section to protect the inner data structures specifically on messaging
-    mutable CCriticalSection cs_process_message;
+    mutable RecursiveMutex cs_process_message;
 
     // map to hold all MNs
     std::vector<CMasternode> vMasternodes;
@@ -73,12 +78,13 @@ public:
     std::map<uint256, CMasternodePing> mapSeenMasternodePing;
 
     // keep track of dsq count to prevent masternodes from gaming obfuscation queue
+    // TODO: Remove this from serialization
     int64_t nDsqCount;
 
     ADD_SERIALIZE_METHODS;
 
     template <typename Stream, typename Operation>
-    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion)
+    inline void SerializationOp(Stream& s, Operation ser_action)
     {
         LOCK(cs);
         READWRITE(vMasternodes);
@@ -92,7 +98,6 @@ public:
     }
 
     CMasternodeMan();
-    CMasternodeMan(CMasternodeMan& other);
 
     /// Add an entry
     bool Add(CMasternode& mn);
@@ -137,9 +142,6 @@ public:
 
     std::vector<std::pair<int, CMasternode> > GetMasternodeRanks(int64_t nBlockHeight, int minProtocol = 0);
     int GetMasternodeRank(const CTxIn& vin, int64_t nBlockHeight, int minProtocol = 0, bool fOnlyActive = true);
-    CMasternode* GetMasternodeByRank(int nRank, int64_t nBlockHeight, int minProtocol = 0, bool fOnlyActive = true);
-
-    void ProcessMasternodeConnections();
 
     void ProcessMessage(CNode* pfrom, std::string& strCommand, CDataStream& vRecv);
 
@@ -153,10 +155,10 @@ public:
 
     void Remove(CTxIn vin);
 
-    int GetEstimatedMasternodes(int nBlock);
-
     /// Update masternode list and maps using provided CMasternodeBroadcast
     void UpdateMasternodeList(CMasternodeBroadcast mnb);
 };
+
+void ThreadCheckMasternodes();
 
 #endif

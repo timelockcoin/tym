@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,15 +12,11 @@
 
 class CScheduler;
 class CWallet;
-class CzTYMWallet;
 
 namespace boost
 {
 class thread_group;
 } // namespace boost
-
-extern CWallet* pwalletMain;
-extern CzTYMWallet* zwalletMain;
 
 void StartShutdown();
 bool ShutdownRequested();
@@ -28,9 +24,13 @@ bool ShutdownRequested();
 void Interrupt();
 void Shutdown();
 void PrepareShutdown();
+//!Initialize the logging infrastructure
+void InitLogging();
+//!Parameter interaction: change current parameters depending on various rules
+void InitParameterInteraction();
 bool AppInit2();
 
-/** Initialize TimelockCoin core: Basic context setup.
+/** Initialize timelockcoin: Basic context setup.
  *  @note This can be done before daemonization. Do not call Shutdown() if this function fails.
  *  @pre Parameters should be parsed and config file should be read.
  */

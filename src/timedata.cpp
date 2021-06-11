@@ -1,6 +1,6 @@
 // Copyright (c) 2014-2017 The Bitcoin developers
-// Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,13 +8,13 @@
 
 #include "chainparams.h"
 #include "guiinterface.h"
-#include "netbase.h"
+#include "netaddress.h"
 #include "sync.h"
 #include "util.h"
 #include "utilstrencodings.h"
 
 
-static CCriticalSection cs_nTimeOffset;
+static RecursiveMutex cs_nTimeOffset;
 static int64_t nTimeOffset = 0;
 
 /**
@@ -44,7 +44,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nOffsetSample, int nOffsetLimit)
     static std::set<CNetAddr> setKnown;
     if (setKnown.size() == BITCOIN_TIMEDATA_MAX_SAMPLES)
         return;
-    if (!setKnown.insert(ip).second && Params().NetworkID() != CBaseChainParams::REGTEST)
+    if (!Params().IsRegTestNet() && !setKnown.insert(ip).second)
         return;
 
     // Add data
@@ -78,16 +78,29 @@ void AddTimeData(const CNetAddr& ip, int64_t nOffsetSample, int nOffsetLimit)
             strMiscWarning = "";
         } else {
             nTimeOffset = (nMedian > 0 ? 1 : -1) * nOffsetLimit;
-            std::string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong TimelockCoin Core will not work properly.");
+            std::string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong TimelockCoin will not work properly.");
             strMiscWarning = strMessage;
             LogPrintf("*** %s\n", strMessage);
             uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_ERROR);
         }
-        if (fDebug) {
+        if (!GetBoolArg("-shrinkdebugfile", g_logger->DefaultShrinkDebugFile())) {
             for (int64_t n : vSorted)
                 LogPrintf("%+d  ", n);
             LogPrintf("|  ");
         }
         LogPrintf("nTimeOffset = %+d\n", nTimeOffset);
     }
+}
+
+// Time Protocol V2
+// Timestamp for time protocol V2: slot duration 15 seconds
+int64_t GetTimeSlot(const int64_t nTime)
+{
+    const int slotLen = Params().GetConsensus().nTimeSlotLength;
+    return (nTime / slotLen) * slotLen;
+}
+
+int64_t GetCurrentTimeSlot()
+{
+    return GetTimeSlot(GetAdjustedTime());
 }

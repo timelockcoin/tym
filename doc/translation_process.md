@@ -1,14 +1,14 @@
 Translations
 ============
 
-The TimelockCoin Core project has been designed to support multiple localisations. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations, TimelockCoin Core makes use of the Transifex online translation management tool.
+The timelockcoin project has been designed to support multiple localisations. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations, timelockcoin makes use of the Transifex online translation management tool.
 
 ### Helping to translate (using Transifex)
 Transifex is setup to monitor the GitHub repo for updates, and when code containing new translations is found, Transifex will process any changes. It may take several hours after a pull-request has been merged, to appear in the Transifex web interface.
 
-Multiple language support is critical in assisting TimelockCoin's global adoption, and growth. One of TimelockCoin's greatest strengths is cross-border money transfers, any help making that easier is greatly appreciated.
+Multiple language support is critical in assisting timelockcoin's global adoption, and growth. One of timelockcoin's greatest strengths is cross-border money transfers, any help making that easier is greatly appreciated.
 
-See the [Transifex TimelockCoin project](https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations/) to assist in translations.
+See the [Transifex timelockcoin project](https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations/) to assist in translations.
 
 ### Writing code with translations
 We use automated scripts to help extract translations in both Qt, and non-Qt source files. It is rarely necessary to manually edit the files in `src/qt/locale/`. The translation source files must adhere to the following format:
@@ -43,7 +43,7 @@ git commit
 ### Creating a Transifex account
 Visit the [Transifex Signup](https://www.transifex.com/signup/) page to create an account. Take note of your username and password, as they will be required to configure the command-line tool.
 
-You can find the TimelockCoin translation project at [https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations/](https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations/).
+You can find the timelockcoin translation project at [https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations/](https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations/).
 
 ### Installing the Transifex client command-line tool
 The client is used to fetch updated translations. If you are having problems, or need more details, see [https://docs.transifex.com/client/installing-the-client](https://docs.transifex.com/client/installing-the-client)
@@ -62,7 +62,7 @@ token =
 username = USERNAME
 ```
 
-The Transifex TimelockCoin project config file is included as part of the repo. It can be found at `.tx/config`, however you shouldn’t need to change anything.
+The Transifex timelockcoin project config file is included as part of the repo. It can be found at `.tx/config`, however you shouldn’t need to change anything.
 
 ### Synchronising translations
 To assist in updating translations, we have created a script to help.
@@ -73,7 +73,7 @@ To assist in updating translations, we have created a script to help.
 ```bash
 git ls-files src/qt/locale/*ts|xargs -n1 basename|sed 's/\(timelockcoin_\(.*\)\).ts/<file alias="\2">locale\/\1.qm<\/file>/'
 ```
-4. Update `src/Makefile.qt.include` manually or via
+4. Update `src/Makefile.qt_locale.include` manually or via
 ```bash
 git ls-files src/qt/locale/*ts|xargs -n1 basename|sed 's/\(timelockcoin_\(.*\)\).ts/  qt\/locale\/\1.ts \\/'
 ```
@@ -104,6 +104,6 @@ To create a new language template, you will need to edit the languages manifest 
 **Note:** that the language translation file **must end in `.qm`** (the compiled extension), and not `.ts`.
 
 ### Questions and general assistance
-The TimelockCoin Core translation maintainers include *Fuzzbawls*. You can find them, and others, in the [TimelockCoin Discord](https://discord.timelockcoin.org).
+The timelockcoin translation maintainers include *Fuzzbawls*. You can find them, and others, in the [timelockcoin Discord](https://discord.gg/RpBXAnvp7k).
 
 Announcements will be posted during application pre-releases to notify translators to check for updates.

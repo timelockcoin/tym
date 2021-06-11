@@ -130,12 +130,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your TimelockCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши TimelockCoin-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
+        <source>These are your timelockcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши timelockcoin-адреса для отправки платежей. Перед отправкой монет всегда проверяйте сумму и адрес получателя.</translation>
     </message>
     <message>
-        <source>These are your TimelockCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши TimelockCoin-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
+        <source>These are your timelockcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши timelockcoin-адреса для получения платежей. Для каждой транзакции рекомендуется использовать новый адрес получения.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -196,6 +196,10 @@
         <translation>Дата</translation>
     </message>
     <message>
+        <source>Type</source>
+        <translation>Тип</translation>
+    </message>
+    <message>
         <source>(no label)</source>
         <translation>(нет ярлыка)</translation>
     </message>
@@ -245,6 +249,10 @@
     <message>
         <source>e.g. John Doe</source>
         <translation>Например, Иван Петров</translation>
+    </message>
+    <message>
+        <source>Enter timelockcoin address</source>
+        <translation>Ввести адрес timelockcoin</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -363,6 +371,18 @@ for staking</source>
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
+        <source>WARNING</source>
+        <translation>ВНИМАНИЕ</translation>
+    </message>
+    <message>
+        <source>If you encrypt your wallet and lose your passphrase, you will</source>
+        <translation>Если вы зашифруете свой кошелек и потеряете парольную фразу, вы</translation>
+    </message>
+    <message>
+        <source>LOSE ALL OF YOUR TYM</source>
+        <translation>ПОТЕРЯЕТЕ ВСЕ ВАШИ TYM</translation>
+    </message>
+    <message>
         <source>ENCRYPT</source>
         <translation>РАСШИФРОВАТЬ</translation>
     </message>
@@ -371,16 +391,16 @@ for staking</source>
         <translation>ОТМЕНА</translation>
     </message>
     <message>
-        <source>TimelockCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TYMs from being stolen by malware infecting your computer.</source>
-        <translation>TimelockCoin сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши TimelockCoin от кражи с использованием вредоносного ПО.</translation>
+        <source>WARNING: The Caps Lock key is on!</source>
+        <translation>ВНИМАНИЕ: Включена клавиша Caps Lock!</translation>
+    </message>
+    <message>
+        <source>timelockcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TYMs from being stolen by malware infecting your computer.</source>
+        <translation>timelockcoin сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши timelockcoin от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Вы действительно хотите зашифровать свой кошелек?</translation>
-    </message>
-    <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TYM&lt;/b&gt;!</source>
-        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ TYM&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -422,10 +442,6 @@ for staking</source>
         <source>Wallet passphrase was successfully changed.</source>
         <translation>Кодовая фраза кошелька успешно изменена.</translation>
     </message>
-    <message>
-        <source>Warning: The Caps Lock key is on!</source>
-        <translation>Внимание: Клавиша Caps Lock включена!</translation>
-    </message>
 </context>
 <context>
     <name>BanTableModel</name>
@@ -436,37 +452,6 @@ for staking</source>
     <message>
         <source>Banned Until</source>
         <translation>Запрещено до</translation>
-    </message>
-</context>
-<context>
-    <name>BlockExplorer</name>
-    <message>
-        <source>Blockchain Explorer</source>
-        <translation>Обзор блокчейна</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation>Назад</translation>
-    </message>
-    <message>
-        <source>Forward</source>
-        <translation>вперед</translation>
-    </message>
-    <message>
-        <source>Address / Block / Transaction</source>
-        <translation>Адрес / Блок / Транзакция</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Поиск</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Текстовая метка</translation>
-    </message>
-    <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (timelockcoin.conf).</source>
-        <translation>Будут показаны не все транзакции. Для отображения всех транзакций необходимо выставить txindex=1 в конфигурационном файле (timelockcoin.conf).</translation>
     </message>
 </context>
 <context>
@@ -502,10 +487,6 @@ for staking</source>
         <source>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</source>
         <translation>Общее количество: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Неизвестные: %5)</translation>
     </message>
-    <message>
-        <source>Network Alert</source>
-        <translation>Сетевое предупреждение</translation>
-    </message>
 </context>
 <context>
     <name>CoinControlDialog</name>
@@ -524,6 +505,10 @@ for staking</source>
     <message>
         <source>Coin Selection</source>
         <translation>Выбор монеты</translation>
+    </message>
+    <message>
+        <source>Select TYM Outputs to Spend</source>
+        <translation>Выберите TYM выходы для расходов</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -548,14 +533,6 @@ for staking</source>
     <message>
         <source>Amount</source>
         <translation>Сумма</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Детали транзакции</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Нажать кнопку</translation>
     </message>
     <message>
         <source>0.00 TYM</source>
@@ -626,40 +603,40 @@ for staking</source>
         <translation>Разблокировать неистраченные</translation>
     </message>
     <message>
-        <source>Copy quantity</source>
-        <translation>Копировать количество</translation>
-    </message>
-    <message>
-        <source>Copy fee</source>
-        <translation>Копировать комиссию</translation>
-    </message>
-    <message>
-        <source>Copy after fee</source>
-        <translation>Копировать после вознаграждения </translation>
-    </message>
-    <message>
-        <source>Copy bytes</source>
-        <translation>Копировать байты</translation>
-    </message>
-    <message>
-        <source>Copy priority</source>
-        <translation>Копировать приоритет</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation>Копировать пыль</translation>
-    </message>
-    <message>
-        <source>Copy change</source>
-        <translation>Копировать изменение</translation>
-    </message>
-    <message>
         <source>Unselect all</source>
         <translation>Снять все</translation>
     </message>
     <message>
         <source>Please switch to "List mode" to use this function.</source>
         <translation>Для использования этой функции перейдите в "Режим списка"</translation>
+    </message>
+    <message>
+        <source>Quantity Copied</source>
+        <translation>Количество скопировано</translation>
+    </message>
+    <message>
+        <source>Amount Copied</source>
+        <translation>Сумма скопирована</translation>
+    </message>
+    <message>
+        <source>Fee Copied</source>
+        <translation>Комиссия скопирована</translation>
+    </message>
+    <message>
+        <source>After Fee Copied</source>
+        <translation>После того, как комиссия скопирована</translation>
+    </message>
+    <message>
+        <source>Bytes Copied</source>
+        <translation>Скопировано байтов</translation>
+    </message>
+    <message>
+        <source>Dust Copied</source>
+        <translation>Остаток скопирован</translation>
+    </message>
+    <message>
+        <source>Change Copied</source>
+        <translation>Скопировано сдачи</translation>
     </message>
     <message>
         <source>highest</source>
@@ -710,6 +687,10 @@ for staking</source>
         <translation>да</translation>
     </message>
     <message>
+        <source>delegated to %1 for cold staking</source>
+        <translation>делегирован в %1 для холодного стекинга</translation>
+    </message>
+    <message>
         <source>no</source>
         <translation>нет</translation>
     </message>
@@ -738,12 +719,12 @@ for staking</source>
         <translation>Этот маркер становится красным если получаемая адресатом сумма меньше, чем %1</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 upiv per input.</source>
-        <translation>Может вариироваться +/- %1 upiv при вводе</translation>
+        <source>Can vary +/- %1 utimelockcoin per input.</source>
+        <translation>Может вариироваться +/- %1 utimelockcoin при вводе</translation>
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(нет метки)</translation>
+        <translation>(нет ярлыка)</translation>
     </message>
     <message>
         <source>change from %1 (%2)</source>
@@ -752,89 +733,6 @@ for staking</source>
     <message>
         <source>(change)</source>
         <translation>(изменить)</translation>
-    </message>
-</context>
-<context>
-    <name>CoinControlPivWidget</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Диалоговое окно</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Детали транзакции</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Нажать кнопку</translation>
-    </message>
-    <message>
-        <source>TYM:</source>
-        <translation>TYM:</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Текстовая метка</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Количество:</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>Комиссия:</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Сумма</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation>Метка</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation>Адрес</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Тип</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Дата</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation>Подтверждения</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>Флажок</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Байты:</translation>
-    </message>
-    <message>
-        <source>Dust:</source>
-        <translation>Пыль:</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Изменить:</translation>
-    </message>
-    <message>
-        <source>After Fee: </source>
-        <translation>После комиссии:</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>ОТМЕНА</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>ХОРОШО</translation>
     </message>
 </context>
 <context>
@@ -850,6 +748,14 @@ for staking</source>
     <message>
         <source>TextLabel</source>
         <translation>Текстовая метка</translation>
+    </message>
+    <message>
+        <source>Owner address (optional, if empty a new address will be created)</source>
+        <translation>Адрес владельца (необязательно; если пусто, будет создан новый адрес)</translation>
+    </message>
+    <message>
+        <source>Total Staking:</source>
+        <translation>Общий стекинг:</translation>
     </message>
     <message>
         <source>List of delegated balance by address</source>
@@ -896,8 +802,33 @@ for staking</source>
         <translation>Ошибка при загрузке делегаций: %1</translation>
     </message>
     <message>
+        <source>You can delegate your TYMs, letting a hot node (24/7 online node)
+stake on your behalf, while you keep the keys securely offline.</source>
+        <translation>Вы можете делегировать свои TYM, позволяя горячему узлу (онлайн-узлу, работаещему 24/7) делать стекинг от вашего имени, в то время как ключи надежно хранятся в автономном режиме.</translation>
+    </message>
+    <message>
+        <source>Enter owner address</source>
+        <translation>Введите адрес владельца</translation>
+    </message>
+    <message>
+        <source>Accept TYM delegation / Delegate TYM</source>
+        <translation>Принять делегацию TYM / Делегировать TYM</translation>
+    </message>
+    <message>
+        <source>Cold Staking address</source>
+        <translation>Адрес холодного стекинга</translation>
+    </message>
+    <message>
+        <source>No receive addresses available, you can go to the receive screen and create some there!</source>
+        <translation>Нет доступных адресов получения, вы можете перейти на экран получения и создать там несколько!</translation>
+    </message>
+    <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
         <translation>Нет доступных контактов. Вы можете перейти на вкладку контактов и добавить несколько!</translation>
+    </message>
+    <message>
+        <source>Cannot send delegation, wallet locked</source>
+        <translation>Не удается отправить делегацию, кошелек заблокирован</translation>
     </message>
     <message>
         <source>Cold staking is networkely disabled</source>
@@ -906,6 +837,10 @@ for staking</source>
     <message>
         <source>Invalid entry</source>
         <translation>Неверная запись</translation>
+    </message>
+    <message>
+        <source>Invalid entry, minimum delegable amount is </source>
+        <translation>Неверная запись, минимальная делегируемая сумма</translation>
     </message>
     <message>
         <source>Owner address invalid</source>
@@ -945,6 +880,10 @@ Do you wish to proceed?</source>
     <message>
         <source>You don't have any TYM to select.</source>
         <translation>У вас нет TYM.</translation>
+    </message>
+    <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Невозможно выполнить операцию, кошелек заблокирован</translation>
     </message>
     <message>
         <source>URI copied to clipboard</source>
@@ -1111,50 +1050,6 @@ address</source>
         <translation>Сумма добытых TYM и zTYM</translation>
     </message>
     <message>
-        <source>All</source>
-        <translation>все</translation>
-    </message>
-    <message>
-        <source>Received</source>
-        <translation>Принято</translation>
-    </message>
-    <message>
-        <source>Sent</source>
-        <translation>Отправлено</translation>
-    </message>
-    <message>
-        <source>Mined</source>
-        <translation>заминированный</translation>
-    </message>
-    <message>
-        <source>Minted</source>
-        <translation>Чеканка</translation>
-    </message>
-    <message>
-        <source>MN reward</source>
-        <translation>Вознаграждение от MN</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation>Самому себе</translation>
-    </message>
-    <message>
-        <source>Cold stakes</source>
-        <translation>Холодные стекинг ставки</translation>
-    </message>
-    <message>
-        <source>Hot stakes</source>
-        <translation>Горячие стекинг ставки</translation>
-    </message>
-    <message>
-        <source>Delegated</source>
-        <translation>Делегирован</translation>
-    </message>
-    <message>
-        <source>Delegations</source>
-        <translation>Делегирования</translation>
-    </message>
-    <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
         <translation>Для того, чтобы увидеть правильный баланс, пожалуйста, дождитесь полной синхронизации кошелька</translation>
     </message>
@@ -1221,65 +1116,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
 </context>
 <context>
-    <name>DenomGenerationDialog</name>
-    <message>
-        <source>Form</source>
-        <translation>Вид</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>Детали транзакции</translation>
-    </message>
-    <message>
-        <source>This will unlock your wallet fully, so that anyone with access to it can spend until the wallet is closed or locked again.</source>
-        <translation>Это полностью разблокирует ваш кошелек и любой, кто имеет к нему доступ, может тратить монеты до тех пор, пока кошелек не будет закрыт или заблокирован снова.</translation>
-    </message>
-    <message>
-        <source>5000</source>
-        <translation>5000</translation>
-    </message>
-    <message>
-        <source>100</source>
-        <translation>100</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>1000</source>
-        <translation>1000</translation>
-    </message>
-    <message>
-        <source>50</source>
-        <translation>50</translation>
-    </message>
-    <message>
-        <source>500</source>
-        <translation>500</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation>5</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>Select All</source>
-        <translation>Выбрать все</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>ОТМЕНА</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>СОХРАНИТЬ</translation>
-    </message>
-</context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -1318,8 +1154,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid TimelockCoin address.</source>
-        <translation>Введенный адрес "%1" не является TimelockCoin адресом.</translation>
+        <source>The entered address "%1" is not a valid timelockcoin address.</source>
+        <translation>Введенный адрес "%1" не является timelockcoin адресом.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1365,65 +1201,22 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
 </context>
 <context>
-    <name>GovernancePage</name>
-    <message>
-        <source>Form</source>
-        <translation>Вид</translation>
-    </message>
-    <message>
-        <source>GOVERNANCE</source>
-        <translation>УПРАВЛЕНИЕ</translation>
-    </message>
-    <message>
-        <source>Update Proposals</source>
-        <translation>Обновить предложения</translation>
-    </message>
-    <message>
-        <source>Next super block:</source>
-        <translation>Следующий супер блок:</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>Blocks to next super block:</source>
-        <translation>Блоки до следующего суперблока:</translation>
-    </message>
-    <message>
-        <source>Days to budget payout (estimate):</source>
-        <translation>Дней до выплаты бюджета (приблизительно):</translation>
-    </message>
-    <message>
-        <source>Allotted budget:</source>
-        <translation>Выделенный бюджет:</translation>
-    </message>
-    <message>
-        <source>Budget left:</source>
-        <translation>Остаток Бюджета:</translation>
-    </message>
-    <message>
-        <source>Masternodes count:</source>
-        <translation>Количество мастернод:</translation>
-    </message>
-</context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
         <translation>версия</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-бит)</translation>
     </message>
     <message>
-        <source>About TimelockCoin Core</source>
-        <translation>О TimelockCoin Core</translation>
+        <source>About timelockcoin</source>
+        <translation>О timelockcoin</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1450,6 +1243,10 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Показывать загрузочную заставку при запуске (по умолчанию: %u)</translation>
     </message>
     <message>
+        <source>Hide QT staking charts on startup (default: %u)</source>
+        <translation>Скрыть график стекинга QT при запуске (по умолчанию: %u)</translation>
+    </message>
+    <message>
         <source>Set language, for example "de_DE" (default: system locale)</source>
         <translation>Задайте язык, например "de_DE"(по умолчанию: язык системы)</translation>
     </message>
@@ -1473,16 +1270,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <source>Welcome to TimelockCoin Core.</source>
-        <translation>Добро пожаловать в TimelockCoin Core.</translation>
+        <source>Welcome to timelockcoin.</source>
+        <translation>Добро пожаловать в timelockcoin.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where TimelockCoin Core will store its data.</source>
-        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные TimelockCoin Core.</translation>
+        <source>As this is the first time the program is launched, you can choose where timelockcoin will store its data.</source>
+        <translation>Поскольку это первый запуск программы, вы можете выбрать, где будут храниться данные timelockcoin.</translation>
     </message>
     <message>
-        <source>TimelockCoin Core will download and store a copy of the TimelockCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>TimelockCoin Core загрузит и сохранит копию цепочки блоков TimelockCoin. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
+        <source>timelockcoin will download and store a copy of the timelockcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>timelockcoin загрузит и сохранит копию цепочки блоков timelockcoin. Каталог будет занимать около %1GB и со временем размер будет увеличиваться. Кроме того, в этом каталоге будет храниться кошелек.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1501,8 +1298,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>ХОРОШО</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1565,18 +1362,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <source>Form</source>
         <translation>Вид</translation>
     </message>
-    <message>
-        <source>user_masternode</source>
-        <translation>user_masternode</translation>
-    </message>
-    <message>
-        <source>Address: 88.26.164.88:51474</source>
-        <translation>Адрес: 88.26.164.88:51474 </translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>19 января, 2019</translation>
-    </message>
 </context>
 <context>
     <name>MasterNodeWizardDialog</name>
@@ -1609,15 +1394,27 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>Адрес</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a TimelockCoin Masternode you must dedicate 10.000 TYM (the unit of TimelockCoin) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для того, чтобы создать мастерноду TimelockCoin, вам необходимо внести в сеть 10.000 TYM (эти монеты остаются вашими и никогда не покинут вас).&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Вы можете отключить узел и разблокировать монеты в любое время.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>Create New Masternode Controller</source>
+        <translation>Создать новый контроллер Мастерноды</translation>
+    </message>
+    <message>
+        <source>Set Masternode Name</source>
+        <translation>Установить имя мастерноды</translation>
+    </message>
+    <message>
+        <source>Set Masternode IP and Port</source>
+        <translation>Задать IP-адрес и порт Мастерноды</translation>
+    </message>
+    <message>
+        <source>Enter port</source>
+        <translation>Ввести порт</translation>
     </message>
     <message>
         <source>Make sure you have this amount of coins.</source>
         <translation>Убедитесь, что у вас есть такое количество монет.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 TYM will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 1000 TYM will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;На новый пустой адрес в вашем кошельке&lt;/p&gt;&lt;p&gt; будет сделана транзакция в 10 000 TYM. &lt;/p&gt;&lt;p&gt;Адрес отмечен под именем мастерноды.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -1657,8 +1454,34 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>IP и порт не могут быть пустыми</translation>
     </message>
     <message>
-        <source>Invalid port number</source>
-        <translation>Неверный номер порта</translation>
+        <source>Invalid IP address</source>
+        <translation>Неверный IP-адрес</translation>
+    </message>
+    <message>
+        <source>Prepare master node failed.
+
+%1
+</source>
+        <translation>Не удалось подготовить мастерноду.
+
+ %1
+</translation>
+    </message>
+    <message>
+        <source>Invalid collateral output index</source>
+        <translation>Неверный индекс выхода коллатераля</translation>
+    </message>
+    <message>
+        <source>Master node created! Wait %1 confirmations before starting it.</source>
+        <translation>Мастернода создана! Подождите %1 подтверждений, прежде чем запустить его.</translation>
+    </message>
+    <message>
+        <source>Cannot send collateral transaction.
+
+%1</source>
+        <translation>Не удается отправить транзакцию коллатераля.
+
+%1</translation>
     </message>
     <message>
         <source>Invalid masternode.conf file</source>
@@ -1667,10 +1490,6 @@ It will start automatically as soon as the wallet has enough confirmations on an
     <message>
         <source>Error parsing masternode.conf file</source>
         <translation>Ошибка разбора файла masternode.conf</translation>
-    </message>
-    <message>
-        <source>Master node created!</source>
-        <translation>Мастернода успешно создана!</translation>
     </message>
     <message>
         <source>masternode.conf file doesn't exists</source>
@@ -1690,6 +1509,14 @@ It will start automatically as soon as the wallet has enough confirmations on an
     <message>
         <source>N/A</source>
         <translation>Недоступно</translation>
+    </message>
+    <message>
+        <source>Start All</source>
+        <translation>Запустить все</translation>
+    </message>
+    <message>
+        <source>Start Inactive/s</source>
+        <translation>Запустить неактивные</translation>
     </message>
     <message>
         <source>Masternodes</source>
@@ -1722,6 +1549,10 @@ and vote on the treasury system receiving a periodic reward.</source>
         <translation>Информация</translation>
     </message>
     <message>
+        <source>Please wait until the node is fully synced</source>
+        <translation>Пожалуйста, дождитесь полной синхронизации узла</translation>
+    </message>
+    <message>
         <source>Start Masternode</source>
         <translation>Запустить мастерноду</translation>
     </message>
@@ -1732,10 +1563,45 @@ and vote on the treasury system receiving a periodic reward.</source>
 </translation>
     </message>
     <message>
-        <source>Cannot start masternode, the collateral transaction has not been accepted by the network.
-Please wait few more minutes.</source>
-        <translation>Невозможно запустить мастерноду - транзакция залога не была принята сетью. 
-Пожалуйста, подождите еще несколько минут.</translation>
+        <source>Cannot edit masternode, wallet locked</source>
+        <translation>Невозможно редактировать мастерноду, кошелек заблокирован</translation>
+    </message>
+    <message>
+        <source>Cannot start masternode, the collateral transaction has not been confirmed by the network yet.
+Please wait few more minutes (masternode collaterals require %1 confirmations).</source>
+        <translation>Невозможно запустить мастерноду, транзакция коллатераля еще не подтверждена сетью. Подождите еще несколько минут (для коллатералей мастерноды требуется %1 подтверждений).</translation>
+    </message>
+    <message>
+        <source>Background task is being executed, please wait</source>
+        <translation>Выполняется фоновая задача, пожалуйста, подождите</translation>
+    </message>
+    <message>
+        <source>Start ALL masternodes failed</source>
+        <translation>Не удалось запустить ВСЕ мастерноды</translation>
+    </message>
+    <message>
+        <source>Wallet unlock cancelled</source>
+        <translation>Разблокировка кошелька отменена</translation>
+    </message>
+    <message>
+        <source>Cannot perform Masternodes start</source>
+        <translation>Невозможно выполнить запуск Мастернод</translation>
+    </message>
+    <message>
+        <source>%1 Masternodes failed to start, %2 started</source>
+        <translation>Не удалось запустить %1 мастернод, запущено %2</translation>
+    </message>
+    <message>
+        <source>All Masternodes started!</source>
+        <translation>Все Мастерноды запущены!</translation>
+    </message>
+    <message>
+        <source>Cannot show Masternode information, wallet locked</source>
+        <translation>Невозможно отобразить информацию о Мастерноде, кошелек заблокирован</translation>
+    </message>
+    <message>
+        <source>Masternode data copied to the clipboard.</source>
+        <translation>Данные Мастерноды скопированы в буфер обмена.</translation>
     </message>
     <message>
         <source>Remote Masternode Data</source>
@@ -1758,10 +1624,6 @@ this controller wallet (select the Masternode in the list and press "start").
 вашего удаленного сервера и запустить его, а затем запустить мастерноду,
 используя этот кошелек контроллера (выберите мастерноду из списка и нажмите «Старт»).
 </translation>
-    </message>
-    <message>
-        <source>Masternode exported!, check your clipboard</source>
-        <translation>Мастернода экспортирована! Проверьте свой буфер обмена</translation>
     </message>
     <message>
         <source>Delete Masternode</source>
@@ -1790,7 +1652,11 @@ Are you sure?</source>
         <translation>Файла masternode.cong не существует</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 TYM required.</source>
+        <source>Cannot create Masternode controller, wallet locked</source>
+        <translation>Невозможно создать контроллер Мастерноды, кошелек заблокирован</translation>
+    </message>
+    <message>
+        <source>Not enough balance to create a masternode, 1000 TYM required.</source>
         <translation>Недостаточно баланса для создания мастерноды. Требуется 10 000 TYM.</translation>
     </message>
     <message>
@@ -1803,6 +1669,10 @@ Are you sure?</source>
     <message>
         <source>Form</source>
         <translation>Вид</translation>
+    </message>
+    <message>
+        <source>Masternode Information</source>
+        <translation>Информация о Мастерноде</translation>
     </message>
     <message>
         <source>Public Key:</source>
@@ -1840,7 +1710,11 @@ Are you sure?</source>
         <source>MISSING</source>
         <translation>ОТСУТСТВУЕТ</translation>
     </message>
-    </context>
+    <message>
+        <source>Export data to run the Masternode on a remote server</source>
+        <translation>Экспорт данных для запуска Мастерноды на удаленном сервере</translation>
+    </message>
+</context>
 <context>
     <name>MyAddressRow</name>
     <message>
@@ -1964,8 +1838,8 @@ Are you sure?</source>
         <translation>Отключив проведение неподтвержденных изменений все изменения о транзакции &lt;br/&gt;не будут использованы пока транзакция не получит хотя бы одно подтверждение.&lt;br/&gt;Также это влияет на расчет вашего баланса.</translation>
     </message>
     <message>
-        <source>Automatically open the TimelockCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть клиентский порт TimelockCoin через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
+        <source>Automatically open the timelockcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть клиентский порт timelockcoin через роутер. Ваш роутер должен поддерживать UPnP, а сам сервис должен быть включен.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1984,12 +1858,12 @@ Are you sure?</source>
         <translation>Эксперт</translation>
     </message>
     <message>
-        <source>Automatically start TimelockCoin after logging in to the system.</source>
-        <translation>Автоматически запускать TimelockCoin после входа в систему.</translation>
+        <source>Automatically start timelockcoin after logging in to the system.</source>
+        <translation>Автоматически запускать timelockcoin после входа в систему.</translation>
     </message>
     <message>
-        <source>&amp;Start TimelockCoin on system login</source>
-        <translation>&amp;Запускать TimelockCoin при входе в систему</translation>
+        <source>&amp;Start timelockcoin on system login</source>
+        <translation>&amp;Запускать timelockcoin при входе в систему</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -2016,14 +1890,14 @@ Are you sure?</source>
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting TimelockCoin.</source>
-        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска TimelockCoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting timelockcoin.</source>
+        <translation>Здесь можно выставить язык интерфейса. Изменения вступят в силу после перезапуска timelockcoin.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations</source>
+https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations</source>
         <translation>Отсутствует ваш язык или заметили незавершенный перевод? Вы можете помочь нам стать лучше:
-https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations</translation>
+https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2066,8 +1940,8 @@ https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations
         <translation>Порог разделения доли:</translation>
     </message>
     <message>
-        <source>Connect to the TimelockCoin network through a SOCKS5 proxy.</source>
-        <translation>Подключиться к сети TimelockCoin через SOCKS5 прокси.</translation>
+        <source>Connect to the timelockcoin network through a SOCKS5 proxy.</source>
+        <translation>Подключиться к сети timelockcoin через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2211,10 +2085,10 @@ https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations
     </message>
 </context>
 <context>
-    <name>TimelockCoinGUI</name>
+    <name>timelockcoinGUI</name>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2241,8 +2115,8 @@ https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations
         <translation>Завершить работу</translation>
     </message>
     <message>
-        <source>TimelockCoin Core client</source>
-        <translation>Клиент TimelockCoin Core</translation>
+        <source>timelockcoin client</source>
+        <translation>Клиент timelockcoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2285,15 +2159,8 @@ Address: %4
 </translation>
     </message>
     <message>
-        <source>A fatal error occurred. TimelockCoin can no longer continue safely and will quit.</source>
-        <translation>Произошла фатальная ошибка. TimelockCoin больше не может безопасно продолжать работу и завершит работу.</translation>
-    </message>
-</context>
-<context>
-    <name>PWidget</name>
-    <message>
-        <source>Wallet locked, you need to unlock it to perform this action</source>
-        <translation>Кошелек заблокирован. Для выполнения этого действия вам нужно его разблокировать</translation>
+        <source>A fatal error occurred. timelockcoin can no longer continue safely and will quit.</source>
+        <translation>Произошла фатальная ошибка. timelockcoin больше не может безопасно продолжать работу и завершит работу.</translation>
     </message>
 </context>
 <context>
@@ -2323,8 +2190,8 @@ Address: %4
         <translation>Не удалось запустить timelockcoin: обработчик click-to-pay </translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid TimelockCoin address or malformed URI parameters.</source>
-        <translation>URI не интерпретируется! Причиной этому может быть неверный TimelockCoin адрес или неверные параметеры URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid timelockcoin address or malformed URI parameters.</source>
+        <translation>URI не интерпретируется! Причиной этому может быть неверный timelockcoin адрес или неверные параметеры URI.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2446,6 +2313,10 @@ transaction history, making transactions untraceable </source>
         <translation>Чеканить новые zTYM или конвертировать обратно в TYM</translation>
     </message>
     <message>
+        <source>Last zTYM Movements</source>
+        <translation>Последние движения zTYM</translation>
+    </message>
+    <message>
         <source>No transactions yet</source>
         <translation>Пока что нет транзакций</translation>
     </message>
@@ -2510,6 +2381,10 @@ transaction history, making transactions untraceable </source>
         <translation>Ваши чеканки zerocoin будут сканироваться из блокчейна с нуля</translation>
     </message>
     <message>
+        <source>Reset Spent zTYM</source>
+        <translation>Сброс потраченных zTYM</translation>
+    </message>
+    <message>
         <source>Your zerocoin spends are going to be scanned from the blockchain from scratch</source>
         <translation>Ваши потраченные zerocoin будут сканироваться из блокчейна с нуля</translation>
     </message>
@@ -2519,79 +2394,14 @@ transaction history, making transactions untraceable </source>
     </message>
 </context>
 <context>
-    <name>ProposalFrame</name>
-    <message>
-        <source>Open proposal page in browser</source>
-        <translation>Откройте страницу предложения в браузере</translation>
-    </message>
-    <message>
-        <source> remaining payment(s).</source>
-        <translation>оставшиеся платеж(и).</translation>
-    </message>
-    <message>
-        <source>Yes:</source>
-        <translation>Да:</translation>
-    </message>
-    <message>
-        <source>Abstain:</source>
-        <translation>Воздержаться:</translation>
-    </message>
-    <message>
-        <source>No:</source>
-        <translation>Нет:</translation>
-    </message>
-    <message>
-        <source>A proposal URL can be used for phishing, scams and computer viruses. Open this link only if you trust the following URL.
-</source>
-        <translation>URL-адрес предложения может быть использован для фишинга, мошенничества и компьютерных вирусов. Открывайте эту ссылку, только если вы доверяете данному URL.
-</translation>
-    </message>
-    <message>
-        <source>Open link</source>
-        <translation>Открыть ссылку</translation>
-    </message>
-    <message>
-        <source>Copy link</source>
-        <translation>Копировать ссылку</translation>
-    </message>
-    <message>
-        <source>Wallet Locked</source>
-        <translation>Кошелек заблокирован</translation>
-    </message>
-    <message>
-        <source>You must unlock your wallet to vote.</source>
-        <translation>Для того, чтобы голосовать вы должны разблокировать ваш кошелек.</translation>
-    </message>
-    <message>
-        <source>Do you want to vote %1 on</source>
-        <translation>Вы хотите проголосовать %1 за</translation>
-    </message>
-    <message>
-        <source>using all your masternodes?</source>
-        <translation>использовать все ваши мастерноды?</translation>
-    </message>
-    <message>
-        <source>Proposal Hash:</source>
-        <translation>Hash предложения:</translation>
-    </message>
-    <message>
-        <source>Proposal URL:</source>
-        <translation>URL предложения:</translation>
-    </message>
-    <message>
-        <source>Confirm Vote</source>
-        <translation>Подтвердить свой голос</translation>
-    </message>
-    <message>
-        <source>Vote Results</source>
-        <translation>Результаты голосования</translation>
-    </message>
-</context>
-<context>
     <name>QObject</name>
     <message>
         <source>Amount</source>
         <translation>Сумма</translation>
+    </message>
+    <message>
+        <source>Enter timelockcoin address (e.g. %1)</source>
+        <translation>Введите адрес timelockcoin (например, %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2618,10 +2428,6 @@ transaction history, making transactions untraceable </source>
         <translation>BLOOM</translation>
     </message>
     <message>
-        <source>ZK_BLOOM</source>
-        <translation>ZK_BLOOM </translation>
-    </message>
-    <message>
         <source>UNKNOWN</source>
         <translation>НЕИЗВЕСТНО</translation>
     </message>
@@ -2638,8 +2444,8 @@ transaction history, making transactions untraceable </source>
         <translation>%1 мс</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2658,8 +2464,104 @@ transaction history, making transactions untraceable </source>
         <translation>Ошибка чтения файла конфигурации мастерноды: %1</translation>
     </message>
     <message>
-        <source>TimelockCoin Core didn't yet exit safely...</source>
-        <translation>TimelockCoin Core еще не вышел безопасно...</translation>
+        <source>timelockcoin didn't yet exit safely...</source>
+        <translation>timelockcoin еще не вышел безопасно...</translation>
+    </message>
+    <message>
+        <source>Contact</source>
+        <translation>Контакты</translation>
+    </message>
+    <message>
+        <source>Receiving</source>
+        <translation>Получающий</translation>
+    </message>
+    <message>
+        <source>Delegator</source>
+        <translation>Делегатор</translation>
+    </message>
+    <message>
+        <source>Cold Staking</source>
+        <translation>Холодный стекинг</translation>
+    </message>
+    <message>
+        <source>Cold Staking Contact</source>
+        <translation>Контакт холодного стекинга</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Спрятан</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Неизвестно</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>все</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation>Контакты</translation>
+    </message>
+    <message>
+        <source>Delegators</source>
+        <translation>Делегаторы</translation>
+    </message>
+    <message>
+        <source>Staking Contacts</source>
+        <translation>Контакты стекинга</translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation>Принято</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Отправлено</translation>
+    </message>
+    <message>
+        <source>Mined</source>
+        <translation>заминированный</translation>
+    </message>
+    <message>
+        <source>Minted</source>
+        <translation>Чеканка</translation>
+    </message>
+    <message>
+        <source>MN reward</source>
+        <translation>Вознаграждение от MN</translation>
+    </message>
+    <message>
+        <source>To yourself</source>
+        <translation>Самому себе</translation>
+    </message>
+    <message>
+        <source>Cold stakes</source>
+        <translation>Холодные стекинг ставки</translation>
+    </message>
+    <message>
+        <source>Hot stakes</source>
+        <translation>Горячие стекинг ставки</translation>
+    </message>
+    <message>
+        <source>Delegated</source>
+        <translation>Делегирован</translation>
+    </message>
+    <message>
+        <source>Delegations</source>
+        <translation>Делегирования</translation>
+    </message>
+    <message>
+        <source>by Label</source>
+        <translation>по метке</translation>
+    </message>
+    <message>
+        <source>by Address</source>
+        <translation>по адресу</translation>
+    </message>
+    <message>
+        <source>by Date</source>
+        <translation>по дате</translation>
     </message>
 </context>
 <context>
@@ -2733,8 +2635,8 @@ transaction history, making transactions untraceable </source>
         <translation>Блокчейн</translation>
     </message>
     <message>
-        <source>Open the TimelockCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Открыть протокол отладки TimelockCoin. Это может занять некоторе время, если файл протокола очень большой.</translation>
+        <source>Open the timelockcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Открыть протокол отладки timelockcoin. Это может занять некоторе время, если файл протокола очень большой.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2959,7 +2861,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <source>Welcome to the TimelockCoin RPC console.</source>
-        <translation>Добро пожаловать в окружение TimelockCoin RPC.</translation>
+        <translation>Добро пожаловать в окружение timelockcoin RPC.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -3019,7 +2921,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <source>WARNING: Scammers have been active, telling users to type commands here, stealing their wallet contents. Do not use this console without fully understanding the ramifications of a command.</source>
-        <translation>ВНИМАНИЕ: мошенники активизировались, предлагая пользователям вводить здесь команды и воруя содержимое кошелька. Не используйте эту консоль без полного понимания последствий команды.</translation>
+        <translation>ВНИМАНИЕ: активизировались мошенники, которые предлагают пользователям вводить здесь команды и воруя содержимое их кошелька. Не используйте эту консоль без полного понимания последствий команды.</translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -3081,8 +2983,8 @@ transaction history, making transactions untraceable </source>
         <translation>Детали транзакции</translation>
     </message>
     <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
+        <source>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </source>
+        <translation>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </translation>
     </message>
     <message>
         <source>CANCEL</source>
@@ -3156,12 +3058,20 @@ transaction history, making transactions untraceable </source>
         <translation>Ошибка при сохранении адресной метки</translation>
     </message>
     <message>
+        <source>Cannot create new address, wallet locked</source>
+        <translation>Невозможно создать новый адрес, кошелек заблокирован</translation>
+    </message>
+    <message>
         <source>New address created</source>
         <translation>Создан новый адрес</translation>
     </message>
     <message>
         <source>Address copied</source>
         <translation>Адрес скопирован</translation>
+    </message>
+    <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Невозможно выполнить операцию, кошелек заблокирован</translation>
     </message>
     <message>
         <source>URI copied to clipboard</source>
@@ -3196,7 +3106,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(нет метки)</translation>
+        <translation>(нет ярлыка)</translation>
     </message>
     <message>
         <source>(no message)</source>
@@ -3234,8 +3144,8 @@ transaction history, making transactions untraceable </source>
         <translation>Текстовая метка</translation>
     </message>
     <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
+        <source>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </source>
+        <translation>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </translation>
     </message>
     <message>
         <source>COPY ADDRESS</source>
@@ -3262,6 +3172,22 @@ transaction history, making transactions untraceable </source>
         <translation>Описание (необязательно)</translation>
     </message>
     <message>
+        <source>New Payment Request</source>
+        <translation>Новый запрос на оплату</translation>
+    </message>
+    <message>
+        <source>Instead of sharing only a timelockcoin address, you can create a payment request, bundling up more information.</source>
+        <translation>Вместо того, чтобы делиться только адресом timelockcoin, вы можете создать запрос на оплату, объединив больше информации.</translation>
+    </message>
+    <message>
+        <source>Enter a label for the address</source>
+        <translation>Введите метку для адреса</translation>
+    </message>
+    <message>
+        <source>Enter description</source>
+        <translation>Введите описание</translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
@@ -3277,7 +3203,11 @@ transaction history, making transactions untraceable </source>
         <source>New Cold Staking Address</source>
         <translation>Новый адрес для холодного стекинга</translation>
     </message>
-    </context>
+    <message>
+        <source>Amount (optional)</source>
+        <translation>Сумма (необязательно)</translation>
+    </message>
+</context>
 <context>
     <name>SendChangeAddressDialog</name>
     <message>
@@ -3305,8 +3235,20 @@ transaction history, making transactions untraceable </source>
         <translation>Смена адреса</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" TimelockCoin address</source>
-        <translation>Остаточная часть значения, полученного от значения входов минус выходов, идет на «изменение» адреса TimelockCoin</translation>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" timelockcoin address</source>
+        <translation>Остаточная часть значения, полученного от значения входов минус выходов, идет на «изменение» адреса timelockcoin</translation>
+    </message>
+    <message>
+        <source>SAVE</source>
+        <translation>СОХРАНИТЬ</translation>
+    </message>
+    <message>
+        <source>RESET</source>
+        <translation>СБРОС</translation>
+    </message>
+    <message>
+        <source>Invalid address</source>
+        <translation>Неверный адрес</translation>
     </message>
 </context>
 <context>
@@ -3324,8 +3266,12 @@ transaction history, making transactions untraceable </source>
         <translation>Настроить комиссию за транзакцию на свой выбор, в зависимости от суммы комиссии, которая будет/не будет включена в вашу транзакцию в блокчейне.</translation>
     </message>
     <message>
-        <source>Recomended</source>
-        <translation>Рекоммендуется</translation>
+        <source>Recommended</source>
+        <translation>рекомендуемые</translation>
+    </message>
+    <message>
+        <source>TYM/kilobyte</source>
+        <translation>TYM/килобайт</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3334,10 +3280,6 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>Custom</source>
         <translation>Настроенная</translation>
-    </message>
-    <message>
-        <source>Per kilobyte</source>
-        <translation>За килобайт</translation>
     </message>
     <message>
         <source>CANCEL</source>
@@ -3352,8 +3294,8 @@ transaction history, making transactions untraceable </source>
         <translation>Настройка комиссии</translation>
     </message>
     <message>
-        <source>Customize the transaction fee, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>Настройте комиссию за транзакцию. В зависимости от величины комиссии, ваша транзакция будет включена или не включена в блокчейн.</translation>
+        <source>Customize the transaction fee, depending on the fee value your transaction might be included faster in the blockchain.</source>
+        <translation>Настройка комиссии за транзакцию; в зависимости от величины комиссии ваша транзакция может быть быстрее включена в блокчейн.</translation>
     </message>
     <message>
         <source>Normal</source>
@@ -3371,7 +3313,7 @@ transaction history, making transactions untraceable </source>
         <source>SAVE</source>
         <translation>СОХРАНИТЬ</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>SendMultiRow</name>
     <message>
@@ -3386,7 +3328,11 @@ transaction history, making transactions untraceable </source>
         <source>Enter address</source>
         <translation>Ввести адрес</translation>
     </message>
-    </context>
+    <message>
+        <source>Enter label</source>
+        <translation>Введите метку</translation>
+    </message>
+</context>
 <context>
     <name>SendWidget</name>
     <message>
@@ -3442,6 +3388,18 @@ transaction history, making transactions untraceable </source>
         <translation>Всего осталось</translation>
     </message>
     <message>
+        <source>Warning!</source>
+        <translation>Предупреждение!</translation>
+    </message>
+    <message>
+        <source>The change address doesn't belong to this wallet.
+
+Do you want to continue?</source>
+        <translation>Смена адреса не относится к этому кошельку.
+
+Хотите продолжить?</translation>
+    </message>
+    <message>
         <source>Customize Fee</source>
         <translation>Настройка комиссии</translation>
     </message>
@@ -3450,8 +3408,16 @@ transaction history, making transactions untraceable </source>
         <translation>Достигнуто максимальное количество выходов</translation>
     </message>
     <message>
+        <source>timelockcoin address or contact label</source>
+        <translation>timelockcoin адрес или метка контакта</translation>
+    </message>
+    <message>
         <source>Invalid entry, previous entries must be valid before add a new one</source>
         <translation>Неверная запись. Прежде чем добавить новую запись, предыдущие записи должны быть действительными</translation>
+    </message>
+    <message>
+        <source>Possibly spend coins delegated for cold-staking (currently available: %1</source>
+        <translation>Возможно потратить монеты, выделенные для холодного стекинга (в настоящее время доступно: %1</translation>
     </message>
     <message>
         <source>Invalid entry</source>
@@ -3534,10 +3500,6 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Не удалось обновить метку адреса для адреса: %1</translation>
     </message>
     <message>
-        <source>Invalid change address</source>
-        <translation>Неверное изменение адреса</translation>
-    </message>
-    <message>
         <source>Invalid URI</source>
         <translation>Неверный URI</translation>
     </message>
@@ -3575,7 +3537,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <source>Cannot store your own address as contact</source>
-        <translation>Невозможно хранить ваш личный адрес в качестве контакта</translation>
+        <translation>Невозможно сохранить ваш личный адрес в качестве контакта</translation>
     </message>
     <message>
         <source>Update Contact</source>
@@ -3622,8 +3584,14 @@ Remember to write it down and store it safely, otherwise you might lose access t
         <translation>Где</translation>
     </message>
     <message>
-        <source>Backup</source>
-        <translation>Сделать резервную копию</translation>
+        <source>Keep your wallet safe by doing regular backups and storing your backup file externally.
+This option creates a wallet.dat file that can be used to recover your whole balance (transactions and addresses) on another device.</source>
+        <translation>Обеспечьте безопасность своего кошелька, регулярно создавая резервные копии и храня файл резервной копии вне системы.
+Этот параметр создает файл wallet.dat, который можно использовать для восстановления всего баланса (транзакций и адресов) на другом устройстве.</translation>
+    </message>
+    <message>
+        <source>Select folder...</source>
+        <translation>Выберите папку...</translation>
     </message>
     <message>
         <source>Change Passphrase</source>
@@ -3717,6 +3685,10 @@ Remember to write it down and store it safely, otherwise you might lose access t
         <translation>Расшифровать ключ</translation>
     </message>
     <message>
+        <source>timelockcoin address</source>
+        <translation>Адрес timelockcoin</translation>
+    </message>
+    <message>
         <source>Enter address</source>
         <translation>Ввести адрес</translation>
     </message>
@@ -3805,8 +3777,8 @@ Remember to write it down and store it safely, otherwise you might lose access t
         <translation>Ошибка при добавлении ключа к кошельку</translation>
     </message>
     <message>
-        <source>Successfully added pivate key to the wallet</source>
-        <translation>Добавление приватного ключа к кошельку прошло успешно</translation>
+        <source>Successfully added private key to the wallet</source>
+        <translation>Закрытый ключ успешно добавлен в кошелек</translation>
     </message>
 </context>
 <context>
@@ -3836,6 +3808,10 @@ Remember to write it down and store it safely, otherwise you might lose access t
         <translation>Открыть файл отладки</translation>
     </message>
     <message>
+        <source>Clear history</source>
+        <translation>Очистить историю</translation>
+    </message>
+    <message>
         <source>Cannot open debug file.
 Verify that you have installed a predetermined text editor.</source>
         <translation>Не удается открыть файл отладки.
@@ -3843,7 +3819,7 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <source>Welcome to the TimelockCoin RPC console.</source>
-        <translation>Добро пожаловать в окружение TimelockCoin RPC.</translation>
+        <translation>Добро пожаловать в окружение timelockcoin RPC.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3867,6 +3843,10 @@ Verify that you have installed a predetermined text editor.</source>
     <message>
         <source>TextLabel</source>
         <translation>Текстовая метка</translation>
+    </message>
+    <message>
+        <source>Hide stake charts in the dashboard</source>
+        <translation>Скрыть график стекинга на панели инструментов</translation>
     </message>
     <message>
         <source>Reset to default</source>
@@ -3918,6 +3898,108 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
 </context>
 <context>
+    <name>SettingsExportCSV</name>
+    <message>
+        <source>Form</source>
+        <translation>Вид</translation>
+    </message>
+    <message>
+        <source>Export Accounting</source>
+        <translation>Экспорт учета</translation>
+    </message>
+    <message>
+        <source>Export your wallet's accounting data to a csv file.</source>
+        <translation>Экспорт учетных данных вашего кошелька в CSV-файл.</translation>
+    </message>
+    <message>
+        <source>Where</source>
+        <translation>Где</translation>
+    </message>
+    <message>
+        <source>Select folder...</source>
+        <translation>Выберите папку...</translation>
+    </message>
+    <message>
+        <source>Export Address Book</source>
+        <translation>Экспорт адресной книги</translation>
+    </message>
+    <message>
+        <source>Export CSV</source>
+        <translation>Экспорт CSV</translation>
+    </message>
+    <message>
+        <source>Export Address List</source>
+        <translation>Экспорт списка адресов</translation>
+    </message>
+    <message>
+        <source>timelockcoin_tx_csv_export(*.csv)</source>
+        <translation>timelockcoin_tx_csv_export(*.csv)</translation>
+    </message>
+    <message>
+        <source>timelockcoin_addresses_csv_export(*.csv)</source>
+        <translation>timelockcoin_addresses_csv_export(*.csv)</translation>
+    </message>
+    <message>
+        <source>Please select a folder to export the csv file first.</source>
+        <translation>Пожалуйста, сначало выберите папку для экспорта файла CSV.</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Подтверждено</translation>
+    </message>
+    <message>
+        <source>Watch-only</source>
+        <translation>смотреть только</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Дата</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Тип</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Метка</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Адрес</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>Номер</translation>
+    </message>
+    <message>
+        <source>Exporting Successful
+The transaction history was successfully saved to %1.</source>
+        <translation>Экспорт выполнен успешно.
+История транзакций была успешно сохранена в %1.</translation>
+    </message>
+    <message>
+        <source>Exporting Failed
+There was an error trying to save the transaction history to %1.</source>
+        <translation>Экспорт не удался. Произошла ошибка при попытке сохранить историю транзакций в %1.</translation>
+    </message>
+    <message>
+        <source>No available addresses to export under the selected filter</source>
+        <translation>Нет доступных адресов для экспорта под выбранным фильтром</translation>
+    </message>
+    <message>
+        <source>Exporting Successful
+The address book was successfully saved to %1.</source>
+        <translation>Экспорт выполнен успешно.
+Адресная книга успешно сохранена в %1.</translation>
+    </message>
+    <message>
+        <source>Exporting Failed
+There was an error trying to save the address list to %1. Please try again.</source>
+        <translation>Экспорт не удался.
+Произошла ошибка при попытке сохранить список адресов в %1. Пожалуйста, попробуйте еще раз.</translation>
+    </message>
+</context>
+<context>
     <name>SettingsFaqWidget</name>
     <message>
         <source>Form</source>
@@ -3932,16 +4014,16 @@ Verify that you have installed a predetermined text editor.</source>
         <translation>Нажать кнопку</translation>
     </message>
     <message>
-        <source>1) What is TimelockCoin?</source>
-        <translation>1) Что такое TimelockCoin?</translation>
+        <source>1) What is timelockcoin?</source>
+        <translation>1) Что такое timelockcoin?</translation>
     </message>
     <message>
         <source>2) Why are my TYM unspendable?</source>
         <translation>2) Почему мои TYM невозможно потратить?</translation>
     </message>
     <message>
-        <source>3) TimelockCoin privacy? What is Zerocoin (zTYM)?</source>
-        <translation>3) Конфиденциальность TimelockCoin? Что такое Zerocoin (zTYM)?</translation>
+        <source>3) timelockcoin privacy? What is Zerocoin (zTYM)?</source>
+        <translation>3) Конфиденциальность timelockcoin? Что такое Zerocoin (zTYM)?</translation>
     </message>
     <message>
         <source>4) Why are my zTYM unspendable?</source>
@@ -3966,40 +4048,48 @@ Verify that you have installed a predetermined text editor.</source>
         <translation>8) Куда я могу обратиться за помощью?</translation>
     </message>
     <message>
+        <source>9) What is a Masternode?</source>
+        <translation>9) Что такое Мастернода?</translation>
+    </message>
+    <message>
+        <source>10) What is a Masternode Controller?</source>
+        <translation>10) Что такое контроллер Мастерноды?</translation>
+    </message>
+    <message>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is TimelockCoin?</source>
-        <translation>Что такое TimelockCoin?</translation>
+        <source>What is timelockcoin?</source>
+        <translation>Что такое timelockcoin?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           TimelockCoin is a form of digital online money using blockchain technology
+                           timelockcoin is a form of digital online money using blockchain technology
                            that can be easily transferred globally, instantly, and with near
-                           zero fees.  TimelockCoin incorporates market leading security &amp;
+                           zero fees.  timelockcoin incorporates market leading security &amp;
                            privacy and is also the first PoS (Proof of Stake) Cryptocurrency
                            to implement ZeroCoin(zTYM) and Zerocoin staking.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           TimelockCoin utilizes a Proof of Stake (PoS) consensus system algorithm,
-                           allowing all owners of TimelockCoin to participate in earning block rewards
+                           timelockcoin utilizes a Proof of Stake (PoS) consensus system algorithm,
+                           allowing all owners of timelockcoin to participate in earning block rewards
                            while securing the network with full node wallets, as well as to
                            run Masternodes to create and vote on proposals.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-TimelockCoin - это форма цифровых онлайн-денег, использующая технологию блокчейн,
+timelockcoin - это форма цифровых онлайн-денег, использующая технологию блокчейн,
 которая может быть легко переведена по всему миру, мгновенно и с практически
-нулевой комиссией. TimelockCoin включает в себя лидирующую на рынке защиту и
+нулевой комиссией. timelockcoin включает в себя лидирующую на рынке защиту и
 «конфиденциальность», а также является первой PoS криптовалютой (Proof of Stake),
 в которой реализована система стекинга ZeroCoin (zTYM) и Zerocoin.
 &lt;/p&gt;&lt;p align="justify"&gt;
-TimelockCoin использует консенсус PoS (Proof of Stake), позволяя всем владельцам TimelockCoin участвовать в заработке вознаграждений
+timelockcoin использует консенсус PoS (Proof of Stake), позволяя всем владельцам timelockcoin участвовать в заработке вознаграждений
 при этом обеспечивая безопасность сети с помощью кошельков с полными узлами, а также позволяет
 запускать мастерноды для создания предложений и голосования по ним.
- &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>2</source>
@@ -4012,19 +4102,19 @@ TimelockCoin использует консенсус PoS (Proof of Stake), по�
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Newly received TimelockCoin requires 6 confirmations on the network
+                           Newly received timelockcoin requires 6 confirmations on the network
                            to become eligible for spending which can take ~6 minutes.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Your TimelockCoin wallet also needs to be completely synchronized
+                           Your timelockcoin wallet also needs to be completely synchronized
                            to see and spend balances on the network.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
-&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt; 
-Недавно полученным TimelockCoin требуется 6 подтверждений в сети,
+&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
+Недавно полученным timelockcoin требуется 6 подтверждений в сети,
 чтобы получить право быть расходуемыми. Это может занять примерно 6 минут.
 &lt;/p&gt;&lt;p align="justify"&gt;
-Ваш кошелек TimelockCoin также должен быть полностью синхронизирован,
+Ваш кошелек timelockcoin также должен быть полностью синхронизирован,
 чтобы видеть баланс и расходовать его в сети.
  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
     </message>
@@ -4033,26 +4123,26 @@ TimelockCoin использует консенсус PoS (Proof of Stake), по�
         <translation>3</translation>
     </message>
     <message>
-        <source>TimelockCoin privacy? What is Zerocoin (zTYM)?</source>
-        <translation>Конфиденциальность TimelockCoin? Что такое Zerocoin (zTYM)?</translation>
+        <source>timelockcoin privacy? What is Zerocoin (zTYM)?</source>
+        <translation>Конфиденциальность timelockcoin? Что такое Zerocoin (zTYM)?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
                            zTYM is an optional privacy-centric method of coin mixing on the
-                           TimelockCoin blockchain. Basically all your transactions cannot be tracked
+                           timelockcoin blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt;
-                           "TimelockCoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
+                           &lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt;
+                           "timelockcoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
 zTYM - это необязательная конфиденциальность, которая возможна при микшировании монет
-в блокчейне TimelockCoin. По сути,ни одна транзакция не может быть отслежена
+в блокчейне timelockcoin. По сути,ни одна транзакция не может быть отслежена
 ни в одном из обозревателей блоков. Вы можете прочитать больше о технических характеристиках в
-&lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt;
-"Техническом документе TimelockCoin Zerocoin (zTYM)"&lt;/a&gt;.
+&lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt;
+"Техническом документе timelockcoin Zerocoin (zTYM)"&lt;/a&gt;.
  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
     </message>
     <message>
@@ -4089,33 +4179,33 @@ zTYM - это необязательная конфиденциальность,
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           By default the TimelockCoin wallet will convert 10% of your entire TYM
+                           By default the timelockcoin wallet will convert 10% of your entire TYM
                            balance to zTYM to assist the network. If you do not wish to
                            stake zTYM or take advantage of the privacy benefit it brings,
-                           you can disable the automatic minting in your TimelockCoin wallet by
+                           you can disable the automatic minting in your timelockcoin wallet by
                            going to Settings-&gt;Options and deselecting “Enable zTYM Automint”.
-                           If you are not making use of the TimelockCoin-QT or GUI you can simply open
+                           If you are not making use of the timelockcoin-QT or GUI you can simply open
                            your timelockcoin.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
                            marks and restart your wallet to disable automint.&lt;/p&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            You can read more about zTYM in the
-                           &lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt; "TimelockCoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
+                           &lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt; "timelockcoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
                            If you would like to keep and stake your zTYM, please read the "How do I stake"
                            section of the FAQ below.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-По умолчанию кошелек TimelockCoin преобразует 10% всего вашего баланса TYM
+По умолчанию кошелек timelockcoin преобразует 10% всего вашего баланса TYM
 в zTYM для помощи сети. Если вы не хотите
 запускать стекинг zTYM или пользоваться преимуществами конфиденциальности, которые она приносит,
-вы можете отключить автоматическую чеканку в своем TimelockCoin-кошельке,
+вы можете отключить автоматическую чеканку в своем timelockcoin-кошельке,
 перейдя в «Настройки-&gt; Параметры» и отменив выбор «Включить авточекунку zTYM».
-Если вы не используете TimelockCoin-QT или GUI, вы можете просто открыть
+Если вы не используете timelockcoin-QT или GUI, вы можете просто открыть
 свой файл timelockcoin.conf и добавить &lt;i&gt;enablezeromint=0&lt;/i&gt; без кавычек и
 перезапустите свой кошелек для отключения  автоматической чеканки. &lt;/p&gt; &lt;/p&gt;&lt;p align="justify"&gt; Вы можете прочитать больше о zTYM в
-&lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt;
- "Технический документ TimelockCoin Zerocoin (zTYM)"&lt;/a&gt;.
+&lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt;
+ "Технический документ timelockcoin Zerocoin (zTYM)"&lt;/a&gt;.
 Если вы хотите продолжать стекинг zTYM, ознакомьтесь с разделом" Как осуществить стекинг"
 в разделе часто задаваемых вопросов ниже.
  &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
@@ -4131,16 +4221,16 @@ zTYM - это необязательная конфиденциальность,
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zTYM can be spent and sent to any TimelockCoin address. The receiver will
-                           receive standard TimelockCoin but the origin of the TimelockCoin is anonymized by the zTYM Protocol.
+                           zTYM can be spent and sent to any timelockcoin address. The receiver will
+                           receive standard timelockcoin but the origin of the timelockcoin is anonymized by the zTYM Protocol.
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            If you want more zTYM you will need to mint your balance in the “Privacy” tab.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
 &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-zTYM можно потратить и отправить на любой адрес TimelockCoin. Получатель получит
-стандартный TimelockCoin, но оригинальное происхождение TimelockCoin анонимизируется протоколом zTYM.
+zTYM можно потратить и отправить на любой адрес timelockcoin. Получатель получит
+стандартный timelockcoin, но оригинальное происхождение timelockcoin анонимизируется протоколом zTYM.
 &lt;/p&gt;&lt;p align="justify"&gt;
 Если вы хотите больше zTYM, вам нужно будет чеканить свой баланс на вкладке «Конфиденциальность».
 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </translation>
@@ -4154,8 +4244,18 @@ zTYM можно потратить и отправить на любой адр�
         <translation>Как мне запустить стекинг TYM/zTYM?</translation>
     </message>
     <message>
+        <source>Where should I go if I need support?</source>
+        <translation>Куда мне обратиться, если мне нужна поддержка?</translation>
+    </message>
+    <message>
         <source>What is a Masternode?</source>
         <translation>Что такое мастернода?</translation>
+    </message>
+    <message>
+        <source>What is a Masternode Controller?</source>
+        <translation>Что такое контроллер Мастерноды?
+
+ </translation>
     </message>
     <message>
         <source>8</source>
@@ -4168,8 +4268,8 @@ zTYM можно потратить и отправить на любой адр�
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node TimelockCoin core wallet with a
-                           requirement of 10,000 TYM secured collateral to provide extra services
+                           A masternode is a computer running a full node timelockcoin wallet with a
+                           requirement of 1000 TYM secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
                            &lt;/p&gt;&lt;p align="justify"&gt;
@@ -4191,17 +4291,17 @@ zTYM можно потратить и отправить на любой адр�
                            Masternode Perks:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Participate in TimelockCoin Governance&lt;/li&gt;
+                           &lt;li&gt;Participate in timelockcoin Governance&lt;/li&gt;
                            &lt;li&gt;Earn Masternode Rewards&lt;/li&gt;
                            &lt;li&gt;Commodity option for future sale&lt;/li&gt;
-                           &lt;li&gt;Help secure the TimelockCoin network&lt;/li&gt;
+                           &lt;li&gt;Help secure the timelockcoin network&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
                            Requirements:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;10,000 TYM per single Masternode instance&lt;/li&gt;
+                           &lt;li&gt;1000 TYM per single Masternode instance&lt;/li&gt;
                            &lt;li&gt;Must be stored in a core wallet&lt;/li&gt;
                            &lt;li&gt;Need dedicated IP address&lt;/li&gt;
                            &lt;li&gt;Masternode wallet to remain online&lt;/li&gt;
@@ -4209,7 +4309,7 @@ zTYM можно потратить и отправить на любой адр�
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
-Мастернода - это компьютер, на котором запущен базовый кошелек TimelockCoin с полным узлом и для которого требуется обеспечение в 10000 TYM для обеспечения дополнительных услуг сети и, в свою очередь, регулярного получения части вознаграждения за блок. Эти услуги в себя включают:
+Мастернода - это компьютер, на котором запущен базовый кошелек timelockcoin с полным узлом и для которого требуется обеспечение в 1000 TYM для обеспечения дополнительных услуг сети и, в свою очередь, регулярного получения части вознаграждения за блок. Эти услуги в себя включают:
 
 Мгновенные транзакции (SwiftX)
 Децентрализованное управление (Голосование по предложениям)
@@ -4217,18 +4317,18 @@ zTYM можно потратить и отправить на любой адр�
 Проверка транзакций в каждом блоке.
 Выступление в качестве дополнительного полного узла в сети.
 
-Для предоставления таких услуг мастернодам также выплачивается определенная часть вознаграждений за каждый блок. Это может служить пассивным доходом для владельцев мастернод за вычетом их эксплуатационных расходов. 
+Для предоставления таких услуг мастернодам также выплачивается определенная часть вознаграждений за каждый блок. Это может служить пассивным доходом для владельцев мастернод за вычетом их эксплуатационных расходов.
 
-Привилегии мастерноды: 
+Привилегии мастерноды:
 
-Участие в управлении TimelockCoin
-Получение вознаграждений за мастерноду 
+Участие в управлении timelockcoin
+Получение вознаграждений за мастерноду
 Товарные опционы для будущей продажи
-Помощь в защите сети TimelockCoin 
+Помощь в защите сети timelockcoin
 
-Требования: 
+Требования:
 
-10 000 TYM для каждой мастерноды 
+10 000 TYM для каждой мастерноды
 Должен храниться в основном кошельке
 Требуется выделенный IP-адрес
 Кошелек мастерноды должен оставаться в сети</translation>
@@ -4257,10 +4357,6 @@ zTYM можно потратить и отправить на любой адр�
         <translation>Вид</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Текстовая метка</translation>
-    </message>
-    <message>
         <source>Network Monitor</source>
         <translation>Сетевой монитор</translation>
     </message>
@@ -4273,16 +4369,48 @@ zTYM можно потратить и отправить на любой адр�
         <translation>Основное</translation>
     </message>
     <message>
-        <source>Client Version: </source>
-        <translation>Версия клиента:</translation>
+        <source>Client Version:</source>
+        <translation>Версия Клиента:</translation>
+    </message>
+    <message>
+        <source>BerkeleyDB version:</source>
+        <translation>Версия BerkeleyDB:</translation>
+    </message>
+    <message>
+        <source>Datadir:</source>
+        <translation>Datadir:</translation>
+    </message>
+    <message>
+        <source>Startup time:</source>
+        <translation>Время запуска:</translation>
+    </message>
+    <message>
+        <source>Connections:</source>
+        <translation>Соединения:</translation>
+    </message>
+    <message>
+        <source>Number of Masternodes:</source>
+        <translation>Число Мастернод:</translation>
+    </message>
+    <message>
+        <source>Current number of blocks:</source>
+        <translation>Текущее количество блоков:</translation>
+    </message>
+    <message>
+        <source>Last block time:</source>
+        <translation>Время последнего блока:</translation>
+    </message>
+    <message>
+        <source>Last block hash:</source>
+        <translation>Хэш последнего блока:</translation>
+    </message>
+    <message>
+        <source>Current number of transactions:</source>
+        <translation>Текущее количество транзакций:</translation>
     </message>
     <message>
         <source>User Agent:</source>
         <translation>Пользовательский агент:</translation>
-    </message>
-    <message>
-        <source>Datadir: </source>
-        <translation>Datadir: </translation>
     </message>
     <message>
         <source>Network</source>
@@ -4380,8 +4508,8 @@ zTYM можно потратить и отправить на любой адр�
         <translation>Количество потоков проверки скрипта</translation>
     </message>
     <message>
-        <source>Start TimelockCoin on system login</source>
-        <translation>Запускать TimelockCoin при входе в систему</translation>
+        <source>Start timelockcoin on system login</source>
+        <translation>Запускать timelockcoin при входе в систему</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4437,6 +4565,14 @@ Are you sure?
         <translation>Новый получатель для мультиотправки</translation>
     </message>
     <message>
+        <source>Address Label (optional)</source>
+        <translation>Лейбл Адреса (необязательно)</translation>
+    </message>
+    <message>
+        <source>Enter label to be saved with this address</source>
+        <translation>Введите лейбл для сохранения с этим адресом</translation>
+    </message>
+    <message>
         <source>Percentage</source>
         <translation>Процент</translation>
     </message>
@@ -4460,8 +4596,8 @@ Are you sure?
         <translation>Флажок</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other TimelockCoin addresses after it matures.</source>
-        <translation>MultiSend позволяет автоматически отправлять до 100% ваших вознаграждений от стекинга или мастернод в список других адресов TimelockCoin после его созревания.</translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other timelockcoin addresses after it matures.</source>
+        <translation>MultiSend позволяет автоматически отправлять до 100% ваших вознаграждений от стекинга или мастернод в список других адресов timelockcoin после его созревания.</translation>
     </message>
     <message>
         <source>Active</source>
@@ -4489,7 +4625,11 @@ Are you sure?
     </message>
     <message>
         <source>CLEAR ALL</source>
-        <translation>УБРАТЬ ВСЕ</translation>
+        <translation>ОЧИСТИТЬ ВСЕ</translation>
+    </message>
+    <message>
+        <source>Cannot perform operation, wallet locked</source>
+        <translation>Невозможно выполнить операцию, кошелек заблокирован</translation>
     </message>
     <message>
         <source>Clear succeed</source>
@@ -4498,6 +4638,10 @@ Are you sure?
     <message>
         <source>Clear all failed, could not locate address in wallet file</source>
         <translation>Полная очистка не удалась. Не удалось найти адрес в файле кошелька</translation>
+    </message>
+    <message>
+        <source>Cannot add multisend recipient, wallet locked</source>
+        <translation>Невозможно добавить получателя мультисендинга, кошелек заблокирован</translation>
     </message>
     <message>
         <source>The entered address: %1 is invalid.
@@ -4583,8 +4727,16 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Сообщение</translation>
     </message>
     <message>
+        <source>timelockcoin address or contact label</source>
+        <translation>timelockcoin адрес или лейбл контакта</translation>
+    </message>
+    <message>
         <source>Enter address</source>
         <translation>Ввести адрес</translation>
+    </message>
+    <message>
+        <source>Write message</source>
+        <translation>Написать сообщение</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -4596,7 +4748,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>CLEAR ALL</source>
-        <translation>УБРАТЬ ВСЕ</translation>
+        <translation>ОЧИСТИТЬ ВСЕ</translation>
     </message>
     <message>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
@@ -4848,10 +5000,6 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Вид</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>Текстовая метка</translation>
-    </message>
-    <message>
         <source>Wallet Data</source>
         <translation>Данные кошелька</translation>
     </message>
@@ -4862,6 +5010,10 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     <message>
         <source>Multisend</source>
         <translation>Multisend</translation>
+    </message>
+    <message>
+        <source>Export Accounting</source>
+        <translation>Экспортный учета</translation>
     </message>
     <message>
         <source>Tools</source>
@@ -4912,8 +5064,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>ЧаВо</translation>
     </message>
     <message>
-        <source>About TimelockCoin</source>
-        <translation>О TimelockCoin</translation>
+        <source>About timelockcoin</source>
+        <translation>О timelockcoin</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4979,8 +5131,8 @@ Are you sure?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>TimelockCoin Core is shutting down...</source>
-        <translation>TimelockCoin Core выключается...</translation>
+        <source>timelockcoin is shutting down...</source>
+        <translation>timelockcoin выключается...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -5009,15 +5161,15 @@ Are you sure?
         <translation>Загрузка...</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -5032,8 +5184,8 @@ Are you sure?
         <translation>Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>The TimelockCoin Core developers</source>
-        <translation>Разработчики TimelockCoin Core</translation>
+        <source>The timelockcoin developers</source>
+        <translation>Разработчики timelockcoin</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -5070,14 +5222,6 @@ Are you sure?
         <translation>Вид</translation>
     </message>
     <message>
-        <source>480.0685 TYM</source>
-        <translation>480.0685 TYM</translation>
-    </message>
-    <message>
-        <source>1,000 zTYM</source>
-        <translation>1 000 zTYM</translation>
-    </message>
-    <message>
         <source>Available</source>
         <translation>Доступный</translation>
     </message>
@@ -5086,24 +5230,8 @@ Are you sure?
         <translation>В ожидании</translation>
     </message>
     <message>
-        <source>6.943 TYM</source>
-        <translation>6.943 TYM</translation>
-    </message>
-    <message>
         <source>Immature</source>
         <translation>Незрелый</translation>
-    </message>
-    <message>
-        <source>10 TYM</source>
-        <translation>10 TYM</translation>
-    </message>
-    <message>
-        <source>60 zTYM</source>
-        <translation>60 zTYM</translation>
-    </message>
-    <message>
-        <source>10 zTYM</source>
-        <translation>10 zTYM</translation>
     </message>
     <message>
         <source>Wallet Unlocked for staking</source>
@@ -5118,14 +5246,6 @@ Are you sure?
         <translation>Адрес скопирован</translation>
     </message>
     <message>
-        <source>Automint enabled</source>
-        <translation>Включена автоматическая чеканка</translation>
-    </message>
-    <message>
-        <source>Automint disabled</source>
-        <translation>Автоматическая чеканка отключена</translation>
-    </message>
-    <message>
         <source>Staking active</source>
         <translation>Стекинг активен</translation>
     </message>
@@ -5134,18 +5254,78 @@ Are you sure?
         <translation>Стекинг не активен</translation>
     </message>
     <message>
-        <source>Synchronized</source>
-        <translation>Синхронизировано</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n час</numerusform><numerusform>%n часа</numerusform><numerusform>%n часов</numerusform><numerusform>%n часов</numerusform></translation>
+        <source>Synchronized - Block: %1</source>
+        <translation>Синхронизировано - Блок: %1</translation>
     </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 и %2</translation>
     </message>
-    </context>
+    <message>
+        <source>Wallet Upgrade</source>
+        <translation>Обновление кошелька</translation>
+    </message>
+    <message>
+        <source>Upgrade Wallet</source>
+        <translation>Обновить кошелек</translation>
+    </message>
+    <message>
+        <source>Wallet unlock cancelled</source>
+        <translation>Разблокировка кошелька отменена</translation>
+    </message>
+    <message>
+        <source>Tor Active: %1</source>
+        <translation>Активные Tor: %1</translation>
+    </message>
+    <message>
+        <source>Tor Disabled</source>
+        <translation>Tor отключен</translation>
+    </message>
+    <message>
+        <source>The wallet has been successfully upgraded to HD.</source>
+        <translation>Кошелек был успешно обновлен до HD.</translation>
+    </message>
+    <message>
+        <source>It is advised to make a backup.</source>
+        <translation>Рекомендуется сделать резервную копию.</translation>
+    </message>
+    <message>
+        <source>Do you wish to backup now?</source>
+        <translation>Вы хотите сделать резервную копию сейчас?</translation>
+    </message>
+    <message>
+        <source>Backup Wallet</source>
+        <translation>Резервная копия кошелька</translation>
+    </message>
+    <message>
+        <source>Wallet Data (*.dat)</source>
+        <translation>Данные кошелька (* .dat)</translation>
+    </message>
+    <message>
+        <source>Backup created</source>
+        <translation>Резервная копия сделана</translation>
+    </message>
+    <message>
+        <source>Backup creation failed</source>
+        <translation>Не удалось создать резервную копию</translation>
+    </message>
+    <message>
+        <source>no file selected</source>
+        <translation>файл не выбран</translation>
+    </message>
+    <message>
+        <source>Wallet upgraded successfully, but no backup created.</source>
+        <translation>Кошелек успешно обновлен, но резервная копия не создана.</translation>
+    </message>
+    <message>
+        <source>WARNING: remember to make a copy of your wallet.dat file!</source>
+        <translation>НАПОМИНАНИЕ: не забудьте сделать копию своего файла wallet.dat!</translation>
+    </message>
+    <message>
+        <source>Upgrade Wallet Error</source>
+        <translation>Ошибка обновления кошелька</translation>
+    </message>
+</context>
 <context>
     <name>TrafficGraphWidget</name>
     <message>
@@ -5383,10 +5563,6 @@ Are you sure?
         <translation>Получен от</translation>
     </message>
     <message>
-        <source>Received via Obfuscation</source>
-        <translation>Получено через обфускацию</translation>
-    </message>
-    <message>
         <source>TYM Stake</source>
         <translation>Доля TYM</translation>
     </message>
@@ -5401,22 +5577,6 @@ Are you sure?
     <message>
         <source>Stake delegation</source>
         <translation>Делегация стекинга</translation>
-    </message>
-    <message>
-        <source>Obfuscation Denominate</source>
-        <translation>Обфускация</translation>
-    </message>
-    <message>
-        <source>Obfuscation Collateral Payment</source>
-        <translation>Обфускационный Сопутствующий платеж</translation>
-    </message>
-    <message>
-        <source>Obfuscation Make Collateral Inputs</source>
-        <translation>Обфускация</translation>
-    </message>
-    <message>
-        <source>Obfuscation Create Denominations</source>
-        <translation>Обфускация Создание конфессий</translation>
     </message>
     <message>
         <source>Converted TYM to zTYM</source>
@@ -5451,12 +5611,16 @@ Are you sure?
         <translation>Оплата себе</translation>
     </message>
     <message>
-        <source>Mined</source>
-        <translation>заминированный</translation>
+        <source>TYM Stake on behalf of</source>
+        <translation>Стекинг TYM от имени</translation>
     </message>
     <message>
-        <source>Obfuscated</source>
-        <translation>затемненный</translation>
+        <source>Stake delegation spent by</source>
+        <translation>Делегация стекинга потрачена</translation>
+    </message>
+    <message>
+        <source>Mined</source>
+        <translation>заминированный</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -5510,36 +5674,8 @@ Are you sure?
         <translation>Детали транзакции</translation>
     </message>
     <message>
-        <source>ID:</source>
-        <translation>ID:</translation>
-    </message>
-    <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994 </translation>
-    </message>
-    <message>
-        <source>Sending to: </source>
-        <translation>Отправить:</translation>
-    </message>
-    <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
-    </message>
-    <message>
         <source>Total amount</source>
         <translation>Общая сумма</translation>
-    </message>
-    <message>
-        <source>2 TYM</source>
-        <translation>2 TYM</translation>
-    </message>
-    <message>
-        <source>Coin inputs:</source>
-        <translation>Входы монеты:</translation>
-    </message>
-    <message>
-        <source>1 Inputs</source>
-        <translation>1 вход</translation>
     </message>
     <message>
         <source>Previous Transaction</source>
@@ -5550,52 +5686,52 @@ Are you sure?
         <translation>Индекс выхода</translation>
     </message>
     <message>
-        <source>Fee:</source>
-        <translation>Комиссия:</translation>
-    </message>
-    <message>
-        <source>0.0001 TYM</source>
-        <translation>0.0001 TYM</translation>
-    </message>
-    <message>
-        <source>Change address:</source>
-        <translation>Изменить адрес:</translation>
-    </message>
-    <message>
         <source>D7VFR83SQbie…BhjcWJtcfip5krte2Z </source>
         <translation>D7VFR83SQbie…BhjcWJtcfip5krte2Z</translation>
-    </message>
-    <message>
-        <source>Confirmations:</source>
-        <translation>Подтверждения:</translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <source>Size:</source>
-        <translation>Размер:</translation>
-    </message>
-    <message>
-        <source>2 kB</source>
-        <translation>2 kB</translation>
-    </message>
-    <message>
-        <source>Date:</source>
-        <translation>Дата:</translation>
     </message>
     <message>
         <source>May 25, 2017</source>
         <translation>25 мая, 2017</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Статус:</translation>
+        <source>ID</source>
+        <translation>Номер</translation>
+    </message>
+    <message>
+        <source>Sending to</source>
+        <translation>Отправка в</translation>
+    </message>
+    <message>
+        <source>Coin inputs</source>
+        <translation>Входы монеты</translation>
+    </message>
+    <message>
+        <source>Fee</source>
+        <translation>Комиссия</translation>
+    </message>
+    <message>
+        <source>Size</source>
+        <translation>Размер</translation>
+    </message>
+    <message>
+        <source>Change address</source>
+        <translation>Изменить адрес</translation>
     </message>
     <message>
         <source>Spendable</source>
         <translation>Расходуемый</translation>
+    </message>
+    <message>
+        <source>Confirmations</source>
+        <translation>Подтверждения</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Состояние</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Дата</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -5657,29 +5793,6 @@ Are you sure?
     </message>
 </context>
 <context>
-    <name>WalletPasswordDialog</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Диалоговое окно</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>Текстовая метка</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. </translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>ОТМЕНА</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>ХОРОШО</translation>
-    </message>
-</context>
-<context>
     <name>WelcomeContentWidget</name>
     <message>
         <source>1</source>
@@ -5719,25 +5832,25 @@ Are you sure?
     </message>
     <message>
         <source>Welcome to
-TimelockCoin Core Wallet</source>
+timelockcoin Wallet</source>
         <translation>Добро пожаловать
-в основной кошелек TimelockCoin</translation>
+в основной кошелек timelockcoin</translation>
     </message>
     <message>
-        <source>TimelockCoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>TimelockCoin - самая инновационная в мире технология на основе блокчейна Proof of Stake. Разработана командой опытных разработчиков и криптографов.</translation>
+        <source>timelockcoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>timelockcoin - самая инновационная в мире технология на основе блокчейна Proof of Stake. Разработана командой опытных разработчиков и криптографов.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - TimelockCoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Как говорится в нашем манифесте: конфиденциальность является не подлежащим обсуждению основным правом человека; это дает пользователям свободу делиться своими данными в любое время и с кем угодно, ведь TimelockCoin верит в собственный суверенитет.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - timelockcoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Как говорится в нашем манифесте: конфиденциальность является не подлежащим обсуждению основным правом человека; это дает пользователям свободу делиться своими данными в любое время и с кем угодно, ведь timelockcoin верит в собственный суверенитет.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is TimelockCoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>Сеть мастернод - это сеть второго уровня TimelockCoin поверх блокчейна, которая позволяет нашему ДАО обеспечивать децентрализованное управление и казначейство.</translation>
+        <source>The masternode network is timelockcoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>Сеть мастернод - это сеть второго уровня timelockcoin поверх блокчейна, которая позволяет нашему ДАО обеспечивать децентрализованное управление и казначейство.</translation>
     </message>
     <message>
-        <source>How TimelockCoin respects your privacy?</source>
-        <translation>Как TimelockCoin уважает вашу конфиденциальность?</translation>
+        <source>How timelockcoin respects your privacy?</source>
+        <translation>Как timelockcoin уважает вашу конфиденциальность?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5749,7 +5862,7 @@ TimelockCoin Core Wallet</source>
     </message>
 </context>
 <context>
-    <name>ZPivControlDialog</name>
+    <name>ZTYMControlDialog</name>
     <message>
         <source>Select zTYM to Spend</source>
         <translation>Выберите zTYM чтобы потратить</translation>
@@ -5763,8 +5876,8 @@ TimelockCoin Core Wallet</source>
         <translation>Нажать кнопку</translation>
     </message>
     <message>
-        <source>zPiv</source>
-        <translation>zPiv</translation>
+        <source>zTYM</source>
+        <translation>zTYM</translation>
     </message>
     <message>
         <source>0.00 </source>
@@ -5814,12 +5927,8 @@ TimelockCoin Core Wallet</source>
         <translation>Привяжите к указанному адресу для прослушивания соединений JSON-RPC. Используйте [host]: обозначение порта для IPv6. Эта опция может быть указана несколько раз (по умолчанию: привязка ко всем интерфейсам)</translation>
     </message>
     <message>
-        <source>Calculated accumulator checkpoint is not what is recorded by block index</source>
-        <translation>Расчетная контрольная точка  не является тем, что регистрируется блочным индексом</translation>
-    </message>
-    <message>
-        <source>Cannot obtain a lock on data directory %s. TimelockCoin Core is probably already running.</source>
-        <translation>Не удается получить блокировку в каталоге данных %s. TimelockCoin Core, вероятно, уже запущен.</translation>
+        <source>Cannot obtain a lock on data directory %s. timelockcoin is probably already running.</source>
+        <translation>Не удается получить блокировку в каталоге данных %s. timelockcoin, вероятно, уже запущен.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -5844,14 +5953,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
         <translation>Распространяется по лицензии программного обеспечения MIT, см. Сопроводительный файл COPYING или &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
-    </message>
-    <message>
-        <source>Enable automatic Zerocoin minting from specific addresses (0-1, default: %u)</source>
-        <translation>Включить автоматическую чеканку Zerocoin с определенных адресов (0-1, по умолчанию:%u)</translation>
-    </message>
-    <message>
-        <source>Enable automatic wallet backups triggered after each zTYM minting (0-1, default: %u)</source>
-        <translation>Включить автоматическое резервное копирование кошелька, запускаемое после каждого чеканки zTYM (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Enable cold staking functionality (0-1, default: %u). Disabled if staking=0</source>
@@ -5884,6 +5985,10 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Error: Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
         <translation>Ошибка: обнаружен неподдерживаемый аргумент -socks. Настройка версии SOCKS больше невозможна, поддерживаются только прокси SOCKS5.</translation>
+    </message>
+    <message>
+        <source>Exclude debugging information for a category. Can be used in conjunction with -debug=1 to output debug logs for all categories except one or more specified categories.</source>
+        <translation>Исключить отладочную информацию для категории. Может использоваться вместе с -debug=1 для вывода журналов отладки для всех категорий, кроме одной или нескольких указанных категорий.</translation>
     </message>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
@@ -5958,10 +6063,6 @@ TimelockCoin Core Wallet</source>
         <translation>Количество секунд, чтобы не допустить повторного подключения неверных пользователей (по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>Obfuscation использует точные деноминированные суммы для отправки средств, вам просто нужно будет анонимизировать еще несколько монет.</translation>
-    </message>
-    <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Выходная информация отладки (по умолчанию: %u, поставка &lt;category&gt; необязательна)</translation>
     </message>
@@ -6014,20 +6115,8 @@ TimelockCoin Core Wallet</source>
         <translation>Общая длина строки версии сети (%i) превышает максимальную длину (%i). Уменьшите количество или размер uacomments.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. TimelockCoin Core is probably already running.</source>
-        <translation>Не удалось привязать к %s на этом компьютере. TimelockCoin Core, вероятно, уже запущен.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
-        <translation>Не удалось найти достаточное количество средств, предназначенных для обфускации, для этой транзакции.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 TYM.</source>
-        <translation>Невозможно найти достаточное количество средств, не предназначенных для обфускации, для этой транзакции, которые не равны 10000 TYM.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 TYM.</source>
-        <translation>Не удалось найти достаточное количество средств для этой транзакции, которые не равны 10000 TYM.</translation>
+        <source>Unable to bind to %s on this computer. timelockcoin is probably already running.</source>
+        <translation>Не удалось привязать к %s на этом компьютере. timelockcoin, вероятно, уже запущен.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -6042,12 +6131,8 @@ TimelockCoin Core Wallet</source>
         <translation>Предупреждение: -paytxfee установлен очень высоко! Это комиссия за транзакцию, которую вы заплатите, если вы отправляете транзакцию.</translation>
     </message>
     <message>
-        <source>Warning: Peers are being disconnected due time differences. Please check that your computer's date and time are correct! If your clock is wrong TimelockCoin Core will not work properly.</source>
-        <translation>Предупреждение: пиры отключаются из-за разницы во времени. Пожалуйста, проверьте правильность даты и времени на вашем компьютере! Если ваши часы настроены не правильно, TimelockCoin Core не будет работать должным образом.</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong TimelockCoin Core will not work properly.</source>
-        <translation>Внимание: проверьте правильность даты и времени вашего компьютера! Если ваши часы ошибочны, TimelockCoin Core не будет работать должным образом.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong timelockcoin will not work properly.</source>
+        <translation>Внимание: проверьте правильность даты и времени вашего компьютера! Если ваши часы ошибочны, timelockcoin не будет работать должным образом.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -6110,10 +6195,6 @@ TimelockCoin Core Wallet</source>
         <translation>Добавьте узел для подключения и попытку сохранить соединение открытым</translation>
     </message>
     <message>
-        <source>Adding Wrapped Serials supply...</source>
-        <translation>Добавление предложения завернутых серий...</translation>
-    </message>
-    <message>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>Разрешить поиск в DNS для -addnode, -seednode и -connect</translation>
     </message>
@@ -6138,28 +6219,8 @@ TimelockCoin Core Wallet</source>
         <translation>Варианты создания блока:</translation>
     </message>
     <message>
-        <source>Calculating missing accumulators...</source>
-        <translation>Вычисление недостающих аккумуляторов ...</translation>
-    </message>
-    <message>
         <source>Cannot downgrade wallet</source>
         <translation>Нельзя понизить кошелек</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -bind address: '%s'</source>
-        <translation>Не удается разрешить -включить адрес: '%s'</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -externalip address: '%s'</source>
-        <translation>Не удается разрешить -externalip адрес: '%s'</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -whitebind address: '%s'</source>
-        <translation>Не удается разрешить -whitebind адрес: '%s'</translation>
-    </message>
-    <message>
-        <source>CoinSpend: failed check</source>
-        <translation>CoinSpend: неудачная проверка</translation>
     </message>
     <message>
         <source>Connect only to the specified node(s)</source>
@@ -6186,8 +6247,8 @@ TimelockCoin Core Wallet</source>
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The TimelockCoin Core Developers</source>
-        <translation>Copyright (C) 2015-%i Разработчики TimelockCoin Core</translation>
+        <source>Copyright (C) 2015-%i The timelockcoin developers</source>
+        <translation>Copyright (C) 2015-%i Разработчики timelockcoin</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -6196,10 +6257,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Could not parse masternode.conf</source>
         <translation>Не удалось разобрать masternode.conf</translation>
-    </message>
-    <message>
-        <source>Couldn't generate the accumulator witness</source>
-        <translation>Не удалось сгенерировать witness аккумулятор</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>
@@ -6234,10 +6291,6 @@ TimelockCoin Core Wallet</source>
         <translation>Загрузка выполнена</translation>
     </message>
     <message>
-        <source>Enable automatic Zerocoin minting (0-1, default: %u)</source>
-        <translation>Включить автоматическую чистку Zerocoin (0-1, по умолчанию: %u)</translation>
-    </message>
-    <message>
         <source>Enable publish hash transaction (locked via SwiftX) in &lt;address&gt;</source>
         <translation>Включить публикацию хеш-транзакции (заблокированной через SwiftX) в &lt;address&gt;</translation>
     </message>
@@ -6270,8 +6323,8 @@ TimelockCoin Core Wallet</source>
         <translation>Ошибка при загрузке wallet.dat: Кошелек поврежден</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of TimelockCoin Core</source>
-        <translation>Ошибка загрузки wallet.dat: Кошелек требует более новой версии TimelockCoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of timelockcoin</source>
+        <translation>Ошибка загрузки wallet.dat: Кошелек требует более новой версии timelockcoin</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -6290,6 +6343,10 @@ TimelockCoin Core Wallet</source>
         <translation>Ошибка</translation>
     </message>
     <message>
+        <source>Error: </source>
+        <translation>Ошибка:</translation>
+    </message>
+    <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
         <translation>Ошибка: произошла фатальная внутренняя ошибка, подробности см. В файле debug.log.</translation>
     </message>
@@ -6304,10 +6361,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Error: Wallet locked, unable to create transaction!</source>
         <translation>Ошибка: кошелек заблокирован, невозможно создать транзакцию!</translation>
-    </message>
-    <message>
-        <source>Failed to calculate accumulator checkpoint</source>
-        <translation>Не удалось вычислить контрольную точку аккумулятора</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -6362,8 +6415,8 @@ TimelockCoin Core Wallet</source>
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. TimelockCoin Core is shutting down.</source>
-        <translation>Инициализация проверки работоспособности не удалась. TimelockCoin Core отключается.</translation>
+        <source>Initialization sanity check failed. timelockcoin is shutting down.</source>
+        <translation>Инициализация проверки работоспособности не удалась. timelockcoin отключается.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -6378,28 +6431,8 @@ TimelockCoin Core Wallet</source>
         <translation>Недопустимый -онионный адрес или имя хоста: '%s'</translation>
     </message>
     <message>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Недопустимая сумма для -maxtxfee =&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Недопустимая сумма для -minrelaytxfee&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Недопустимая сумма для -mintxfee =&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
         <translation>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (должен быть не менее%s)</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Недопустимая сумма для -paytxfee =&lt;amount&gt;: '%s'</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation>Недопустимая сумма для -reservebalance =&lt;amount&gt;</translation>
     </message>
     <message>
         <source>Invalid amount</source>
@@ -6418,20 +6451,8 @@ TimelockCoin Core Wallet</source>
         <translation>Неверный порт обнаружен в файле masternode.conf</translation>
     </message>
     <message>
-        <source>Percentage of automatically minted Zerocoin  (1-100, default: %u)</source>
-        <translation>Процент автоматически отчеканенного Zerocoin (1-100, по умолчанию: %u)</translation>
-    </message>
-    <message>
         <source>Recalculating TYM supply...</source>
         <translation>Перерасчет предложения TYM...</translation>
-    </message>
-    <message>
-        <source>Recalculating minted ZTYM...</source>
-        <translation>Перерасчет отчеканенных ZTYM...</translation>
-    </message>
-    <message>
-        <source>Recalculating spent ZTYM...</source>
-        <translation>Перерасчет потраченных ZTYM...</translation>
     </message>
     <message>
         <source>Reindex the TYM and zTYM money supply statistics</source>
@@ -6448,10 +6469,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Selected coins value is less than payment target</source>
         <translation>Выбранная стоимость монет меньше цели платежа</translation>
-    </message>
-    <message>
-        <source>Support the zerocoin light node protocol (default: %u)</source>
-        <translation>Поддержка лайт узла zerocoin протокола (по умолчанию: %u)</translation>
     </message>
     <message>
         <source>SwiftX options:</source>
@@ -6478,8 +6495,8 @@ TimelockCoin Core Wallet</source>
 </translation>
     </message>
     <message>
-        <source>Disable all TimelockCoin specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>Отключите все специфические функции TimelockCoin (Masternodes, Zerocoin, SwiftX, Бюджетирование) (0-1, по умолчанию: %u)</translation>
+        <source>Disable all timelockcoin specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>Отключите все специфические функции timelockcoin (Masternodes, Zerocoin, SwiftX, Бюджетирование) (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -6488,10 +6505,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
         <translation>Ошибка: транзакция была отклонена! Это может произойти, если некоторые из монет в вашем кошельке уже были потрачены, например, если вы использовали копию кошелька. Dat и монеты были потрачены в копии, но не отмечены как потраченные здесь.</translation>
-    </message>
-    <message>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Ошибка. Для этой транзакции требуется комиссия за транзакцию не менее %s из-за ее количества, сложности или использования недавно полученных средств!</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
@@ -6508,14 +6521,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>In rare cases, a spend with 7 coins exceeds our maximum allowable transaction size, please retry spend using 6 or less coins</source>
         <translation>В редких случаях трата с 7 монетами превышает наш максимально допустимый размер транзакции, пожалуйста, попробуйте потратить, используя 6 или менее монет</translation>
-    </message>
-    <message>
-        <source>Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)</source>
-        <translation>Предпочтительный номинал для автоматически чеканившегося Zerocoin (1/5/10/50/100/500/1000/5000), 0 без предпочтений. default: %u)</translation>
-    </message>
-    <message>
-        <source>Specify custom backup path to add a copy of any automatic zTYM backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
-        <translation>Укажите собственный путь резервного копирования, чтобы добавить копию любой автоматической резервной копии zTYM. Если задано как dir, каждая резервная копия генерирует файл с отметкой времени. Если он установлен как файл, он будет переписывать в этот файл каждую резервную копию. Если также установлен резервный путь, произойдет 4 резервных копии</translation>
     </message>
     <message>
         <source>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</source>
@@ -6536,10 +6541,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Cannot create public spend input</source>
         <translation>Невозможно создать вход публичных расходов</translation>
-    </message>
-    <message>
-        <source>CoinSpend: Accumulator witness does not verify</source>
-        <translation>CoinSpend: Свидетель Аккумулятора не проверяет</translation>
     </message>
     <message>
         <source>Display the stake modifier calculations in the debug.log file.</source>
@@ -6576,10 +6577,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Error: No valid utxo!</source>
         <translation>Ошибка: нет действительного utxo!</translation>
-    </message>
-    <message>
-        <source>Failed to create mint</source>
-        <translation>Не удалось создать монетный двор</translation>
     </message>
     <message>
         <source>Failed to find Zerocoins in wallet.dat</source>
@@ -6626,6 +6623,10 @@ TimelockCoin Core Wallet</source>
         <translation>Загрузка адресов ...</translation>
     </message>
     <message>
+        <source>Loading banlist...</source>
+        <translation>Загрузка банлиста...</translation>
+    </message>
+    <message>
         <source>Loading block index...</source>
         <translation>Загружается индекс блока ...</translation>
     </message>
@@ -6646,10 +6647,6 @@ TimelockCoin Core Wallet</source>
         <translation>Загрузка ...</translation>
     </message>
     <message>
-        <source>Loading wallet... (%3.2f %%)</source>
-        <translation>Загрузка кошелька ... (%3.2f %%)</translation>
-    </message>
-    <message>
         <source>Loading wallet...</source>
         <translation>Загрузка кошелька ...</translation>
     </message>
@@ -6664,6 +6661,10 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Lookup(): Invalid -proxy address or hostname: '%s'</source>
         <translation>Lookup (): Invalid -proxy адрес или имя хоста: '%s'</translation>
+    </message>
+    <message>
+        <source>MNs synchronization pending...</source>
+        <translation>Ожидается синхронизация Мастернод...</translation>
     </message>
     <message>
         <source>Maintain at most &lt;n&gt; connections to peers (default: %u)</source>
@@ -6706,6 +6707,10 @@ TimelockCoin Core Wallet</source>
         <translation>Количество резервных копий пользовательского местоположения для сохранения (по умолчанию: %d)</translation>
     </message>
     <message>
+        <source>On first run, create a legacy wallet instead of a HD wallet</source>
+        <translation>При первом запуске создайте предыдущий кошелек вместо HD-кошелька</translation>
+    </message>
+    <message>
         <source>Only accept block chain matching built-in checkpoints (default: %u)</source>
         <translation>Учитывать встроенные контрольные точки с использованием цепочки блоков (по умолчанию: %u)</translation>
     </message>
@@ -6720,6 +6725,10 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Password for JSON-RPC connections</source>
         <translation>Пароль для подключений JSON-RPC</translation>
+    </message>
+    <message>
+        <source>Peers are being disconnected due time differences.</source>
+        <translation>Пиры отключены из-за разницы во времени.</translation>
     </message>
     <message>
         <source>Unable to find transaction containing mint %s</source>
@@ -6740,6 +6749,22 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Preparing for resync...</source>
         <translation>Подготовка к повторной синхронизации ...</translation>
+    </message>
+    <message>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong timelockcoin will not work properly.</source>
+        <translation>Пожалуйста, проверьте правильность даты и времени на вашем компьютере! Если ваши часы не точны, timelockcoin не будет работать должным образом.</translation>
+    </message>
+    <message>
+        <source>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</source>
+        <translation>Укажите местоположение файла журнала отладки: это может быть абсолютный путь или путь относительно каталога данных (по умолчанию: %s)</translation>
+    </message>
+    <message>
+        <source>Cannot resolve -%s address: '%s'</source>
+        <translation>Не удается разрешить -%s адрес: '%s'</translation>
+    </message>
+    <message>
+        <source>Cannot upgrade to HD wallet (already running HD support). Version: %d</source>
+        <translation>Невозможно обновить до HD-кошелька (поддержка HD уже работает). Версия: %d</translation>
     </message>
     <message>
         <source>Need destination or change address because change is not exact</source>
@@ -6774,14 +6799,6 @@ TimelockCoin Core Wallet</source>
         <translation>Перестроить индекс цепочки блоков из текущих файлов blk000 ?? .dat</translation>
     </message>
     <message>
-        <source>Receive and display P2P network alerts (default: %u)</source>
-        <translation>Получение и отображение оповещений сети P2P (по умолчанию: %u)</translation>
-    </message>
-    <message>
-        <source>Reindex the accumulator database</source>
-        <translation>Reindex база данных аккумулятора</translation>
-    </message>
-    <message>
         <source>Relay and mine data carrier transactions (default: %u)</source>
         <translation>Операции передачи данных реле и мины (по умолчанию: %u)</translation>
     </message>
@@ -6798,14 +6815,6 @@ TimelockCoin Core Wallet</source>
         <translation>Повторное сканирование ...</translation>
     </message>
     <message>
-        <source>ResetMintZerocoin finished: </source>
-        <translation>ResetMintZerocoin завершен:</translation>
-    </message>
-    <message>
-        <source>ResetSpentZerocoin finished: </source>
-        <translation>ResetSpentZerocoin завершен:</translation>
-    </message>
-    <message>
         <source>Run a thread to flush wallet periodically (default: %u)</source>
         <translation>Запустите поток, чтобы периодически очищать кошелек (по умолчанию: %u)</translation>
     </message>
@@ -6816,10 +6825,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
         <translation>Отправлять транзакции как транзакции с нулевой оплатой, если это возможно (по умолчанию: %u)</translation>
-    </message>
-    <message>
-        <source>Session timed out.</source>
-        <translation>Время сеанса истекло.</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
@@ -6864,10 +6869,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Сжать файл debug.log при запуске клиента (по умолчанию: 1, когда нет -debug)</translation>
-    </message>
-    <message>
-        <source>Signing timed out.</source>
-        <translation>Подписание закончилось.</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -6926,10 +6927,6 @@ TimelockCoin Core Wallet</source>
         <translation>Синхронизация завершена</translation>
     </message>
     <message>
-        <source>Synchronization pending...</source>
-        <translation>Ожидается синхронизация ...</translation>
-    </message>
-    <message>
         <source>Synchronizing budgets...</source>
         <translation>Синхронизация бюджетов ...</translation>
     </message>
@@ -6948,14 +6945,6 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Syncing zTYM wallet...</source>
         <translation>Синхронизация zTYM кошелька ...</translation>
-    </message>
-    <message>
-        <source>The coin spend has been used</source>
-        <translation>Расходы на монеты использовались</translation>
-    </message>
-    <message>
-        <source>The transaction did not verify</source>
-        <translation>Транзакция не подтверждена</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -7022,6 +7011,10 @@ TimelockCoin Core Wallet</source>
         <translation>Невозможно сгенерировать первоначальный ключ</translation>
     </message>
     <message>
+        <source>Unable to generate keys</source>
+        <translation>Невозможно сгенерировать ключи</translation>
+    </message>
+    <message>
         <source>Unable to sign spork message, wrong key?</source>
         <translation>Не удалось подписать сообщение , неправильный ключ?</translation>
     </message>
@@ -7032,6 +7025,10 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
         <translation>Неизвестная сеть, указанная в -onlynet: '%s'</translation>
+    </message>
+    <message>
+        <source>Unsupported logging category %s=%s.</source>
+        <translation>Неподдерживаемая категория протоколирования %s =%s.</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format</source>
@@ -7063,7 +7060,7 @@ TimelockCoin Core Wallet</source>
     </message>
     <message>
         <source>Value is below the smallest available denomination (= 1) of zTYM</source>
-        <translation>Значение ниже наименьшего доступного номинала (= 1) zPiv</translation>
+        <translation>Значение ниже наименьшего доступного номинала (= 1) zTYM</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>
@@ -7078,8 +7075,8 @@ TimelockCoin Core Wallet</source>
         <translation>Кошелек %s находится за пределами каталога данных %s</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart TimelockCoin Core to complete</source>
-        <translation>Кошелек необходимо переписать: перезапустите TimelockCoin Core, чтобы завершить</translation>
+        <source>Wallet needed to be rewritten: restart timelockcoin to complete</source>
+        <translation>Кошелек необходимо переписать: перезапустите timelockcoin, чтобы завершить</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -7122,6 +7119,10 @@ TimelockCoin Core Wallet</source>
         <translation>Опции уведомления ZeroMQ:</translation>
     </message>
     <message>
+        <source>Zerocoin minting available only on regtest</source>
+        <translation>Чеканка zerocoin доступна только на regtest</translation>
+    </message>
+    <message>
         <source>Zerocoin options:</source>
         <translation>Варианты Zerocoin:</translation>
     </message>
@@ -7147,6 +7148,10 @@ TimelockCoin Core Wallet</source>
     <message>
         <source>TextLabel</source>
         <translation>Текстовая метка</translation>
+    </message>
+    <message>
+        <source>Include delegated</source>
+        <translation>Включить делегированного</translation>
     </message>
     <message>
         <source>PushButton</source>

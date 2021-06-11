@@ -1,6 +1,6 @@
 // Copyright (c) 2014 The Bitcoin developers
 // Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -343,4 +343,47 @@ bool CBitcoinSecret::SetString(const char* pszSecret)
 bool CBitcoinSecret::SetString(const std::string& strSecret)
 {
     return SetString(strSecret.c_str());
+}
+
+CTxDestination DestinationFor(const CKeyID& keyID, const CChainParams::Base58Type addrType)
+{
+    CBitcoinAddress addr(keyID, addrType);
+    if (!addr.IsValid()) throw std::runtime_error("Error, trying to decode an invalid keyID");
+    return addr.Get();
+}
+
+std::string EncodeDestination(const CTxDestination& dest, const CChainParams::Base58Type addrType)
+{
+    CBitcoinAddress addr(dest, addrType);
+    if (!addr.IsValid()) return "";
+    return addr.ToString();
+}
+
+CTxDestination DecodeDestination(const std::string& str)
+{
+    return CBitcoinAddress(str).Get();
+}
+
+CTxDestination DecodeDestination(const std::string& str, bool& isStaking)
+{
+    CBitcoinAddress addr(str);
+    isStaking = addr.IsStakingAddress();
+    return addr.Get();
+}
+
+bool IsValidDestinationString(const std::string& str, bool fStaking, const CChainParams& params)
+{
+    return IsValidDestinationString(str, fStaking);
+}
+
+bool IsValidDestinationString(const std::string& str)
+{
+    CBitcoinAddress address(str);
+    return address.IsValid();
+}
+
+bool IsValidDestinationString(const std::string& str, bool isStaking)
+{
+    CBitcoinAddress address(str);
+    return address.IsValid() && (address.IsStakingAddress() == isStaking);
 }

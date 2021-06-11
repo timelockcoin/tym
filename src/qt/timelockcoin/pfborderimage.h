@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef TimelockCoin_PFBorderImage_H
-#define TimelockCoin_PFBorderImage_H
+#ifndef timelockcoin_PFBorderImage_H
+#define timelockcoin_PFBorderImage_H
 
 #include <QPainter>
 #include <QPixmap>
@@ -53,4 +53,4 @@ protected:
 
 };
 
-#endif //TimelockCoin_PFBorderImage_H
+#endif //timelockcoin_PFBorderImage_H

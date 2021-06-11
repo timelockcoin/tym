@@ -30,9 +30,7 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Calculated accumulator checkpoint is not what is recorded by block index"),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Cannot obtain a lock on data directory %s. TimelockCoin Core is probably already "
+"Cannot obtain a lock on data directory %s. TimelockCoin is probably already "
 "running."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Change automatic finalized budget voting behavior. mode=auto: Vote for only "
@@ -47,10 +45,7 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Delete all zerocoin spends and mints that have been recorded to the "
-"blockchain database and reindex them (0-1, default: %u)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Disable all TimelockCoin specific functionality (Masternodes, Zerocoin, SwiftX, "
+"Disable all TimelockCoin specific functionality (Masternodes, SwiftX, "
 "Budgeting) (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Distributed under the MIT software license, see the accompanying file "
@@ -58,16 +53,9 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Enable SwiftX, show confirmations for locked transactions (bool, default: %s)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Enable automatic Zerocoin minting from specific addresses (0-1, default: %u)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Enable automatic wallet backups triggered after each zTYM minting (0-1, "
-"default: %u)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Enable cold staking functionality (0-1, default: %u). Disabled if staking=0"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Enable or disable staking functionality for TYM inputs (0-1, default: %u)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Enable or disable staking functionality for zTYM inputs (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Enable spork administration functionality with the appropriate private key."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
@@ -82,13 +70,14 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "in your wallet were already spent, such as if you used a copy of wallet.dat "
 "and coins were spent in the copy but not marked as spent here."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Error: This transaction requires a transaction fee of at least %s because of "
-"its amount, complexity, or use of recently received funds!"),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Error: Unsupported argument -checklevel found. Checklevel must be level 4."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Error: Unsupported argument -socks found. Setting SOCKS version isn't "
 "possible anymore, only SOCKS5 proxies are supported."),
+QT_TRANSLATE_NOOP("timelockcoin-core", ""
+"Exclude debugging information for a category. Can be used in conjunction "
+"with -debug=1 to output debug logs for all categories except one or more "
+"specified categories."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Execute command when a relevant alert is received or we see a really long "
 "fork (%s in cmd is replaced by message)"),
@@ -148,13 +137,10 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Number of seconds to keep misbehaving peers from reconnecting (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Obfuscation uses exact denominated amounts to send funds, you might simply "
-"need to anonymize some more coins."),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Output debugging information (default: %u, supplying <category> is optional)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Preferred Denomination for automatically minted Zerocoin  "
-"(1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)"),
+"Please check that your computer's date and time are correct! If your clock "
+"is wrong TimelockCoin Core will not work properly."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Query for peer addresses via DNS lookup, if low on addresses (default: 1 "
 "unless -connect)"),
@@ -177,14 +163,12 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Show N confirmations for a successfully locked transaction (0-9999, default: "
 "%u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Specify custom backup path to add a copy of any automatic zTYM backup. If "
-"set as dir, every backup generates a timestamped file. If set as file, will "
-"rewrite to that file every backup. If backuppath is set as well, 4 backups "
-"will happen"),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Specify custom backup path to add a copy of any wallet backup. If set as "
 "dir, every backup generates a timestamped file. If set as file, will rewrite "
 "to that file every backup."),
+QT_TRANSLATE_NOOP("timelockcoin-core", ""
+"Specify location of debug log file: this can be an absolute path or a path "
+"relative to the data directory (default: %s)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Support filtering of blocks and transaction with bloom filters (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
@@ -208,14 +192,6 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Unable to bind to %s on this computer. TimelockCoin Core is probably already running."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Unable to locate enough Obfuscation denominated funds for this transaction."),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 10000 TYM."),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Unable to locate enough funds for this transaction that are not equal 10000 "
-"TYM."),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
@@ -224,10 +200,6 @@ QT_TRANSLATE_NOOP("timelockcoin-core", ""
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Warning: -paytxfee is set very high! This is the transaction fee you will "
 "pay if you send a transaction."),
-QT_TRANSLATE_NOOP("timelockcoin-core", ""
-"Warning: Peers are being disconnected due time differences. Please check "
-"that your computer's date and time are correct! If your clock is wrong TimelockCoin "
-"Core will not work properly."),
 QT_TRANSLATE_NOOP("timelockcoin-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
 "your clock is wrong TimelockCoin Core will not work properly."),
@@ -262,7 +234,6 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Accept command line and JSON-RPC command
 QT_TRANSLATE_NOOP("timelockcoin-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Accept public REST requests (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Add a node to connect to and attempt to keep the connection open"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Adding Wrapped Serials supply..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Allow DNS lookups for -addnode, -seednode and -connect"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Always query for peer addresses via DNS lookup (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Append comment to the user agent string"),
@@ -270,14 +241,10 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Attempt to force blockchain corruption r
 QT_TRANSLATE_NOOP("timelockcoin-core", "Attempt to recover private keys from a corrupt wallet.dat"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Automatically create Tor hidden service (default: %d)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Block creation options:"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Calculating missing accumulators..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Cannot create public spend input"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Cannot downgrade wallet"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Cannot resolve -bind address: '%s'"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Cannot resolve -externalip address: '%s'"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Cannot resolve -whitebind address: '%s'"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "CoinSpend: Accumulator witness does not verify"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "CoinSpend: failed check"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Cannot resolve -%s address: '%s'"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Cannot upgrade to HD wallet (already running HD support). Version: %d"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Connect only to the specified node(s)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Connect through SOCKS5 proxy"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Connect to a node to retrieve peer addresses, and disconnect"),
@@ -287,7 +254,6 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Copyright (C) 2014-%i The Dash Core Deve
 QT_TRANSLATE_NOOP("timelockcoin-core", "Copyright (C) 2015-%i The TimelockCoin Core Developers"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Could not parse masternode.conf"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Couldn't generate the accumulator witness"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Debugging/Testing options:"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Delete blockchain folders and resync from scratch"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Disable OS notifications for incoming transactions (default: %u)"),
@@ -298,7 +264,6 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Display verbose coin stake messages in t
 QT_TRANSLATE_NOOP("timelockcoin-core", "Do not load the wallet and disable wallet RPC calls"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Do you want to rebuild the block database now?"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Done loading"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Enable automatic Zerocoin minting (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Enable publish hash block in <address>"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Enable publish hash transaction (locked via SwiftX) in <address>"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Enable publish hash transaction in <address>"),
@@ -315,23 +280,18 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Error loading wallet.dat: Wallet corrupt
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error loading wallet.dat: Wallet requires newer version of TimelockCoin Core"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error opening block database"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error reading from database, shutting down."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Error writing zerocoinDB to disk"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Error: "),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error: A fatal internal error occured, see debug.log for details"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error: A fatal internal error occurred, see debug.log for details"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error: Disk space is low!"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error: No valid utxo!"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error: Unsupported argument -tor found, use -onion."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Error: Wallet locked, unable to create transaction!"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to calculate accumulator checkpoint"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to create mint"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to find Zerocoins in wallet.dat"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to parse host:port string"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to parse public spend"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to read block"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to select a zerocoin"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to wipe zerocoinDB"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Failed to write coin serial number into wallet"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Fee (in TYM/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Force safe mode (default: %u)"),
@@ -347,12 +307,8 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Initialization sanity check failed. Time
 QT_TRANSLATE_NOOP("timelockcoin-core", "Insufficient funds"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Insufficient funds."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid -onion address or hostname: '%s'"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount for -maxtxfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount for -minrelaytxfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount for -mintxfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount for -%s=<amount>: '%s'"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount for -paytxfee=<amount>: '%s' (must be at least %s)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount for -paytxfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount for -reservebalance=<amount>"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid amount"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid masternodeprivkey. Please see documenation."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Invalid netmask specified in -whitelist: '%s'"),
@@ -363,16 +319,17 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Line: %d"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Listen for JSON-RPC connections on <port> (default: %u or testnet: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Listen for connections on <port> (default: %u or testnet: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Loading addresses..."),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Loading banlist..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Loading block index..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Loading budget cache..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Loading masternode cache..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Loading masternode payment cache..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Loading sporks..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Loading wallet... (%3.2f %%)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Loading wallet..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Location of the auth cookie (default: data dir)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Lock masternodes from masternode configuration file (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Lookup(): Invalid -proxy address or hostname: '%s'"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "MNs synchronization pending..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Maintain at most <n> connections to peers (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Masternode options:"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Maximum per-connection receive buffer, <n>*1000 bytes (default: %u)"),
@@ -384,11 +341,12 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Node relay options:"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Not enough file descriptors available."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Number of automatic wallet backups (default: 10)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Number of custom location backups to retain (default: %d)"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "On first run, create a legacy wallet instead of a HD wallet"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Only accept block chain matching built-in checkpoints (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Only connect to nodes in network <net> (ipv4, ipv6 or onion)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Options:"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Password for JSON-RPC connections"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Percentage of automatically minted Zerocoin  (1-100, default: %u)"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Peers are being disconnected due time differences."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Preparing for resync..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Prepend debug output with timestamp (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Print version and exit"),
@@ -398,24 +356,15 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Randomly drop 1 of every <n> network mes
 QT_TRANSLATE_NOOP("timelockcoin-core", "Randomly fuzz 1 of every <n> network messages"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Rebuild block chain index from current blk000??.dat files"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Recalculating TYM supply..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Recalculating minted ZTYM..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Recalculating spent ZTYM..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Receive and display P2P network alerts (default: %u)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Reindex the TYM and zTYM money supply statistics"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Reindex the accumulator database"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Reindexing zerocoin database..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Reindexing zerocoin failed"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Reindex the TYM money supply statistics"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Relay and mine data carrier transactions (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Relay non-P2SH multisig (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Rescan the block chain for missing wallet transactions"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Rescanning..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "ResetMintZerocoin finished: "),
-QT_TRANSLATE_NOOP("timelockcoin-core", "ResetSpentZerocoin finished: "),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Run a thread to flush wallet periodically (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Run in the background as a daemon and accept commands"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Selected coins value is less than payment target"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Send transactions as zero-fee transactions if possible (default: %u)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Session timed out."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Set database cache size in megabytes (%d to %d, default: %d)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Set external address:port to get to this masternode (example: %s)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Set key pool size to <n> (default: %u)"),
@@ -427,7 +376,6 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Set the number of threads to service RPC
 QT_TRANSLATE_NOOP("timelockcoin-core", "Sets the DB_PRIVATE flag in the wallet db environment (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Show all debugging options (usage: --help -help-debug)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Shrink debug.log file on client startup (default: 1 when no -debug)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Signing timed out."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Signing transaction failed"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Specify configuration file (default: %s)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Specify connection timeout in milliseconds (minimum: 1, default: %d)"),
@@ -440,18 +388,13 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Spend Valid"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Spend unconfirmed change when sending transactions (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Staking options:"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Stop running after importing blocks from disk (default: %u)"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Support the zerocoin light node protocol (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "SwiftX options:"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Synchronization failed"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Synchronization finished"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Synchronization pending..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Synchronizing budgets..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Synchronizing masternode winners..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Synchronizing masternodes..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Synchronizing sporks..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Syncing zTYM wallet..."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "The coin spend has been used"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "The transaction did not verify"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "This help message"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "This is experimental software."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "This is intended for regression testing tools and app development."),
@@ -470,9 +413,11 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Unable to bind to %s on this computer (b
 QT_TRANSLATE_NOOP("timelockcoin-core", "Unable to find transaction containing mint %s"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Unable to find transaction containing mint, txHash: %s"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Unable to generate initial key"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Unable to generate keys"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Unable to sign spork message, wrong key?"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Unable to start HTTP server. See debug log for details."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Unknown network specified in -onlynet: '%s'"),
+QT_TRANSLATE_NOOP("timelockcoin-core", "Unsupported logging category %s=%s."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Upgrade wallet to latest format"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Use UPnP to map the listening port (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Use UPnP to map the listening port (default: 1 when listening)"),
@@ -481,7 +426,6 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Use block spam filter (default: %u)"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Use the test network"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "User Agent comment (%s) contains unsafe characters."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Username for JSON-RPC connections"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Value is below the smallest available denomination (= 1) of zTYM"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Verifying wallet..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Wallet %s resides outside data directory %s"),
@@ -492,11 +436,9 @@ QT_TRANSLATE_NOOP("timelockcoin-core", "Warning"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Warning: This version is obsolete, upgrade required!"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Warning: Unsupported argument -benchmark ignored, use -debug=bench."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Warning: Unsupported argument -debugnet ignored, use -debug=net."),
-QT_TRANSLATE_NOOP("timelockcoin-core", "You don't have enough Zerocoins in your wallet"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "You need to rebuild the database using -reindex to change -txindex"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "Zapping all transactions from wallet..."),
 QT_TRANSLATE_NOOP("timelockcoin-core", "ZeroMQ notification options:"),
-QT_TRANSLATE_NOOP("timelockcoin-core", "Zerocoin options:"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "isValid(): Invalid -proxy address or hostname: '%s'"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "on startup"),
 QT_TRANSLATE_NOOP("timelockcoin-core", "wallet.dat corrupt, salvage failed"),

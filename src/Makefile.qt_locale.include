@@ -1,0 +1,14 @@
+QT_TS = \
+  qt/locale/timelockcoin_de.ts \
+  qt/locale/timelockcoin_en.ts \
+  qt/locale/timelockcoin_en_US.ts \
+  qt/locale/timelockcoin_es.ts \
+  qt/locale/timelockcoin_fr_FR.ts \
+  qt/locale/timelockcoin_hr_HR.ts \
+  qt/locale/timelockcoin_it.ts \
+  qt/locale/timelockcoin_ko_KR.ts \
+  qt/locale/timelockcoin_nl.ts \
+  qt/locale/timelockcoin_pl.ts \
+  qt/locale/timelockcoin_ru.ts \
+  qt/locale/timelockcoin_tr.ts \
+  qt/locale/timelockcoin_zh_CN.ts

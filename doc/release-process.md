@@ -5,8 +5,8 @@ Release Process
 
 ### Before every release candidate
 
-* Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/TimelockCoin-Project/TimelockCoin/blob/master/doc/translation_process.md#synchronising-translations).
-* Update manpages, see [gen-manpages.sh](https://github.com/timelockcoin-project/timelockcoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update translations (ping Fuzzbawls on Discord) see [translation_process.md](https://github.com/timelockcoinvps-project/timelockcoin/blob/master/doc/translation_process.md#synchronising-translations).
+* Update manpages, see [gen-manpages.sh](https://github.com/timelockcoinvps-project/timelockcoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`)
 
 ### Before every major and minor release
@@ -49,12 +49,12 @@ If you're using the automated script (found in [contrib/gitian-build.py](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/timelockcoin-project/gitian.sigs.git
-    git clone https://github.com/timelockcoin-project/timelockcoin-detached-sigs.git
+    git clone https://github.com/timelockcoinvps-project/gitian.sigs.git
+    git clone https://github.com/timelockcoinvps-project/timelockcoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/timelockcoin-project/timelockcoin.git
+    git clone https://github.com/timelockcoinvps-project/timelockcoin.git
 
-### TimelockCoin maintainers/release engineers, suggestion for writing release notes
+### timelockcoin maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -124,7 +124,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign TimelockCoin Core for Linux, Windows, and macOS:
+### Build and sign timelockcoin for Linux, Windows, and macOS:
 
     pushd ./gitian-builder
     ./bin/gbuild --num-make 2 --memory 3000 --commit timelockcoin=v${VERSION} ../timelockcoin/contrib/gitian-descriptors/gitian-linux.yml
@@ -211,7 +211,7 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/macOS detached signatures:
 
 - Once the Windows/macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [timelockcoin-detached-sigs](https://github.com/timelockcoin-Project/timelockcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [timelockcoin-detached-sigs](https://github.com/timelockcoinvps-project/timelockcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed macOS binary:
 
@@ -229,7 +229,6 @@ Create (and optionally verify) the signed Windows binaries:
     ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../timelockcoin/contrib/gitian-descriptors/gitian-win-signer.yml
     ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../timelockcoin/contrib/gitian-descriptors/gitian-win-signer.yml
     mv build/out/timelockcoin-*win64-setup.exe ../timelockcoin-${VERSION}-win64-setup.exe
-    mv build/out/timelockcoin-*win32-setup.exe ../timelockcoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed macOS/Windows binaries:
@@ -259,8 +258,6 @@ timelockcoin-${VERSION}-x86_64-linux-gnu.tar.gz
 timelockcoin-${VERSION}-osx64.tar.gz
 timelockcoin-${VERSION}-osx.dmg
 timelockcoin-${VERSION}.tar.gz
-timelockcoin-${VERSION}-win32-setup.exe
-timelockcoin-${VERSION}-win32.zip
 timelockcoin-${VERSION}-win64-setup.exe
 timelockcoin-${VERSION}-win64.zip
 ```
@@ -288,6 +285,6 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/TimelockCoin-Project/TimelockCoin/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/timelockcoinvps-project/timelockcoin/releases/new) with a link to the archived release notes.
 
   - Celebrate

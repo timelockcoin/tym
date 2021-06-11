@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +13,7 @@
 #include <QTimer>
 #include <QProgressBar>
 
-class TimelockCoinGUI;
+class timelockcoinGUI;
 class WalletModel;
 class ClientModel;
 
@@ -25,7 +26,7 @@ class TopBar : public PWidget
     Q_OBJECT
 
 public:
-    explicit TopBar(TimelockCoinGUI* _mainWindow, QWidget *parent = nullptr);
+    explicit TopBar(timelockcoinGUI* _mainWindow, QWidget *parent = nullptr);
     ~TopBar();
 
     void showTop();
@@ -34,27 +35,34 @@ public:
     void loadWalletModel() override;
     void loadClientModel() override;
 
+    void openPassPhraseDialog(AskPassphraseDialog::Mode mode, AskPassphraseDialog::Context ctx);
     void encryptWallet();
-public slots:
-    void updateBalances(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, const CAmount& LockedCollateralBalance,
-                        const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
+    void showUpgradeDialog();
+
+    void run(int type) override;
+    void onError(QString error, int type) override;
+    void unlockWallet();
+
+public Q_SLOTS:
+    void updateBalances(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
                         const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance,
-                        const CAmount& delegatedBalance, const CAmount& coldStakedBalance);
+                        const CAmount& delegatedBalance, const CAmount& coldStakedBalance, const CAmount& LockedCollateralBalance);
     void updateDisplayUnit();
 
     void setNumConnections(int count);
     void setNumBlocks(int count);
     void setStakingStatusActive(bool fActive);
     void updateStakingStatus();
+    void updateHDState(const bool& upgraded, const QString& upgradeError);
 
-signals:
+Q_SIGNALS:
     void themeChanged(bool isLight);
     void walletSynced(bool isSync);
     void onShowHideColdStakingChanged(bool show);
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
-private slots:
+private Q_SLOTS:
     void onBtnReceiveClicked();
     void onThemeClicked();
     void onBtnLockClicked();
@@ -73,6 +81,8 @@ private:
     int nDisplayUnit = -1;
     QTimer* timerStakingIcon = nullptr;
     bool isInitializing = true;
+
+    void updateTorIcon();
 };
 
 #endif // TOPBAR_H

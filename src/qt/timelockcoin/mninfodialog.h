@@ -1,12 +1,12 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef MNINFODIALOG_H
 #define MNINFODIALOG_H
 
-#include <QDialog>
+#include "qt/timelockcoin/focuseddialog.h"
 #include "qt/timelockcoin/snackbar.h"
 
 class WalletModel;
@@ -15,7 +15,7 @@ namespace Ui {
 class MnInfoDialog;
 }
 
-class MnInfoDialog : public QDialog
+class MnInfoDialog : public FocusedDialog
 {
     Q_OBJECT
 
@@ -27,8 +27,8 @@ public:
 
     void setData(QString privKey, QString name, QString address, QString txId, QString outputIndex, QString status);
 
-public slots:
-    void closeDialog();
+public Q_SLOTS:
+    void reject() override;
 
 private:
     Ui::MnInfoDialog *ui;

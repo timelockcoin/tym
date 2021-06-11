@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,13 +10,15 @@
 
 #define ADDRESS_SIZE 12
 
-QWidget* TxViewHolder::createHolder(int pos){
+QWidget* TxViewHolder::createHolder(int pos)
+{
     if (!txRow) txRow = new TxRow();
     txRow->init(isLightTheme);
     return txRow;
 }
 
-void TxViewHolder::init(QWidget* holder,const QModelIndex &index, bool isHovered, bool isSelected) const{
+void TxViewHolder::init(QWidget* holder,const QModelIndex &index, bool isHovered, bool isSelected) const
+{
     TxRow *txRow = static_cast<TxRow*>(holder);
     txRow->updateStatus(isLightTheme, isHovered, isSelected);
 
@@ -28,12 +30,9 @@ void TxViewHolder::init(QWidget* holder,const QModelIndex &index, bool isHovered
     QString label = indexType.data(Qt::DisplayRole).toString();
     int type = rIndex.data(TransactionTableModel::TypeRole).toInt();
 
-    if(type != TransactionRecord::ZerocoinMint &&
-            type !=  TransactionRecord::ZerocoinSpend_Change_zPiv &&
-            type !=  TransactionRecord::StakeZTYM &&
-            type != TransactionRecord::Other){
+    if (type != TransactionRecord::Other) {
         QString address = rIndex.data(Qt::DisplayRole).toString();
-        if(address.length() > 20) {
+        if (address.length() > 20) {
             address = address.left(ADDRESS_SIZE) + "..." + address.right(ADDRESS_SIZE);
         }
         label += " " + address;
@@ -51,6 +50,7 @@ void TxViewHolder::init(QWidget* holder,const QModelIndex &index, bool isHovered
     txRow->setType(isLightTheme, type, !isUnconfirmed);
 }
 
-QColor TxViewHolder::rectColor(bool isHovered, bool isSelected) {
+QColor TxViewHolder::rectColor(bool isHovered, bool isSelected)
+{
     return getRowColor(isLightTheme, isHovered, isSelected);
 }

@@ -49,10 +49,10 @@ git config --global user.email "MY_NAME@example.com"
 Fetching the Build Script
 --------------------------
 
-The build script we'll be using is contained in the TimelockCoin github repository ([contrib/gitian-build.py](https://github.com/timelockcoin-project/timelockcoin/blob/master/contrib/gitian-build.py)). Since this is a completely fresh environment, we haven't yet cloned the TimelockCoin repository and will need to fetch this script with the following commands:
+The build script we'll be using is contained in the timelockcoin github repository ([contrib/gitian-build.py](https://github.com/timelockcoinvps-project/timelockcoin/blob/master/contrib/gitian-build.py)). Since this is a completely fresh environment, we haven't yet cloned the timelockcoin repository and will need to fetch this script with the following commands:
 
 ```bash
-curl -L -O https://raw.githubusercontent.com/TimelockCoin-Project/TimelockCoin/master/contrib/gitian-build.py
+curl -L -O https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/master/contrib/gitian-build.py
 chmod +x gitian-build.py
 ```
 

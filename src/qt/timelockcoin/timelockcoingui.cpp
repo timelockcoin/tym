@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,6 +19,9 @@
 #include "qt/timelockcoin/defaultdialog.h"
 #include "qt/timelockcoin/settings/settingsfaqwidget.h"
 
+#include "init.h"
+#include "util.h"
+
 #include <QDesktopWidget>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -27,7 +31,6 @@
 #include <QKeySequence>
 #include <QWindowStateChangeEvent>
 
-#include "util.h"
 
 #define BASE_WINDOW_WIDTH 1200
 #define BASE_WINDOW_HEIGHT 740
@@ -35,9 +38,9 @@
 #define BASE_WINDOW_MIN_WIDTH 1100
 
 
-const QString TimelockCoinGUI::DEFAULT_WALLET = "~Default";
+const QString timelockcoinGUI::DEFAULT_WALLET = "~Default";
 
-TimelockCoinGUI::TimelockCoinGUI(const NetworkStyle* networkStyle, QWidget* parent) :
+timelockcoinGUI::timelockcoinGUI(const NetworkStyle* networkStyle, QWidget* parent) :
         QMainWindow(parent),
         clientModel(0){
 
@@ -63,25 +66,20 @@ TimelockCoinGUI::TimelockCoinGUI(const NetworkStyle* networkStyle, QWidget* pare
     enableWallet = false;
 #endif // ENABLE_WALLET
 
-    QString windowTitle = tr("TimelockCoin Core") + " - ";
-    windowTitle += ((enableWallet) ? tr("Wallet") : tr("Node"));
+    QString windowTitle = QString::fromStdString(GetArg("-windowtitle", ""));
+    if (windowTitle.isEmpty()) {
+        windowTitle = tr("TimelockCoin") + " - ";
+        windowTitle += ((enableWallet) ? tr("Wallet") : tr("Node"));
+    }
     windowTitle += " " + networkStyle->getTitleAddText();
     setWindowTitle(windowTitle);
 
-#ifndef Q_OS_MAC
     QApplication::setWindowIcon(networkStyle->getAppIcon());
     setWindowIcon(networkStyle->getAppIcon());
-#else
-    MacDockIconHandler::instance()->setIcon(networkStyle->getAppIcon());
-#endif
-
-
-
 
 #ifdef ENABLE_WALLET
     // Create wallet frame
-    if(enableWallet){
-
+    if (enableWallet) {
         QFrame* centralWidget = new QFrame(this);
         this->setMinimumWidth(BASE_WINDOW_MIN_WIDTH);
         this->setMinimumHeight(BASE_WINDOW_MIN_HEIGHT);
@@ -128,7 +126,6 @@ TimelockCoinGUI::TimelockCoinGUI(const NetworkStyle* networkStyle, QWidget* pare
         sendWidget = new SendWidget(this);
         receiveWidget = new ReceiveWidget(this);
         addressesWidget = new AddressesWidget(this);
-        privacyWidget = new PrivacyWidget(this);
         masterNodesWidget = new MasterNodesWidget(this);
         coldStakingWidget = new ColdStakingWidget(this);
         settingsWidget = new SettingsWidget(this);
@@ -138,7 +135,6 @@ TimelockCoinGUI::TimelockCoinGUI(const NetworkStyle* networkStyle, QWidget* pare
         stackedContainer->addWidget(sendWidget);
         stackedContainer->addWidget(receiveWidget);
         stackedContainer->addWidget(addressesWidget);
-        stackedContainer->addWidget(privacyWidget);
         stackedContainer->addWidget(masterNodesWidget);
         stackedContainer->addWidget(coldStakingWidget);
         stackedContainer->addWidget(settingsWidget);
@@ -171,7 +167,8 @@ TimelockCoinGUI::TimelockCoinGUI(const NetworkStyle* networkStyle, QWidget* pare
 
 }
 
-void TimelockCoinGUI::createActions(const NetworkStyle* networkStyle){
+void timelockcoinGUI::createActions(const NetworkStyle* networkStyle)
+{
     toggleHideAction = new QAction(networkStyle->getAppIcon(), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
@@ -180,14 +177,15 @@ void TimelockCoinGUI::createActions(const NetworkStyle* networkStyle){
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
 
-    connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
-    connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
+    connect(toggleHideAction, &QAction::triggered, this, &timelockcoinGUI::toggleHidden);
+    connect(quitAction, &QAction::triggered, qApp, &QApplication::quit);
 }
 
 /**
  * Here add every event connection
  */
-void TimelockCoinGUI::connectActions() {
+void timelockcoinGUI::connectActions()
+{
     QShortcut *consoleShort = new QShortcut(this);
     consoleShort->setKey(QKeySequence(SHORT_KEY + Qt::Key_C));
     connect(consoleShort, &QShortcut::activated, [this](){
@@ -195,26 +193,26 @@ void TimelockCoinGUI::connectActions() {
         settingsWidget->showDebugConsole();
         goToSettings();
     });
-    connect(topBar, &TopBar::showHide, this, &TimelockCoinGUI::showHide);
-    connect(topBar, &TopBar::themeChanged, this, &TimelockCoinGUI::changeTheme);
+    connect(topBar, &TopBar::showHide, this, &timelockcoinGUI::showHide);
+    connect(topBar, &TopBar::themeChanged, this, &timelockcoinGUI::changeTheme);
     connect(topBar, &TopBar::onShowHideColdStakingChanged, navMenu, &NavMenuWidget::onShowHideColdStakingChanged);
-    connect(settingsWidget, &SettingsWidget::showHide, this, &TimelockCoinGUI::showHide);
-    connect(sendWidget, &SendWidget::showHide, this, &TimelockCoinGUI::showHide);
-    connect(receiveWidget, &ReceiveWidget::showHide, this, &TimelockCoinGUI::showHide);
-    connect(addressesWidget, &AddressesWidget::showHide, this, &TimelockCoinGUI::showHide);
-    connect(privacyWidget, &PrivacyWidget::showHide, this, &TimelockCoinGUI::showHide);
-    connect(masterNodesWidget, &MasterNodesWidget::showHide, this, &TimelockCoinGUI::showHide);
-    connect(masterNodesWidget, &MasterNodesWidget::execDialog, this, &TimelockCoinGUI::execDialog);
-    connect(coldStakingWidget, &ColdStakingWidget::showHide, this, &TimelockCoinGUI::showHide);
-    connect(coldStakingWidget, &ColdStakingWidget::execDialog, this, &TimelockCoinGUI::execDialog);
-    connect(settingsWidget, &SettingsWidget::execDialog, this, &TimelockCoinGUI::execDialog);
+    connect(settingsWidget, &SettingsWidget::showHide, this, &timelockcoinGUI::showHide);
+    connect(sendWidget, &SendWidget::showHide, this, &timelockcoinGUI::showHide);
+    connect(receiveWidget, &ReceiveWidget::showHide, this, &timelockcoinGUI::showHide);
+    connect(addressesWidget, &AddressesWidget::showHide, this, &timelockcoinGUI::showHide);
+    connect(masterNodesWidget, &MasterNodesWidget::showHide, this, &timelockcoinGUI::showHide);
+    connect(masterNodesWidget, &MasterNodesWidget::execDialog, this, &timelockcoinGUI::execDialog);
+    connect(coldStakingWidget, &ColdStakingWidget::showHide, this, &timelockcoinGUI::showHide);
+    connect(coldStakingWidget, &ColdStakingWidget::execDialog, this, &timelockcoinGUI::execDialog);
+    connect(settingsWidget, &SettingsWidget::execDialog, this, &timelockcoinGUI::execDialog);
 }
 
 
-void TimelockCoinGUI::createTrayIcon(const NetworkStyle* networkStyle) {
+void timelockcoinGUI::createTrayIcon(const NetworkStyle* networkStyle)
+{
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("TimelockCoin Core client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("TimelockCoin client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getAppIcon());
     trayIcon->hide();
@@ -222,8 +220,8 @@ void TimelockCoinGUI::createTrayIcon(const NetworkStyle* networkStyle) {
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-//
-TimelockCoinGUI::~TimelockCoinGUI() {
+timelockcoinGUI::~timelockcoinGUI()
+{
     // Unsubscribe from notifications from core
     unsubscribeFromCoreSignals();
 
@@ -237,16 +235,17 @@ TimelockCoinGUI::~TimelockCoinGUI() {
 
 
 /** Get restart command-line parameters and request restart */
-void TimelockCoinGUI::handleRestart(QStringList args){
+void timelockcoinGUI::handleRestart(QStringList args)
+{
     if (!ShutdownRequested())
-        emit requestedRestart(args);
+        Q_EMIT requestedRestart(args);
 }
 
 
-void TimelockCoinGUI::setClientModel(ClientModel* clientModel) {
+void timelockcoinGUI::setClientModel(ClientModel* clientModel)
+{
     this->clientModel = clientModel;
-    if(this->clientModel) {
-
+    if (this->clientModel) {
         // Create system tray menu (or setup the dock menu) that late to prevent users from calling actions,
         // while the client has not yet fully loaded
         createTrayIconMenu();
@@ -257,9 +256,9 @@ void TimelockCoinGUI::setClientModel(ClientModel* clientModel) {
         settingsWidget->setClientModel(clientModel);
 
         // Receive and report messages from client model
-        connect(clientModel, SIGNAL(message(QString, QString, unsigned int)), this, SLOT(message(QString, QString, unsigned int)));
-        connect(topBar, SIGNAL(walletSynced(bool)), dashboard, SLOT(walletSynced(bool)));
-        connect(topBar, SIGNAL(walletSynced(bool)), coldStakingWidget, SLOT(walletSynced(bool)));
+        connect(clientModel, &ClientModel::message, this, &timelockcoinGUI::message);
+        connect(topBar, &TopBar::walletSynced, dashboard, &DashboardWidget::walletSynced);
+        connect(topBar, &TopBar::walletSynced, coldStakingWidget, &ColdStakingWidget::walletSynced);
 
         // Get restart command-line parameters and handle restart
         connect(settingsWidget, &SettingsWidget::handleRestart, [this](QStringList arg){handleRestart(arg);});
@@ -281,45 +280,53 @@ void TimelockCoinGUI::setClientModel(ClientModel* clientModel) {
     }
 }
 
-void TimelockCoinGUI::createTrayIconMenu() {
+void timelockcoinGUI::createTrayIconMenu()
+{
 #ifndef Q_OS_MAC
-    // return if trayIcon is unset (only on non-Mac OSes)
+    // return if trayIcon is unset (only on non-macOSes)
     if (!trayIcon)
         return;
 
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
 
-    connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
-            this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
+    connect(trayIcon, &QSystemTrayIcon::activated, this, &timelockcoinGUI::trayIconActivated);
 #else
-    // Note: On Mac, the dock icon is used to provide the tray's functionality.
+    // Note: On macOS, the Dock icon is used to provide the tray's functionality.
     MacDockIconHandler* dockIconHandler = MacDockIconHandler::instance();
-    dockIconHandler->setMainWindow((QMainWindow*)this);
-    trayIconMenu = dockIconHandler->dockMenu();
+    connect(dockIconHandler, &MacDockIconHandler::dockIconClicked, this, &timelockcoinGUI::macosDockIconActivated);
+
+    trayIconMenu = new QMenu(this);
+    trayIconMenu->setAsDockMenu();
 #endif
 
-    // Configuration of the tray icon (or dock icon) icon menu
+    // Configuration of the tray icon (or Dock icon) icon menu
     trayIconMenu->addAction(toggleHideAction);
     trayIconMenu->addSeparator();
 
-#ifndef Q_OS_MAC // This is built-in on Mac
+#ifndef Q_OS_MAC // This is built-in on macOS
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(quitAction);
 #endif
 }
 
 #ifndef Q_OS_MAC
-void TimelockCoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void timelockcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if (reason == QSystemTrayIcon::Trigger) {
         // Click on system tray icon triggers show/hide of the main window
         toggleHidden();
     }
 }
+#else
+void timelockcoinGUI::macosDockIconActivated()
+ {
+     show();
+     activateWindow();
+ }
 #endif
 
-void TimelockCoinGUI::changeEvent(QEvent* e)
+void timelockcoinGUI::changeEvent(QEvent* e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -327,7 +334,7 @@ void TimelockCoinGUI::changeEvent(QEvent* e)
         if (clientModel && clientModel->getOptionsModel() && clientModel->getOptionsModel()->getMinimizeToTray()) {
             QWindowStateChangeEvent* wsevt = static_cast<QWindowStateChangeEvent*>(e);
             if (!(wsevt->oldState() & Qt::WindowMinimized) && isMinimized()) {
-                QTimer::singleShot(0, this, SLOT(hide()));
+                QTimer::singleShot(0, this, &timelockcoinGUI::hide);
                 e->ignore();
             }
         }
@@ -335,7 +342,7 @@ void TimelockCoinGUI::changeEvent(QEvent* e)
 #endif
 }
 
-void TimelockCoinGUI::closeEvent(QCloseEvent* event)
+void timelockcoinGUI::closeEvent(QCloseEvent* event)
 {
 #ifndef Q_OS_MAC // Ignored on Mac
     if (clientModel && clientModel->getOptionsModel()) {
@@ -348,16 +355,18 @@ void TimelockCoinGUI::closeEvent(QCloseEvent* event)
 }
 
 
-void TimelockCoinGUI::messageInfo(const QString& text){
-    if(!this->snackBar) this->snackBar = new SnackBar(this, this);
+void timelockcoinGUI::messageInfo(const QString& text)
+{
+    if (!this->snackBar) this->snackBar = new SnackBar(this, this);
     this->snackBar->setText(text);
     this->snackBar->resize(this->width(), snackBar->height());
     openDialog(this->snackBar, this);
 }
 
 
-void TimelockCoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret) {
-    QString strTitle =  tr("TimelockCoin Core"); // default title
+void timelockcoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret)
+{
+    QString strTitle =  tr("TimelockCoin"); // default title
     // Default to information icon
     int nNotifyIcon = Notificator::Information;
 
@@ -395,26 +404,27 @@ void TimelockCoinGUI::message(const QString& title, const QString& message, unsi
         // Check for buttons, use OK as default, if none was supplied
         int r = 0;
         showNormalIfMinimized();
-        if(style & CClientUIInterface::BTN_MASK){
+        if (style & CClientUIInterface::BTN_MASK) {
             r = openStandardDialog(
                     (title.isEmpty() ? strTitle : title), message, "OK", "CANCEL"
                 );
-        }else{
+        } else {
             r = openStandardDialog((title.isEmpty() ? strTitle : title), message, "OK");
         }
         if (ret != NULL)
             *ret = r;
-    } else if(style & CClientUIInterface::MSG_INFORMATION_SNACK){
+    } else if (style & CClientUIInterface::MSG_INFORMATION_SNACK) {
         messageInfo(message);
-    }else {
-        // Append title to "TimelockCoin - "
+    } else {
+        // Append title to "timelockcoin - "
         if (!msgType.isEmpty())
             strTitle += " - " + msgType;
         notificator->notify((Notificator::Class) nNotifyIcon, strTitle, message);
     }
 }
 
-bool TimelockCoinGUI::openStandardDialog(QString title, QString body, QString okBtn, QString cancelBtn){
+bool timelockcoinGUI::openStandardDialog(QString title, QString body, QString okBtn, QString cancelBtn)
+{
     DefaultDialog *dialog;
     if (isVisible()) {
         showHide(true);
@@ -425,7 +435,7 @@ bool TimelockCoinGUI::openStandardDialog(QString title, QString body, QString ok
     } else {
         dialog = new DefaultDialog();
         dialog->setText(title, body, okBtn);
-        dialog->setWindowTitle(tr("TimelockCoin Core"));
+        dialog->setWindowTitle(tr("TimelockCoin"));
         dialog->adjustSize();
         dialog->raise();
         dialog->exec();
@@ -436,28 +446,24 @@ bool TimelockCoinGUI::openStandardDialog(QString title, QString body, QString ok
 }
 
 
-void TimelockCoinGUI::showNormalIfMinimized(bool fToggleHidden) {
+void timelockcoinGUI::showNormalIfMinimized(bool fToggleHidden)
+{
     if (!clientModel)
         return;
-    // activateWindow() (sometimes) helps with keyboard focus on Windows
-    if (isHidden()) {
-        show();
-        activateWindow();
-    } else if (isMinimized()) {
-        showNormal();
-        activateWindow();
-    } else if (GUIUtil::isObscured(this)) {
-        raise();
-        activateWindow();
-    } else if (fToggleHidden)
+    if (!isHidden() && !isMinimized() && !GUIUtil::isObscured(this) && fToggleHidden) {
         hide();
+    } else {
+        GUIUtil::bringToFront(this);
+    }
 }
 
-void TimelockCoinGUI::toggleHidden() {
+void timelockcoinGUI::toggleHidden()
+{
     showNormalIfMinimized(true);
 }
 
-void TimelockCoinGUI::detectShutdown() {
+void timelockcoinGUI::detectShutdown()
+{
     if (ShutdownRequested()) {
         if (rpcConsole)
             rpcConsole->hide();
@@ -465,82 +471,101 @@ void TimelockCoinGUI::detectShutdown() {
     }
 }
 
-void TimelockCoinGUI::goToDashboard(){
-    if(stackedContainer->currentWidget() != dashboard){
+void timelockcoinGUI::goToDashboard()
+{
+    if (stackedContainer->currentWidget() != dashboard) {
         stackedContainer->setCurrentWidget(dashboard);
         topBar->showBottom();
     }
 }
 
-void TimelockCoinGUI::goToSend(){
+void timelockcoinGUI::goToSend()
+{
     showTop(sendWidget);
 }
 
-void TimelockCoinGUI::goToAddresses(){
+void timelockcoinGUI::goToAddresses()
+{
     showTop(addressesWidget);
 }
 
-void TimelockCoinGUI::goToPrivacy(){
-    showTop(privacyWidget);
-}
-
-void TimelockCoinGUI::goToMasterNodes(){
+void timelockcoinGUI::goToMasterNodes()
+{
     showTop(masterNodesWidget);
 }
 
-void TimelockCoinGUI::goToColdStaking(){
+void timelockcoinGUI::goToColdStaking()
+{
     showTop(coldStakingWidget);
 }
 
-void TimelockCoinGUI::goToSettings(){
+void timelockcoinGUI::goToSettings(){
     showTop(settingsWidget);
 }
 
-void TimelockCoinGUI::goToReceive(){
+void timelockcoinGUI::goToSettingsInfo()
+{
+    navMenu->selectSettings();
+    settingsWidget->showInformation();
+    goToSettings();
+}
+
+void timelockcoinGUI::goToReceive()
+{
     showTop(receiveWidget);
 }
 
-void TimelockCoinGUI::showTop(QWidget* view){
-    if(stackedContainer->currentWidget() != view){
+void timelockcoinGUI::openNetworkMonitor()
+{
+    settingsWidget->openNetworkMonitor();
+}
+
+void timelockcoinGUI::showTop(QWidget* view)
+{
+    if (stackedContainer->currentWidget() != view) {
         stackedContainer->setCurrentWidget(view);
         topBar->showTop();
     }
 }
 
-void TimelockCoinGUI::changeTheme(bool isLightTheme){
+void timelockcoinGUI::changeTheme(bool isLightTheme)
+{
 
     QString css = GUIUtil::loadStyleSheet();
     this->setStyleSheet(css);
 
     // Notify
-    emit themeChanged(isLightTheme, css);
+    Q_EMIT themeChanged(isLightTheme, css);
 
     // Update style
     updateStyle(this);
 }
 
-void TimelockCoinGUI::resizeEvent(QResizeEvent* event){
+void timelockcoinGUI::resizeEvent(QResizeEvent* event)
+{
     // Parent..
     QMainWindow::resizeEvent(event);
     // background
     showHide(opEnabled);
     // Notify
-    emit windowResizeEvent(event);
+    Q_EMIT windowResizeEvent(event);
 }
 
-bool TimelockCoinGUI::execDialog(QDialog *dialog, int xDiv, int yDiv){
+bool timelockcoinGUI::execDialog(QDialog *dialog, int xDiv, int yDiv)
+{
     return openDialogWithOpaqueBackgroundY(dialog, this);
 }
 
-void TimelockCoinGUI::showHide(bool show){
-    if(!op) op = new QLabel(this);
-    if(!show){
+void timelockcoinGUI::showHide(bool show)
+{
+    if (!op) op = new QLabel(this);
+    if (!show) {
         op->setVisible(false);
         opEnabled = false;
-    }else{
+    } else {
         QColor bg("#000000");
         bg.setAlpha(200);
-        if(!isLightTheme()){
+        if (!isLightTheme()) {
             bg = QColor("#00000000");
             bg.setAlpha(150);
         }
@@ -559,11 +584,13 @@ void TimelockCoinGUI::showHide(bool show){
     }
 }
 
-int TimelockCoinGUI::getNavWidth(){
+int timelockcoinGUI::getNavWidth()
+{
     return this->navMenu->width();
 }
 
-void TimelockCoinGUI::openFAQ(int section){
+void timelockcoinGUI::openFAQ(int section)
+{
     showHide(true);
     SettingsFaqWidget* dialog = new SettingsFaqWidget(this);
     if (section > 0) dialog->setSection(section);
@@ -573,10 +600,10 @@ void TimelockCoinGUI::openFAQ(int section){
 
 
 #ifdef ENABLE_WALLET
-bool TimelockCoinGUI::addWallet(const QString& name, WalletModel* walletModel)
+bool timelockcoinGUI::addWallet(const QString& name, WalletModel* walletModel)
 {
     // Single wallet supported for now..
-    if(!stackedContainer || !clientModel || !walletModel)
+    if (!stackedContainer || !clientModel || !walletModel)
         return false;
 
     // set the model for every view
@@ -586,39 +613,41 @@ bool TimelockCoinGUI::addWallet(const QString& name, WalletModel* walletModel)
     receiveWidget->setWalletModel(walletModel);
     sendWidget->setWalletModel(walletModel);
     addressesWidget->setWalletModel(walletModel);
-    privacyWidget->setWalletModel(walletModel);
     masterNodesWidget->setWalletModel(walletModel);
     coldStakingWidget->setWalletModel(walletModel);
     settingsWidget->setWalletModel(walletModel);
 
     // Connect actions..
-    connect(privacyWidget, &PrivacyWidget::message, this, &TimelockCoinGUI::message);
-    connect(masterNodesWidget, &MasterNodesWidget::message, this, &TimelockCoinGUI::message);
-    connect(coldStakingWidget, &MasterNodesWidget::message, this, &TimelockCoinGUI::message);
-    connect(topBar, &TopBar::message, this, &TimelockCoinGUI::message);
-    connect(sendWidget, &SendWidget::message,this, &TimelockCoinGUI::message);
-    connect(receiveWidget, &ReceiveWidget::message,this, &TimelockCoinGUI::message);
-    connect(addressesWidget, &AddressesWidget::message,this, &TimelockCoinGUI::message);
-    connect(settingsWidget, &SettingsWidget::message, this, &TimelockCoinGUI::message);
+    connect(walletModel, &WalletModel::message, this, &timelockcoinGUI::message);
+    connect(masterNodesWidget, &MasterNodesWidget::message, this, &timelockcoinGUI::message);
+    connect(coldStakingWidget, &ColdStakingWidget::message, this, &timelockcoinGUI::message);
+    connect(topBar, &TopBar::message, this, &timelockcoinGUI::message);
+    connect(sendWidget, &SendWidget::message,this, &timelockcoinGUI::message);
+    connect(receiveWidget, &ReceiveWidget::message,this, &timelockcoinGUI::message);
+    connect(addressesWidget, &AddressesWidget::message,this, &timelockcoinGUI::message);
+    connect(settingsWidget, &SettingsWidget::message, this, &timelockcoinGUI::message);
 
     // Pass through transaction notifications
-    connect(dashboard, SIGNAL(incomingTransaction(QString, int, CAmount, QString, QString)), this, SLOT(incomingTransaction(QString, int, CAmount, QString, QString)));
+    connect(dashboard, &DashboardWidget::incomingTransaction, this, &timelockcoinGUI::incomingTransaction);
 
     return true;
 }
 
-bool TimelockCoinGUI::setCurrentWallet(const QString& name) {
+bool timelockcoinGUI::setCurrentWallet(const QString& name)
+{
     // Single wallet supported.
     return true;
 }
 
-void TimelockCoinGUI::removeAllWallets() {
+void timelockcoinGUI::removeAllWallets()
+{
     // Single wallet supported.
 }
 
-void TimelockCoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address) {
+void timelockcoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address)
+{
     // Only send notifications when not disabled
-    if(!bdisableSystemnotifications){
+    if (!bdisableSystemnotifications) {
         // On new transaction, make an info balloon
         message((amount) < 0 ? (pwalletMain->fMultiSendNotify == true ? tr("Sent MultiSend transaction") : tr("Sent transaction")) : tr("Incoming transaction"),
             tr("Date: %1\n"
@@ -638,7 +667,7 @@ void TimelockCoinGUI::incomingTransaction(const QString& date, int unit, const C
 #endif // ENABLE_WALLET
 
 
-static bool ThreadSafeMessageBox(TimelockCoinGUI* gui, const std::string& message, const std::string& caption, unsigned int style)
+static bool ThreadSafeMessageBox(timelockcoinGUI* gui, const std::string& message, const std::string& caption, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -657,13 +686,13 @@ static bool ThreadSafeMessageBox(TimelockCoinGUI* gui, const std::string& messag
 }
 
 
-void TimelockCoinGUI::subscribeToCoreSignals()
+void timelockcoinGUI::subscribeToCoreSignals()
 {
     // Connect signals to client
     uiInterface.ThreadSafeMessageBox.connect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
 }
 
-void TimelockCoinGUI::unsubscribeFromCoreSignals()
+void timelockcoinGUI::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from client
     uiInterface.ThreadSafeMessageBox.disconnect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));

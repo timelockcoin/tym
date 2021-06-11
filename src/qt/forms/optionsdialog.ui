@@ -131,8 +131,8 @@
         </spacer>
        </item>
        <item>
-        <widget class="QWidget" name="verticalZpivOptionsWidget" native="true">
-         <layout class="QVBoxLayout" name="verticalZpivOptionsLayout">
+        <widget class="QWidget" name="verticalZtimelockcoinOptionsWidget" native="true">
+         <layout class="QVBoxLayout" name="verticalZtimelockcoinOptionsLayout">
           <property name="margin">
            <number>0</number>
           </property>
@@ -533,7 +533,7 @@
          </property>
          <property name="text">
           <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations</string>
+https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -561,8 +561,8 @@ https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations
         </layout>
        </item>
        <item>
-        <widget class="QWidget" name="verticalZpivDisplayWidget" native="true">
-         <layout class="QVBoxLayout" name="verticalZpivDisplayLayout">
+        <widget class="QWidget" name="verticalZtimelockcoinDisplayWidget" native="true">
+         <layout class="QVBoxLayout" name="verticalZtimelockcoinDisplayLayout">
           <property name="margin">
            <number>0</number>
           </property>

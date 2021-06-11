@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,7 +29,7 @@ class SettingsConsoleWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsConsoleWidget(TimelockCoinGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsConsoleWidget(timelockcoinGUI* _window, QWidget *parent = nullptr);
     ~SettingsConsoleWidget();
 
     void loadClientModel() override;
@@ -43,9 +43,10 @@ public:
         CMD_ERROR
     };
 
-public slots:
-    void clear();
-    void message(int category, const QString& message, bool html = false);
+public Q_SLOTS:
+    void clear(bool clearHistory = true);
+    void message(int category, const QString &msg) { message(category, msg, false); }
+    void message(int category, const QString &message, bool html);
     /** Go forward or back in history */
     void browseHistory(int offset);
     /** Scroll console view to end */
@@ -55,10 +56,10 @@ public slots:
 protected:
     virtual bool eventFilter(QObject* obj, QEvent* event) override;
 
-protected slots:
+protected Q_SLOTS:
     void changeTheme(bool isLightTheme, QString &theme) override;
 
-signals:
+Q_SIGNALS:
     // For RPC command executor
     void stopExecutor();
     void cmdCommandRequest(const QString& command);
@@ -73,7 +74,7 @@ private:
 
     void startExecutor();
 
-private slots:
+private Q_SLOTS:
     void on_lineEdit_returnPressed();
 
 

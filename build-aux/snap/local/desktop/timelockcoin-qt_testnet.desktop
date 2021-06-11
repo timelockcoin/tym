@@ -2,15 +2,15 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=TimelockCoin Core
-Comment=TimelockCoin Core QT test network
-GenericName=TimelockCoin Digital Currency QT client testnet network
-Exec=timelockcoin-core.qt-testnet %u
+Name=TYM_Coin
+Comment=TYM_Coin QT test network
+GenericName=TYM_Coin Digital Currency QT client testnet network
+Exec=timelockcoin_coin-core.qt-testnet %u
 Terminal=false
 Type=Application
-Icon=${SNAP}/share/pixmaps/timelockcoin_testnet.png
-MimeType=x-scheme-handler/piv;
+Icon=${SNAP}/share/pixmaps/timelockcoin_coin_testnet.png
+MimeType=x-scheme-handler/timelockcoin;
 Categories=X-Office;X-Finance;
-Keywords=internet;timelockcoin;zpiv;tpiv;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Keywords=internet;timelockcoin_coin;ztimelockcoin;ttimelockcoin;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
 Version=1.0
-Name[en_US]=timelockcoin-qt_testnet.desktop
+Name[en_IN]=timelockcoin-qt_testnet.desktop

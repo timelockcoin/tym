@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@
 #include "optionsmodel.h"
 #include "qt/timelockcoin/qtutils.h"
 
-SettingsNetworkWidget::SettingsNetworkWidget(TimelockCoinGUI* _window, QWidget *parent) :
+SettingsNetworkWidget::SettingsNetworkWidget(timelockcoinGUI* _window, QWidget *parent) :
     PWidget(_window, parent),
     ui(new Ui::SettingsNetworkWidget)
 {
@@ -26,7 +26,7 @@ SettingsNetworkWidget::SettingsNetworkWidget(TimelockCoinGUI* _window, QWidget *
     setCssBtnPrimary(ui->pushButtonSave);
     setCssBtnSecondary(ui->pushButtonReset);
 
-    connect(ui->pushButtonSave, SIGNAL(clicked()), parent, SLOT(onSaveOptionsClicked()));
+    connect(ui->pushButtonSave, &QPushButton::clicked, [this] { Q_EMIT saveSettings(); });
 }
 
 void SettingsNetworkWidget::setMapper(QDataWidgetMapper *mapper){

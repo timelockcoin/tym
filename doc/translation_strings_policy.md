@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the TimelockCoin Core software.
+This document provides guidelines for internationalization of the timelockcoin software.
 
 How to translate?
 ------------------
@@ -75,10 +75,10 @@ In Qt code, use tr's third argument for optional plurality. For example:
 This adds `<numerusform>`s to the respective `.ts` file, which can be translated separately depending on the language. In English, this is simply:
 
     <message numerus="yes">
-        <source>%n active connection(s) to TimelockCoin network</source>
+        <source>%n active connection(s) to timelockcoin network</source>
         <translation>
-            <numerusform>%n active connection to TimelockCoin network</numerusform>
-            <numerusform>%n active connections to TimelockCoin network</numerusform>
+            <numerusform>%n active connection to timelockcoin network</numerusform>
+            <numerusform>%n active connections to timelockcoin network</numerusform>
         </translation>
     </message>
 

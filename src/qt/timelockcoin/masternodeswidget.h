@@ -1,19 +1,23 @@
-// Copyright (c) 2019-2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef MASTERNODESWIDGET_H
 #define MASTERNODESWIDGET_H
 
-#include <QWidget>
 #include "qt/timelockcoin/pwidget.h"
 #include "qt/timelockcoin/furabstractlistitemdelegate.h"
 #include "qt/timelockcoin/mnmodel.h"
 #include "qt/timelockcoin/tooltipmenu.h"
-#include <QTimer>
+#include "walletmodel.h"
+
 #include <atomic>
 
-class TimelockCoinGUI;
+#include <QTimer>
+#include <QWidget>
+
+class timelockcoinGUI;
 
 namespace Ui {
 class MasterNodesWidget;
@@ -29,7 +33,7 @@ class MasterNodesWidget : public PWidget
 
 public:
 
-    explicit MasterNodesWidget(TimelockCoinGUI *parent = nullptr);
+    explicit MasterNodesWidget(timelockcoinGUI *parent = nullptr);
     ~MasterNodesWidget();
 
     void loadWalletModel() override;
@@ -40,7 +44,7 @@ public:
     void showEvent(QShowEvent *event) override;
     void hideEvent(QHideEvent *event) override;
 
-private slots:
+private Q_SLOTS:
     void onCreateMNClicked();
     void onStartAllClicked(int type);
     void changeTheme(bool isLightTheme, QString &theme) override;

@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,6 +7,8 @@
 #define SETTINGSFAQWIDGET_H
 
 #include <QDialog>
+
+class timelockcoinGUI;
 
 namespace Ui {
 class SettingsFaqWidget;
@@ -17,21 +19,16 @@ class SettingsFaqWidget : public QDialog
     Q_OBJECT
 
 public:
-    explicit SettingsFaqWidget(QWidget *parent = nullptr);
+    explicit SettingsFaqWidget(timelockcoinGUI *parent = nullptr);
     ~SettingsFaqWidget();
 
     void showEvent(QShowEvent *event) override;
 
-public slots:
+public Q_SLOTS:
    void windowResizeEvent(QResizeEvent* event);
    void setSection(int num);
-private slots:
-    void onFaq1Clicked();
-    void onFaq2Clicked();
-    void onFaq3Clicked();
-    void onFaq4Clicked();
-    void onFaq5Clicked();
-    void onFaq6Clicked();
+private Q_SLOTS:
+    void onFaqClicked(const QWidget* const widget);
 private:
     Ui::SettingsFaqWidget *ui;
     int pos = 0;

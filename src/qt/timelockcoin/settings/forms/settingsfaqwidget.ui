@@ -58,7 +58,7 @@
         <item>
          <widget class="QLabel" name="labelTitle">
           <property name="text">
-           <string>TextLabel</string>
+           <string>Frequently Asked Questions</string>
           </property>
          </widget>
         </item>
@@ -78,7 +78,7 @@
         <item>
          <widget class="QPushButton" name="pushButtonExit">
           <property name="text">
-           <string>PushButton</string>
+           <string>Exit</string>
           </property>
          </widget>
         </item>
@@ -146,7 +146,7 @@
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButtonFaq1">
+                    <widget class="QPushButton" name="pushButton_Intro">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -163,7 +163,7 @@
                       <enum>Qt::NoFocus</enum>
                      </property>
                      <property name="text">
-                      <string>1) What is TimelockCoin?</string>
+                      <string>1) What is timelockcoin ?</string>
                      </property>
                      <property name="checkable">
                       <bool>true</bool>
@@ -177,7 +177,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButtonFaq2">
+                    <widget class="QPushButton" name="pushButton_UnspendableTYM">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -205,7 +205,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButtonFaq3">
+                    <widget class="QPushButton" name="pushButton_Stake">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -216,7 +216,7 @@
                       <enum>Qt::NoFocus</enum>
                      </property>
                      <property name="text">
-                      <string>3)  Where I should go if I need support?</string>
+                      <string>3) How do I stake TYM?</string>
                      </property>
                      <property name="checkable">
                       <bool>true</bool>
@@ -227,7 +227,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButtonFaq4">
+                    <widget class="QPushButton" name="pushButton_Support">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -238,7 +238,7 @@
                       <enum>Qt::NoFocus</enum>
                      </property>
                      <property name="text">
-                      <string>4) How do I stake TYM/zTYM?</string>
+                      <string>4) Where I should go if I need support?</string>
                      </property>
                      <property name="checkable">
                       <bool>true</bool>
@@ -249,7 +249,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButtonFaq5">
+                    <widget class="QPushButton" name="pushButton_Masternode">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -271,7 +271,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButtonFaq6">
+                    <widget class="QPushButton" name="pushButton_MNController">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -316,7 +316,7 @@
                <item>
                 <widget class="QLabel" name="labelWebLink">
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>You can read more here</string>
                  </property>
                 </widget>
                </item>
@@ -342,7 +342,7 @@
                   <enum>Qt::NoFocus</enum>
                  </property>
                  <property name="text">
-                  <string>PushButton</string>
+                  <string>https://timelockcoin.com/</string>
                  </property>
                 </widget>
                </item>
@@ -423,9 +423,9 @@
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>-66</y>
-                  <width>628</width>
-                  <height>1678</height>
+                  <y>0</y>
+                  <width>642</width>
+                  <height>1614</height>
                  </rect>
                 </property>
                 <property name="autoFillBackground">
@@ -454,16 +454,16 @@
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QWidget" name="widgetFaq1" native="true">
+                  <widget class="QWidget" name="widget_Intro" native="true">
                    <property name="minimumSize">
                     <size>
                      <width>300</width>
                      <height>0</height>
                     </size>
                    </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_1" stretch="0,1">
+                   <layout class="QHBoxLayout" name="horizontalLayout_Intro" stretch="0,1">
                     <item alignment="Qt::AlignTop">
-                     <widget class="QLabel" name="labelNumber1">
+                     <widget class="QLabel" name="labelNumber_Intro">
                       <property name="minimumSize">
                        <size>
                         <width>24</width>
@@ -485,7 +485,7 @@
                      </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_61">
+                     <layout class="QVBoxLayout" name="verticalLayout_Intro">
                       <property name="leftMargin">
                        <number>20</number>
                       </property>
@@ -493,9 +493,9 @@
                        <number>20</number>
                       </property>
                       <item>
-                       <widget class="QLabel" name="labelSubtitle1">
+                       <widget class="QLabel" name="labelSubtitle_Intro">
                         <property name="text">
-                         <string>What is TimelockCoin?</string>
+                         <string>What is TYM ?</string>
                         </property>
                         <property name="wordWrap">
                          <bool>true</bool>
@@ -503,7 +503,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_10">
+                       <spacer name="verticalSpacer1_Intro">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -519,9 +519,9 @@
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="labelContent1">
+                       <widget class="QLabel" name="labelContent_Intro">
                         <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;TimelockCoin is a form of digital online money using blockchain technology that can be easily transferred globally, instantly, and with near zero fees. TimelockCoin incorporates market leading security &amp;amp; privacy and is PoS (Proof of Stake) Cryptocurrency. &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;TimelockCoin utilizes a Proof of Stake (PoS) consensus system algorithm, allowing all owners of TimelockCoin to participate in earning block rewards while securing the network with full node wallets, as well as to run Masternodes to create and vote on proposals. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TYM is a digital crypto currency based on blockchain tecnology to support Timelockcoin platform, powered by own TYM blockchain.&lt;/p&gt;&lt;p&gt;TYM utilizes a Proof of Stake (PoS) consensus system algorithm, allowing all owners of TYM to participate in earning block rewards while securing the network with full node wallets, as well as to run Masternodes to have passive income of TYM coin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -532,7 +532,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_11">
+                       <spacer name="verticalSpacer2_Intro">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -550,10 +550,10 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QWidget" name="widgetFaq2" native="true">
-                   <layout class="QHBoxLayout" name="horizontalPage2" stretch="0,1">
+                  <widget class="QWidget" name="widget_UnspendableTYM" native="true">
+                   <layout class="QHBoxLayout" name="horizontalPage_UnspendableTYM" stretch="0,1">
                     <item alignment="Qt::AlignTop">
-                     <widget class="QLabel" name="labelNumber2">
+                     <widget class="QLabel" name="labelNumber_UnspendableTYM">
                       <property name="minimumSize">
                        <size>
                         <width>24</width>
@@ -575,7 +575,7 @@
                      </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayoutPage2">
+                     <layout class="QVBoxLayout" name="verticalLayout_UnspendableTYM">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -586,7 +586,7 @@
                        <number>20</number>
                       </property>
                       <item>
-                       <widget class="QLabel" name="labelSubtitle2">
+                       <widget class="QLabel" name="labelSubtitle_UnspendableTYM">
                         <property name="text">
                          <string>Why are my TYM unspendable?</string>
                         </property>
@@ -596,7 +596,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_20">
+                       <spacer name="verticalSpacer1_UnspendableTYM">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -612,17 +612,9 @@
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="labelContent2">
+                       <widget class="QLabel" name="labelContent_UnspendableTYM">
                         <property name="text">
-                         <string>
-                           &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;
-                           Newly received TimelockCoin requires 6 confirmations on the network
-                           to become eligible for spending which can take ~6 minutes.
-                           &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;
-                           Your TimelockCoin wallet also needs to be completely synchronized
-                           to see and spend balances on the network.
-                           &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                         </string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Newly received TYM coin requires 6 confirmations on the network to become eligible for spending which can take ~6 minutes.&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Your TYM coin wallet also needs to be completely synchronized to see and spend balances on the network.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -633,7 +625,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_21">
+                       <spacer name="verticalSpacer2_UnspendableTYM">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -651,10 +643,10 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QWidget" name="widgetFaq3" native="true">
-                   <layout class="QHBoxLayout" name="horizontalpage_3" stretch="0,1">
+                  <widget class="QWidget" name="widget_Stake" native="true">
+                   <layout class="QHBoxLayout" name="horizontalpage_Stake" stretch="0,1">
                     <item alignment="Qt::AlignTop">
-                     <widget class="QLabel" name="labelNumber3">
+                     <widget class="QLabel" name="labelNumber_Stake">
                       <property name="minimumSize">
                        <size>
                         <width>24</width>
@@ -676,7 +668,7 @@
                      </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayoutpage_3">
+                     <layout class="QVBoxLayout" name="verticalLayoutpage_Stake">
                       <property name="leftMargin">
                        <number>20</number>
                       </property>
@@ -684,9 +676,9 @@
                        <number>20</number>
                       </property>
                       <item>
-                       <widget class="QLabel" name="labelSubtitle3">
+                       <widget class="QLabel" name="labelSubtitle_Stake">
                         <property name="text">
-                         <string>Where should I go if I need support?</string>
+                         <string>How do I stake TYM?</string>
                         </property>
                         <property name="wordWrap">
                          <bool>true</bool>
@@ -694,7 +686,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_30">
+                       <spacer name="verticalSpacer1_Stake">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -710,9 +702,9 @@
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="labelContent3">
+                       <widget class="QLabel" name="labelContent_Stake">
                         <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We have support channels in most of our official chat groups, for example &lt;a href=&quot;https://discord.TimelockCoin.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#b088ff;&quot;&gt;#support in our Discord&lt;/span&gt;&lt;/a&gt;. If you prefer to submit a ticket, One can be &lt;a href=&quot;https://TimelockCoin.freshdesk.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#b088ff;&quot;&gt;our Freshdesk support site&lt;/span&gt;&lt;/a&gt;. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Make sure your wallet is completely synchronized and you are using the latest release. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must have a balance of TYM coin with a minimum of 200 confirmations. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Your wallet must stay online and be unlocked for staking purposes. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Once all those steps are followed staking should be enabled. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state &amp;quot;Staking Enabled&amp;quot; to indicate it is staking. Using the command line interface (timelockcoin-cli); the command &lt;span style=&quot; font-style:italic;&quot;&gt;getstakingstatus&lt;/span&gt; will confirm that staking is active. &lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -723,7 +715,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_31">
+                       <spacer name="verticalSpacer2_Stake">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -741,10 +733,10 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QWidget" name="widgetFaq4" native="true">
-                   <layout class="QHBoxLayout" name="horizontalPage_4" stretch="0,1">
+                  <widget class="QWidget" name="widget_Support" native="true">
+                   <layout class="QHBoxLayout" name="horizontalpage_Support" stretch="0,1">
                     <item alignment="Qt::AlignTop">
-                     <widget class="QLabel" name="labelNumber4">
+                     <widget class="QLabel" name="labelNumber_Support">
                       <property name="minimumSize">
                        <size>
                         <width>24</width>
@@ -766,7 +758,7 @@
                      </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayoutPage_4">
+                     <layout class="QVBoxLayout" name="verticalLayoutpage_Support">
                       <property name="leftMargin">
                        <number>20</number>
                       </property>
@@ -774,9 +766,9 @@
                        <number>20</number>
                       </property>
                       <item>
-                       <widget class="QLabel" name="labelSubtitle4">
+                       <widget class="QLabel" name="labelSubtitle_Support">
                         <property name="text">
-                         <string>How do I stake TYM?</string>
+                         <string>Where should I go if I need support?</string>
                         </property>
                         <property name="wordWrap">
                          <bool>true</bool>
@@ -784,7 +776,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_40">
+                       <spacer name="verticalSpacer1_Support">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -800,9 +792,9 @@
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="labelContent4">
+                       <widget class="QLabel" name="labelContent_Support">
                         <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To Stake TimelockCoin: &lt;/p&gt;&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Make sure your wallet is completely synchronized and you are using the latest release. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must have a balance of TimelockCoin with a minimum of 600 confirmations. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Your wallet must stay online and be unlocked for staking purposes. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Once all those steps are followed staking should be enabled. &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You can see the status of staking in the wallet by mousing over the package icon in the row on the top left of the wallet interface. There package will be lit up and will state &amp;quot;Staking Enabled&amp;quot; to indicate it is staking. Using the command line interface (timelockcoin-cli); the command &lt;span style=&quot; font-style:italic;&quot;&gt;getstakingstatus&lt;/span&gt; will confirm that staking is active. &lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We have support channels in most of our official chat groups, visit &lt;a href=&quot;https://timelockcoin.trade&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#b088ff;&quot;&gt;timelockcoin.com &lt;/span&gt;&lt;/a&gt;to find all available.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -813,7 +805,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_41">
+                       <spacer name="verticalSpacer2_Support">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -831,10 +823,10 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QWidget" name="widgetFaq5" native="true">
-                   <layout class="QHBoxLayout" name="horizontalPage_5" stretch="0,1">
+                  <widget class="QWidget" name="widget_Masternode" native="true">
+                   <layout class="QHBoxLayout" name="horizontalpage_Masternode" stretch="0,1">
                     <item alignment="Qt::AlignTop">
-                     <widget class="QLabel" name="labelNumber5">
+                     <widget class="QLabel" name="labelNumber_Masternode">
                       <property name="minimumSize">
                        <size>
                         <width>24</width>
@@ -856,7 +848,7 @@
                      </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayoutPage_5">
+                     <layout class="QVBoxLayout" name="verticalLayoutpage_Masternode">
                       <property name="leftMargin">
                        <number>20</number>
                       </property>
@@ -864,7 +856,7 @@
                        <number>20</number>
                       </property>
                       <item>
-                       <widget class="QLabel" name="labelSubtitle5">
+                       <widget class="QLabel" name="labelSubtitle_Masternode">
                         <property name="text">
                          <string>What is a Masternode?</string>
                         </property>
@@ -874,7 +866,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_50">
+                       <spacer name="verticalSpacer1_Masternode">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -890,9 +882,9 @@
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="labelContent5">
+                       <widget class="QLabel" name="labelContent_Masternode">
                         <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A masternode is a computer running a full node TimelockCoin core wallet with a requirement of dinamyc value of TYM secured collateral to provide extra services to the network and in return, receive a portion of the block reward regularly. These services include: &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Instant transactions (SwiftX) &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A decentralized governance (Proposal Voting) &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A decentralized budgeting system (Treasury) &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Validation of transactions within each block &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Act as an additional full node in the network &lt;/li&gt;&lt;/ul&gt;&lt;p align=&quot;justify&quot;&gt;For providing such services, masternodes are also paid a certain portion of reward for each block. This can serve as a passive income to the masternode owners minus their running cost. &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Masternode Perks: &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Participate in TimelockCoin Governance &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Earn Masternode Rewards &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Commodity option for future sale &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Help secure the TimelockCoin network &lt;/li&gt;&lt;/ul&gt;&lt;p align=&quot;justify&quot;&gt;Requirements: &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Must be stored in a core wallet &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Need dedicated IP address &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Masternode wallet to remain online &lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;A masternode is a computer running a full node TYM coin core wallet with a requirement of secured collateral to provide extra services to the network and in return, receive a portion of the block reward regularly. These services include: &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Instant transactions (SwiftX) &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A decentralized governance (Proposal Voting) &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A decentralized budgeting system (Treasury) &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Validation of transactions within each block &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Act as an additional full node in the network &lt;/li&gt;&lt;/ul&gt;&lt;p align=&quot;justify&quot;&gt;For providing such services, masternodes are also paid a certain portion of reward for each block. This can serve as a passive income to the masternode owners minus their running cost. &lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Masternode Perks: &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Participate in TYM coin Governance &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Earn Masternode Rewards &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Commodity option for future sale &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Help secure the TimelockCoin network &lt;/li&gt;&lt;/ul&gt;&lt;p align=&quot;justify&quot;&gt;Requirements: &lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Collateral Amount per single Masternode instance &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Must be stored in a core wallet &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Need dedicated IP address &lt;/li&gt;&lt;li align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Masternode wallet to remain online &lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -903,7 +895,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_51">
+                       <spacer name="verticalSpacer2_Masternode">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -921,10 +913,10 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QWidget" name="widgetFaq6" native="true">
-                   <layout class="QHBoxLayout" name="horizontalpage_6" stretch="0,1">
+                  <widget class="QWidget" name="widget_MNController" native="true">
+                   <layout class="QHBoxLayout" name="horizontalpage_MNController" stretch="0,1">
                     <item alignment="Qt::AlignTop">
-                     <widget class="QLabel" name="labelNumber6">
+                     <widget class="QLabel" name="labelNumber_MNController">
                       <property name="minimumSize">
                        <size>
                         <width>24</width>
@@ -946,10 +938,7 @@
                      </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayoutpage_6">
-                      <property name="spacing">
-                       <number>0</number>
-                      </property>
+                     <layout class="QVBoxLayout" name="verticalLayoutpage_MNController">
                       <property name="leftMargin">
                        <number>20</number>
                       </property>
@@ -957,7 +946,7 @@
                        <number>20</number>
                       </property>
                       <item>
-                       <widget class="QLabel" name="labelSubtitle6">
+                       <widget class="QLabel" name="labelSubtitle_MNController">
                         <property name="text">
                          <string>What is a Masternode Controller?</string>
                         </property>
@@ -967,7 +956,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_60">
+                       <spacer name="verticalSpacer1_MNController">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>
@@ -983,9 +972,9 @@
                        </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="labelContent6">
+                       <widget class="QLabel" name="labelContent_MNController">
                         <property name="text">
-                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A Masternode Controller wallet is where our special dynamic collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;A Masternode Controller wallet is where the collateral Amount can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -996,7 +985,7 @@
                        </widget>
                       </item>
                       <item>
-                       <spacer name="verticalSpacer_61">
+                       <spacer name="verticalSpacer2_MNController">
                         <property name="orientation">
                          <enum>Qt::Vertical</enum>
                         </property>

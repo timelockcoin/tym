@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef TimelockCoin_CORE_NEW_GUI_PRUNNABLE_H
-#define TimelockCoin_CORE_NEW_GUI_PRUNNABLE_H
+#ifndef timelockcoin_CORE_NEW_GUI_PRUNNABLE_H
+#define timelockcoin_CORE_NEW_GUI_PRUNNABLE_H
 
 class Runnable {
 public:
@@ -12,4 +12,4 @@ public:
     virtual void onError(QString error, int type) = 0;
 };
 
-#endif //TimelockCoin_CORE_NEW_GUI_PRUNNABLE_H
+#endif //timelockcoin_CORE_NEW_GUI_PRUNNABLE_H

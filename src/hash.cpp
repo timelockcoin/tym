@@ -1,10 +1,11 @@
 // Copyright (c) 2013-2014 The Bitcoin developers
 // Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "hash.h"
+#include "crypto/common.h"
 #include "crypto/hmac_sha512.h"
 #include "crypto/scrypt.h"
 
@@ -25,10 +26,10 @@ unsigned int MurmurHash3(unsigned int nHashSeed, const std::vector<unsigned char
 
         //----------
         // body
-        const uint32_t* blocks = (const uint32_t*)(&vDataToHash[0] + nblocks * 4);
+        const uint8_t* blocks = &vDataToHash[0] + nblocks * 4;
 
         for (int i = -nblocks; i; i++) {
-            uint32_t k1 = blocks[i];
+            uint32_t k1 = ReadLE32(blocks + i*4);
 
             k1 *= c1;
             k1 = ROTL32(k1, 15);

@@ -84,9 +84,9 @@ OpenRC).
 ### macOS
 
 Binary:              `/usr/local/bin/timelockcoind`
-Configuration file:  `~/Library/Application Support/TimelockCoin/timelockcoin.conf`
-Data directory:      `~/Library/Application Support/TimelockCoin`
-Lock file:           `~/Library/Application Support/TimelockCoin/.lock`
+Configuration file:  `~/Library/Application Support/timelockcoin/timelockcoin.conf`
+Data directory:      `~/Library/Application Support/timelockcoin`
+Lock file:           `~/Library/Application Support/timelockcoin/.lock`
 
 Installing Service Configuration
 -----------------------------------
@@ -124,7 +124,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy timelockcoind.init to /etc/init.d/timelockcoind. Test by running `service timelockcoind start`.
 
 Using this script, you can adjust the path and flags to the timelockcoind program by
-setting the TimelockCoinD and FLAGS environment variables in the file
+setting the timelockcoinD and FLAGS environment variables in the file
 /etc/sysconfig/timelockcoind. You can also use the DAEMONOPTS environment variable here.
 
 ### macOS

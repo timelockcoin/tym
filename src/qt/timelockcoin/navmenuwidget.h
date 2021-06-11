@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +9,7 @@
 #include <QWidget>
 #include "qt/timelockcoin/pwidget.h"
 
-class TimelockCoinGUI;
+class timelockcoinGUI;
 
 namespace Ui {
 class NavMenuWidget;
@@ -19,17 +20,17 @@ class NavMenuWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit NavMenuWidget(TimelockCoinGUI* mainWindow, QWidget *parent = nullptr);
+    explicit NavMenuWidget(timelockcoinGUI* mainWindow, QWidget *parent = nullptr);
     ~NavMenuWidget();
 
     void loadWalletModel() override;
     virtual void showEvent(QShowEvent *event) override;
 
-public slots:
+public Q_SLOTS:
     void selectSettings();
     void onShowHideColdStakingChanged(bool show);
 
-private slots:
+private Q_SLOTS:
     void onSendClicked();
     void onDashboardClicked();
     void onAddressClicked();

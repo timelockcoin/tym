@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,14 +19,17 @@ class SettingsInformationWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsInformationWidget(TimelockCoinGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsInformationWidget(timelockcoinGUI* _window, QWidget *parent = nullptr);
     ~SettingsInformationWidget();
 
     void loadClientModel() override;
 
-private slots:
+private Q_SLOTS:
     void setNumConnections(int count);
     void setNumBlocks(int count);
+    void setMasternodeCount(const QString& strMasternodes);
+
+public Q_SLOTS:
     void openNetworkMonitor();
 
 private:

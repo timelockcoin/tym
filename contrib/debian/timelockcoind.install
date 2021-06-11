@@ -1,0 +1,3 @@
+usr/local/bin/timelockcoind usr/bin
+usr/local/bin/timelockcoin-cli usr/bin
+debian/examples/timelockcoin.conf etc/timelockcoin

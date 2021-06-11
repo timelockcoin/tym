@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +11,8 @@ namespace GuiTransactionsUtils {
 
     QString ProcessSendCoinsReturn(PWidget::Translator *parent, const WalletModel::SendCoinsReturn &sendCoinsReturn,
                                 WalletModel *walletModel, CClientUIInterface::MessageBoxFlags& informType, const QString &msgArg,
-                                bool fPrepare) {
+                                bool fPrepare)
+    {
         QString retStr;
         informType = CClientUIInterface::MSG_WARNING;
         // This comment is specific to SendCoinsDialog usage of WalletModel::SendCoinsReturn.
@@ -36,19 +37,19 @@ namespace GuiTransactionsUtils {
                         "Duplicate address found, can only send to each address once per send operation.");
                 break;
             case WalletModel::TransactionCreationFailed:
-                retStr = parent->translate("Transaction creation failed!");
                 informType = CClientUIInterface::MSG_ERROR;
                 break;
             case WalletModel::TransactionCommitFailed:
-                retStr = parent->translate("The transaction was rejected! This might happen if some of the coins in your wallet were already spent, or because one of the inputs includes time-locked Masternode collateral amount. First remove this invalid transaction go to Settings -> Debug -> Wallet Repair and click on Recover Transaction 1, then go to Send -> Coin Control, right-click on value of the collateral amount and choose Lock unspent. Then you can try to send your transaction again.");
+                retStr = parent->translate(
+                        "The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.");
                 informType = CClientUIInterface::MSG_ERROR;
                 break;
-            case WalletModel::AnonymizeOnlyUnlocked:
+            case WalletModel::StakingOnlyUnlocked:
                 // Unlock is only need when the coins are send
                 if (!fPrepare) {
                     // Unlock wallet if it wasn't fully unlocked already
-                    walletModel->requestUnlock(AskPassphraseDialog::Context::Unlock_Full, false);
-                    if (walletModel->getEncryptionStatus() != WalletModel::Unlocked) {
+                    WalletModel::UnlockContext ctx(walletModel->requestUnlock());
+                    if (!ctx.isValid()) {
                         retStr = parent->translate(
                                 "Error: The wallet was unlocked for staking only. Unlock canceled.");
                     }
@@ -70,11 +71,11 @@ namespace GuiTransactionsUtils {
         return retStr;
     }
 
-    void ProcessSendCoinsReturnAndInform(PWidget* parent, const WalletModel::SendCoinsReturn& sendCoinsReturn, WalletModel* walletModel, const QString& msgArg, bool fPrepare) {
+    void ProcessSendCoinsReturnAndInform(PWidget* parent, const WalletModel::SendCoinsReturn& sendCoinsReturn, WalletModel* walletModel, const QString& msgArg, bool fPrepare)
+    {
         CClientUIInterface::MessageBoxFlags informType;
         QString informMsg = ProcessSendCoinsReturn(parent, sendCoinsReturn, walletModel, informType, msgArg, fPrepare);
         if (!informMsg.isEmpty()) parent->emitMessage(parent->translate("Send Coins"), informMsg, informType, 0);
     }
-
 
 }

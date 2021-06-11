@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,16 +9,13 @@
 #include <QMetaObject>
 #include "qt/timelockcoin/qtutils.h"
 
-SettingsFaqWidget::SettingsFaqWidget(QWidget *parent) :
+SettingsFaqWidget::SettingsFaqWidget(timelockcoinGUI *parent) :
     QDialog(parent),
     ui(new Ui::SettingsFaqWidget)
 {
     ui->setupUi(this);
-
     this->setStyleSheet(parent->styleSheet());
 
-    ui->labelTitle->setText(tr("Frequently Asked Questions"));
-    ui->labelWebLink->setText(tr(" ")); // You can read more here
 #ifdef Q_OS_MAC
     ui->container->load("://bg-welcome");
     setCssProperty(ui->container, "container-welcome-no-image");
@@ -30,123 +27,107 @@ SettingsFaqWidget::SettingsFaqWidget(QWidget *parent) :
 
     // Content
     setCssProperty({
-           ui->labelNumber1,
-           ui->labelNumber2,
-           ui->labelNumber3,
-           ui->labelNumber4,
-           ui->labelNumber5,
-           ui->labelNumber6
+           ui->labelNumber_Intro,
+           ui->labelNumber_UnspendableTYM,
+           ui->labelNumber_Stake,
+           ui->labelNumber_Support,
+           ui->labelNumber_Masternode,
+           ui->labelNumber_MNController
         }, "container-number-faq");
 
     setCssProperty({
-              ui->labelSubtitle1,
-              ui->labelSubtitle2,
-              ui->labelSubtitle3,
-              ui->labelSubtitle4,
-              ui->labelSubtitle5,
-              ui->labelSubtitle6
+              ui->labelSubtitle_Intro,
+              ui->labelSubtitle_UnspendableTYM,
+              ui->labelSubtitle_Stake,
+              ui->labelSubtitle_Support,
+              ui->labelSubtitle_Masternode,
+              ui->labelSubtitle_MNController
             }, "text-subtitle-faq");
 
 
     setCssProperty({
-              ui->labelContent1,
-              ui->labelContent2,
-              ui->labelContent3,
-              ui->labelContent4,
-              ui->labelContent5,
-              ui->labelContent6
+              ui->labelContent_Intro,
+              ui->labelContent_UnspendableTYM,
+              ui->labelContent_Stake,
+              ui->labelContent_Support,
+              ui->labelContent_Masternode,
+              ui->labelContent_MNController
             }, "text-content-faq");
 
 
     setCssProperty({
-              ui->pushButtonFaq1,
-              ui->pushButtonFaq2,
-              ui->pushButtonFaq3,
-              ui->pushButtonFaq4,
-              ui->pushButtonFaq5,
-              ui->pushButtonFaq6
+              ui->pushButton_Intro,
+              ui->pushButton_UnspendableTYM,
+              ui->pushButton_Stake,
+              ui->pushButton_Support,
+              ui->pushButton_Masternode,
+              ui->pushButton_MNController
             }, "btn-faq-options");
 
-    ui->labelContent3->setOpenExternalLinks(true);
+    ui->labelContent_Support->setOpenExternalLinks(true);
 
     // Exit button
-    ui->pushButtonExit->setText(tr("Exit"));
     setCssProperty(ui->pushButtonExit, "btn-faq-exit");
 
     // Web Link
-    ui->pushButtonWebLink->setText(" "); // todo: web link here
     setCssProperty(ui->pushButtonWebLink, "btn-faq-web");
     setCssProperty(ui->containerButtons, "container-faq-buttons");
 
     // Buttons
-    connect(ui->pushButtonExit, SIGNAL(clicked()), this, SLOT(close()));
-    connect(ui->pushButtonFaq1, SIGNAL(clicked()), this, SLOT(onFaq1Clicked()));
-    connect(ui->pushButtonFaq2, SIGNAL(clicked()), this, SLOT(onFaq2Clicked()));
-    connect(ui->pushButtonFaq3, SIGNAL(clicked()), this, SLOT(onFaq3Clicked()));
-    connect(ui->pushButtonFaq4, SIGNAL(clicked()), this, SLOT(onFaq4Clicked()));
-    connect(ui->pushButtonFaq5, SIGNAL(clicked()), this, SLOT(onFaq5Clicked()));
-    connect(ui->pushButtonFaq6, SIGNAL(clicked()), this, SLOT(onFaq6Clicked()));
+    connect(ui->pushButtonExit, &QPushButton::clicked, this, &SettingsFaqWidget::close);
+    connect(ui->pushButton_Intro, &QPushButton::clicked, [this](){onFaqClicked(ui->widget_Intro);});
+    connect(ui->pushButton_UnspendableTYM, &QPushButton::clicked, [this](){onFaqClicked(ui->widget_UnspendableTYM);});
+    connect(ui->pushButton_Stake, &QPushButton::clicked, [this](){onFaqClicked(ui->widget_Stake);});
+    connect(ui->pushButton_Support, &QPushButton::clicked, [this](){onFaqClicked(ui->widget_Support);});
+    connect(ui->pushButton_Masternode, &QPushButton::clicked, [this](){onFaqClicked(ui->widget_Masternode);});
+    connect(ui->pushButton_MNController, &QPushButton::clicked, [this](){onFaqClicked(ui->widget_MNController);});
 
     if (parent)
-        connect(parent, SIGNAL(windowResizeEvent(QResizeEvent*)), this, SLOT(windowResizeEvent(QResizeEvent*)));
+        connect(parent, &timelockcoinGUI::windowResizeEvent, this, &SettingsFaqWidget::windowResizeEvent);
 }
 
-void SettingsFaqWidget::showEvent(QShowEvent *event){
-    if(pos != 0){
+void SettingsFaqWidget::showEvent(QShowEvent *event)
+{
+    if (pos != 0) {
         QPushButton* btn = getButtons()[pos - 1];
         QMetaObject::invokeMethod(btn, "setChecked", Qt::QueuedConnection, Q_ARG(bool, true));
         QMetaObject::invokeMethod(btn, "clicked", Qt::QueuedConnection);
     }
 }
 
-void SettingsFaqWidget::setSection(int num){
+void SettingsFaqWidget::setSection(int num)
+{
     if (num < 1 || num > 10)
         return;
     pos = num;
 }
 
-void SettingsFaqWidget::onFaq1Clicked(){
-    ui->scrollAreaFaq->verticalScrollBar()->setValue(ui->widgetFaq1->y());
+void SettingsFaqWidget::onFaqClicked(const QWidget* const widget)
+{
+    ui->scrollAreaFaq->verticalScrollBar()->setValue(widget->y());
 }
 
-void SettingsFaqWidget::onFaq2Clicked(){
-   ui->scrollAreaFaq->verticalScrollBar()->setValue(ui->widgetFaq2->y());
-}
-
-void SettingsFaqWidget::onFaq3Clicked(){
-   ui->scrollAreaFaq->verticalScrollBar()->setValue(ui->widgetFaq3->y());
-}
-
-void SettingsFaqWidget::onFaq4Clicked(){
-    ui->scrollAreaFaq->verticalScrollBar()->setValue(ui->widgetFaq4->y());
-}
-
-void SettingsFaqWidget::onFaq5Clicked(){
-    ui->scrollAreaFaq->verticalScrollBar()->setValue(ui->widgetFaq5->y());
-}
-
-void SettingsFaqWidget::onFaq6Clicked(){
-    ui->scrollAreaFaq->verticalScrollBar()->setValue(ui->widgetFaq6->y());
-}
-
-void SettingsFaqWidget::windowResizeEvent(QResizeEvent* event){
+void SettingsFaqWidget::windowResizeEvent(QResizeEvent* event)
+{
     QWidget* w = qobject_cast<QWidget*>(parent());
     this->resize(w->width(), w->height());
     this->move(QPoint(0, 0));
 }
 
-std::vector<QPushButton*> SettingsFaqWidget::getButtons(){
+std::vector<QPushButton*> SettingsFaqWidget::getButtons()
+{
     return {
-            ui->pushButtonFaq1,
-            ui->pushButtonFaq2,
-            ui->pushButtonFaq3,
-            ui->pushButtonFaq4,
-            ui->pushButtonFaq5,
-            ui->pushButtonFaq6
+            ui->pushButton_Intro,
+            ui->pushButton_UnspendableTYM,
+            ui->pushButton_Stake,
+            ui->pushButton_Support,
+            ui->pushButton_Masternode,
+            ui->pushButton_MNController
     };
 }
 
-SettingsFaqWidget::~SettingsFaqWidget(){
+SettingsFaqWidget::~SettingsFaqWidget()
+{
     delete ui;
 }
 

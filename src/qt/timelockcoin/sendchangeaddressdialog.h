@@ -1,12 +1,13 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef SENDCHANGEADDRESSDIALOG_H
 #define SENDCHANGEADDRESSDIALOG_H
 
-#include <QDialog>
+#include "qt/timelockcoin/focuseddialog.h"
+#include "qt/timelockcoin/snackbar.h"
 
 class WalletModel;
 
@@ -14,21 +15,28 @@ namespace Ui {
 class SendChangeAddressDialog;
 }
 
-class SendChangeAddressDialog : public QDialog
+class SendChangeAddressDialog : public FocusedDialog
 {
     Q_OBJECT
 
 public:
-    explicit SendChangeAddressDialog(QWidget *parent = nullptr);
+    explicit SendChangeAddressDialog(QWidget* parent, WalletModel* model);
     ~SendChangeAddressDialog();
 
     void setAddress(QString address);
-    bool getAddress(WalletModel *model, QString *retAddress);
-    bool selected = false;
+    QString getAddress() const;
 
-    void showEvent(QShowEvent *event) override;
+    void showEvent(QShowEvent* event) override;
+
 private:
+    WalletModel* walletModel;
     Ui::SendChangeAddressDialog *ui;
+    SnackBar *snackBar = nullptr;
+    void inform(const QString& text);
+
+private Q_SLOTS:
+    void reset();
+    void accept() override;
 };
 
 #endif // SENDCHANGEADDRESSDIALOG_H

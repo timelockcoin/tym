@@ -1,75 +1,74 @@
 # Copyright (c) 2018-2019 The Ion developers
-# Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
-name: timelockcoin-core
+# Copyright (c) 2019 The TYM developers
+name: timelockcoin_coin-core
 base: core18
-version: 4.0.99
-summary:   TimelockCoin (Private – Instant – Verified – Transaction)
+version: 4.1.99
+summary:   TYM_Coin (Private – Instant – Verified – Transaction)
 description: |
-  TimelockCoin is an MIT licensed,
+  TYM_Coin is an MIT licensed,
   open source, blockchain-based cryptocurrency with
   ultra fast transactions, low fees, high network decentralization, and
   Zero Knowledge cryptography proofs for industry-leading
   transaction anonymity.
 
-  - [Download](https://timelockcoin.org/wp-content/uploads/2018/10/TimelockCoin-White.pdf) TimelockCoin White Paper PDF
+  - [Download](https://timelockcoin_coin.org/wp-content/uploads/2018/10/TYM_Coin-White.pdf) TYM_Coin White Paper PDF
 grade: devel
 confinement: strict
 apps:
   daemon:
-    command: timelockcoind
+    command: timelockcoin_coind
     plugs: [network, network-bind, home, removable-media]
-    desktop: timelockcoind.desktop
+    desktop: timelockcoin_coind.desktop
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   daemon-testnet:
-    command: timelockcoind --testnet
+    command: timelockcoin_coind --testnet
     plugs: [network, network-bind, home, removable-media]
-    desktop: timelockcoind_testnet.desktop
+    desktop: timelockcoin_coind_testnet.desktop
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   qt:
-    command: timelockcoin-qt
+    command: timelockcoin_coin-qt
     plugs: [network, network-bind, network-status, unity7, desktop, desktop-legacy, wayland, x11, mir, opengl, home, gsettings, removable-media, screen-inhibit-control, pulseaudio, media-hub]
-    desktop: timelockcoin-qt.desktop
+    desktop: timelockcoin_coin-qt.desktop
     environment:
       QT_XKB_CONFIG_ROOT: $SNAP_USER_DATA:$SNAP/usr/share:$QT_XKB_CONFIG_ROOT
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   qt-testnet:
-    command: timelockcoin-qt --testnet
+    command: timelockcoin_coin-qt --testnet
     plugs: [network, network-bind, network-status, unity7, desktop, desktop-legacy, wayland, x11, mir, opengl, home, gsettings, removable-media, screen-inhibit-control, pulseaudio, media-hub]
-    desktop: timelockcoin-qt_testnet.desktop
+    desktop: timelockcoin_coin-qt_testnet.desktop
     environment:
       QT_XKB_CONFIG_ROOT: $SNAP_USER_DATA:$SNAP/usr/share:$QT_XKB_CONFIG_ROOT
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   cli:
-    command: timelockcoin-cli
+    command: timelockcoin_coin-cli
     plugs: [network, network-bind, home, removable-media]
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   cli-testnet:
-    command: timelockcoin-cli --testnet
+    command: timelockcoin_coin-cli --testnet
     plugs: [network, network-bind, home, removable-media]
     environment:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
       HOME: $SNAP_USER_COMMON
   tx:
-    command: timelockcoin-tx
+    command: timelockcoin_coin-tx
     plugs: [home]
   test:
-    command: test_timelockcoin
+    command: test_timelockcoin_coin
     plugs: [home]
   testqt:
-    command: test_timelockcoin-qt
+    command: test_timelockcoin_coin-qt
     plugs: [home]
 parts:
-  timelockcoin-core:
-    source: https://github.com/TimelockCoin-Project/TimelockCoin
+  timelockcoin_coin-core:
+    source: https://github.com/timelockcoinvps-project/timelockcoin
     source-type: git
     source-tag: master
     plugin: nil
@@ -81,7 +80,7 @@ parts:
       #    project is called ioncore because ion exists already as package. For anybody
       #    offering non official release and using own SNAP, this variable should be used
       #    default value is "false", to enable it, use your projects binary prefix
-      OVERRIDEBINPREFIX="timelockcoin"
+      OVERRIDEBINPREFIX="timelockcoin_coin"
       OVERRIDEDATADIR="false"
       OVERRIDECONF="${OVERRIDEDATADIR}"
       COPYCONF=0    # copy example config into users data folder, 1 = enabled
@@ -183,8 +182,8 @@ parts:
       echo "INSTALLATION OF ${BINPREF}-${SNAPCRAFT_PROJECT_VERSION}" # run make install with a prefix where to install
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
       make install prefix=${SNAPCRAFT_PART_INSTALL}
-      install -m 0644 -D -T $SNAPCRAFT_PART_BUILD/src/qt/res/icons/bitcoin.png $SNAPCRAFT_PART_INSTALL/share/pixmaps/timelockcoin.png
-      install -m 0644 -D -T $SNAPCRAFT_PART_BUILD/src/qt/res/icons/bitcoin_testnet.png $SNAPCRAFT_PART_INSTALL/share/pixmaps/timelockcoin_testnet.png
+      install -m 0644 -D -T $SNAPCRAFT_PART_BUILD/src/qt/res/icons/bitcoin.png $SNAPCRAFT_PART_INSTALL/share/pixmaps/timelockcoin_coin.png
+      install -m 0644 -D -T $SNAPCRAFT_PART_BUILD/src/qt/res/icons/bitcoin_testnet.png $SNAPCRAFT_PART_INSTALL/share/pixmaps/timelockcoin_coin_testnet.png
       echo "-----------------------------------------------"
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
       echo "POST INSTALL SCRIPTS OF ${BINPREF}-${SNAPCRAFT_PROJECT_VERSION}" # run make install with a prefix where to install
@@ -205,20 +204,18 @@ parts:
             chmod +x ${SNAPCRAFT_PART_INSTALL}/usr/bin/test_${BINPREF}-qt
             echo "PPC64EL fix - test_${BINPREF}-qt does not exist, fix required, dummy as test_${BINPREF}-qt"
           fi
-          if [ -e $SNAPCRAFT_PART_BUILD/src/test/test_${BINPREF} ]; then
-            echo "PPC64EL fix - test_${BINPREF} exists, fix unrequired"
-          else
-            echo "echo test_${BINPREF} is not installed" > ${SNAPCRAFT_PART_INSTALL}/usr/bin/test_${BINPREF}
-            chmod +x ${SNAPCRAFT_PART_INSTALL}/usr/bin/test_${BINPREF}
-            echo "PPC64EL fix - test_${BINPREF} does not exist, fix required, dummy as test_${BINPREF}"
-          fi
+
+        echo "echo test_${BINPREF} is not installed" > ${SNAPCRAFT_PART_INSTALL}/usr/bin/test_${BINPREF}
+        chmod +x ${SNAPCRAFT_PART_INSTALL}/usr/bin/test_${BINPREF}
+        echo "PPC64EL fix - test_${BINPREF} does not exist, fix required, dummy as test_${BINPREF}"
+
         fi
         else
           echo "PPC64EL fix disabled, skipping"
       fi
       echo "-----------------------------------------------"
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
-      echo "CONFIG FILE" # create .timelockcoin folder and copy example config - !!!warning!!!: do not copy as timelockcoin.conf
+      echo "CONFIG FILE" # create .timelockcoin_coin folder and copy example config - !!!warning!!!: do not copy as timelockcoin_coin.conf
       echo "+++++++++++++++++++++++++++++++++++++++++++++++"
       mkdir -p ${SNAP_USER_COMMON}/.${DATADIR}
       if [ $COPYCONF = 1 ]; then

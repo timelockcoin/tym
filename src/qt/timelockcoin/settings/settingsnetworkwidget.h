@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,13 +19,16 @@ class SettingsNetworkWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsNetworkWidget(TimelockCoinGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsNetworkWidget(timelockcoinGUI* _window, QWidget *parent = nullptr);
     ~SettingsNetworkWidget();
 
     void setMapper(QDataWidgetMapper *mapper);
 
 private:
     Ui::SettingsNetworkWidget *ui;
+
+Q_SIGNALS:
+    void saveSettings() {};
 };
 
 #endif // SETTINGSNETWORKWIDGET_H

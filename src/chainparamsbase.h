@@ -1,6 +1,6 @@
 // Copyright (c) 2014 The Bitcoin developers
-// Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +12,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between timelockcoin-cli and timelockcoind)
- * of a given instance of the TimelockCoin system.
+ * of a given instance of the timelockcoin system.
  */
 class CBaseChainParams
 {
@@ -21,7 +21,6 @@ public:
         MAIN,
         TESTNET,
         REGTEST,
-        UNITTEST,
 
         MAX_NETWORK_TYPES
     };

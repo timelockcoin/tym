@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,17 +18,17 @@ class SettingsWalletRepairWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit SettingsWalletRepairWidget(TimelockCoinGUI* _window, QWidget *parent = nullptr);
+    explicit SettingsWalletRepairWidget(timelockcoinGUI* _window, QWidget *parent = nullptr);
     ~SettingsWalletRepairWidget();
 
     /** Build parameter list for restart */
     void buildParameterlist(QString arg);
 
-signals:
+Q_SIGNALS:
     /** Get restart command-line parameters and handle restart */
     void handleRestart(QStringList args);
 
-public slots:
+public Q_SLOTS:
     void walletSalvage();
     void walletRescan();
     void walletZaptxes1();

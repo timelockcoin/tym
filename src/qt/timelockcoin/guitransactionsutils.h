@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FURSZY_TimelockCoin_GUITRANSACTIONSUTILS_H
-#define FURSZY_TimelockCoin_GUITRANSACTIONSUTILS_H
+#ifndef FURSZY_timelockcoin_GUITRANSACTIONSUTILS_H
+#define FURSZY_timelockcoin_GUITRANSACTIONSUTILS_H
 
 #include "walletmodel.h"
 #include "qt/timelockcoin/pwidget.h"
@@ -35,4 +35,4 @@ namespace GuiTransactionsUtils {
 }
 
 
-#endif //FURSZY_TimelockCoin_GUITRANSACTIONSUTILS_H
+#endif //FURSZY_timelockcoin_GUITRANSACTIONSUTILS_H

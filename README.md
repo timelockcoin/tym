@@ -29,8 +29,8 @@ More information at [timelockcoin.com](http://www.timelockcoin.com).
 <tr><td>Phase 6</td><td>330001 - 380000</td><td>4000.0001234 TYM</td><td>3.00 TYM</td><td>2.9950 TYM</td><td>0.0050 TYM</td></tr>
 <tr><td>Phase 7</td><td>380001 - 420000</td><td>7000.0001234 TYM</td><td>3.50 TYM</td><td>3.4950 TYM</td><td>0.0050 TYM</td></tr>
 <tr><td>Phase 8</td><td>420001 - 450000</td><td>8000.0001234 TYM</td><td>4.00 TYM</td><td>3.9950 TYM</td><td>0.0050 TYM</td></tr>
-<tr><td>Phase 9</td><td>450001 - 500000</td><td>9000.0001234 TYM</td><td>4.50 TYM</td><td>4.4950 TYM</td><td>0.0050 TYM</td></tr>
-<tr><td>Phase 10</td><td>500001 - 550000</td><td>13000.0001234 TYM</td><td>6.50 TYM</td><td>6.4500 TYM</td><td>0.0500 TYM</td></tr>
-<tr><td>Phase 11</td><td>550001 - 600000</td><td>15000.0001234 TYM</td><td>8.00 TYM</td><td>7.9500 TYM</td><td>0.0500 TYM</td></tr>
-<tr><td>Phase 12</td><td>600001 - ∞</td><td>20000.0001234 TYM</td><td>10.0 TYM</td><td>9.9500 TYM</td><td>0.0500 TYM</td></tr>
+<tr><td>Phase 9</td><td>450001 - 500000</td><td>5000.0001234 TYM</td><td>1.55 TYM</td><td>1.5000 TYM</td><td>0.0050 TYM</td></tr>
+<tr><td>Phase 10</td><td>500001 - 550000</td><td>9000.0001234 TYM</td><td>3.00 TYM</td><td>2.9500 TYM</td><td>0.0500 TYM</td></tr>
+<tr><td>Phase 11</td><td>550001 - 600000</td><td>15000.0001234 TYM</td><td>6.00 TYM</td><td>5.9500 TYM</td><td>0.0500 TYM</td></tr>
+<tr><td>Phase 12</td><td>600001 - ∞</td><td>25000.0001234 TYM</td><td>9.0 TYM</td><td>8.9500 TYM</td><td>0.0500 TYM</td></tr>
 </table>

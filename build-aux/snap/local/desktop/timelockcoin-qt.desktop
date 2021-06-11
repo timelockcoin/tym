@@ -2,15 +2,15 @@
 
 [Desktop Entry]
 Encoding=UTF-8
-Name=TimelockCoin Core
-Comment=TimelockCoin Core QT main network
-GenericName=TimelockCoin Digital Currency QT client main network
-Exec=timelockcoin-core.qt %u
+Name=TYM_Coin
+Comment=TYM_Coin QT main network
+GenericName=TYM_Coin Digital Currency QT client main network
+Exec=timelockcoin_coin-core.qt %u
 Terminal=false
 Type=Application
-Icon=${SNAP}/share/pixmaps/timelockcoin.png
-MimeType=x-scheme-handler/timelockcoin;
+Icon=${SNAP}/share/pixmaps/timelockcoin_coin.png
+MimeType=x-scheme-handler/timelockcoin_coin;
 Categories=X-Office;X-Finance;
-Keywords=internet;timelockcoin;zpiv;piv;core;wallet;qt;main;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Keywords=internet;timelockcoin_coin;ztimelockcoin;timelockcoin;core;wallet;qt;main;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
 Version=1.0
-Name[en_US]=timelockcoin-qt.desktop
+Name[en_IN]=timelockcoin-qt.desktop

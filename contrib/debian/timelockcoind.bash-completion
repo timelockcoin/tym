@@ -1,0 +1,2 @@
+contrib/timelockcoind.bash-completion	timelockcoind
+contrib/timelockcoin-cli.bash-completion timelockcoin-cli

@@ -130,12 +130,12 @@
         <translation>Alıcı Adres</translation>
     </message>
     <message>
-        <source>These are your TimelockCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödemeleri göndermek için olan TimelockCoin adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
+        <source>These are your timelockcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödemeleri göndermek için olan timelockcoin adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
     </message>
     <message>
-        <source>These are your TimelockCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için olan TimelockCoin adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
+        <source>These are your timelockcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödemeleri almak için olan timelockcoin adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -194,6 +194,10 @@
     <message>
         <source>Date</source>
         <translation>Tarih</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Yaz</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -372,16 +376,12 @@ Stake için kaldırın</translation>
         <translation>İPTAL</translation>
     </message>
     <message>
-        <source>TimelockCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TYMs from being stolen by malware infecting your computer.</source>
-        <translation>TimelockCoin şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, TYM'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
+        <source>timelockcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TYMs from being stolen by malware infecting your computer.</source>
+        <translation>timelockcoin şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, TYM'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Cüzdanınızı şifrelemek istediğinizden emin misiniz?</translation>
-    </message>
-    <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TYM&lt;/b&gt;!</source>
-        <translation>Dikkat! Eğer cüzdanınızı şifrelerseniz ve şifrenizi unutursanız &lt;b&gt;Tüm Pıvlerinizi kaybedersiniz&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -423,10 +423,6 @@ Stake için kaldırın</translation>
         <source>Wallet passphrase was successfully changed.</source>
         <translation>Cüzdan parolası başarıyla değiştirildi.</translation>
     </message>
-    <message>
-        <source>Warning: The Caps Lock key is on!</source>
-        <translation>Uyarı: Caps Lock tuşu açık!</translation>
-    </message>
 </context>
 <context>
     <name>BanTableModel</name>
@@ -437,38 +433,6 @@ Stake için kaldırın</translation>
     <message>
         <source>Banned Until</source>
         <translation>Yasaklılık Bitiş Tarihi</translation>
-    </message>
-</context>
-<context>
-    <name>BlockExplorer</name>
-    <message>
-        <source>Blockchain Explorer</source>
-        <translation>Blok zinciri tarayıcı</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation>Geri</translation>
-    </message>
-    <message>
-        <source>Forward</source>
-        <translation>Ileri</translation>
-    </message>
-    <message>
-        <source>Address / Block / Transaction</source>
-        <translation>Adres/Blok/İşlem</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Ara</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (timelockcoin.conf).</source>
-        <translation>Tüm işlemler gösterilmez. Tüm işlemleri görmek için yapılandırma dosyasında txindex = 1 ayarlamanız gerekir (timelockcoin.conf).
-</translation>
     </message>
 </context>
 <context>
@@ -503,10 +467,6 @@ Stake için kaldırın</translation>
     <message>
         <source>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</source>
         <translation>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Bilinmeyen: %5)</translation>
-    </message>
-    <message>
-        <source>Network Alert</source>
-        <translation>Ağ Uyarısı</translation>
     </message>
 </context>
 <context>
@@ -552,14 +512,6 @@ Stake için kaldırın</translation>
         <translation>Miktar</translation>
     </message>
     <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
         <source>0.00 TYM</source>
         <translation>0.00 TYM</translation>
     </message>
@@ -597,7 +549,7 @@ Stake için kaldırın</translation>
     </message>
     <message>
         <source>Confirmations</source>
-        <translation>Doğrulamalar</translation>
+        <translation>Onaylar</translation>
     </message>
     <message>
         <source>Confirmed</source>
@@ -628,34 +580,6 @@ Stake için kaldırın</translation>
         <translation>Harcanmamış tutarın kilidini aç</translation>
     </message>
     <message>
-        <source>Copy quantity</source>
-        <translation>Miktarı kopyala</translation>
-    </message>
-    <message>
-        <source>Copy fee</source>
-        <translation>Ücreti kopyala</translation>
-    </message>
-    <message>
-        <source>Copy after fee</source>
-        <translation>Ücret sonrasını kopyala</translation>
-    </message>
-    <message>
-        <source>Copy bytes</source>
-        <translation>bytes kopyala</translation>
-    </message>
-    <message>
-        <source>Copy priority</source>
-        <translation>öncelik kopyala</translation>
-    </message>
-    <message>
-        <source>Copy dust</source>
-        <translation>dust kopyala</translation>
-    </message>
-    <message>
-        <source>Copy change</source>
-        <translation>fark kopyala</translation>
-    </message>
-    <message>
         <source>Unselect all</source>
         <translation>Tüm seçimleri kaldır</translation>
     </message>
@@ -681,7 +605,7 @@ Stake için kaldırın</translation>
     </message>
     <message>
         <source>medium</source>
-        <translation>orta</translation>
+        <translation>Orta</translation>
     </message>
     <message>
         <source>low-medium</source>
@@ -740,8 +664,8 @@ Stake için kaldırın</translation>
         <translation>Herhangi bir alıcı %1 'den küçük bir miktar alırsa, bu etiket kırmızıya döner.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 upiv per input.</source>
-        <translation>Her giriş için +/- %1 upiv farkedebilir.</translation>
+        <source>Can vary +/- %1 utimelockcoin per input.</source>
+        <translation>Her giriş için +/- %1 utimelockcoin farkedebilir.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -754,89 +678,6 @@ Stake için kaldırın</translation>
     <message>
         <source>(change)</source>
         <translation>(değişiklik)</translation>
-    </message>
-</context>
-<context>
-    <name>CoinControlPivWidget</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Diyalog</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>PushButton</source>
-        <translation>Butona Basın</translation>
-    </message>
-    <message>
-        <source>TYM:</source>
-        <translation>TYM:</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Quantity:</source>
-        <translation>Miktar</translation>
-    </message>
-    <message>
-        <source>Fee:</source>
-        <translation>Ücret:</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Miktar</translation>
-    </message>
-    <message>
-        <source>Label</source>
-        <translation>Etiket</translation>
-    </message>
-    <message>
-        <source>Address</source>
-        <translation>Adres</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Yaz</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Tarih</translation>
-    </message>
-    <message>
-        <source>Confirmations</source>
-        <translation>Onaylar</translation>
-    </message>
-    <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
-        <source>Bytes:</source>
-        <translation>Bytes:</translation>
-    </message>
-    <message>
-        <source>Dust:</source>
-        <translation>Dust</translation>
-    </message>
-    <message>
-        <source>Change:</source>
-        <translation>Fark:</translation>
-    </message>
-    <message>
-        <source>After Fee: </source>
-        <translation>Ücret sonrası:</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
     </message>
 </context>
 <context>
@@ -928,8 +769,8 @@ Do you wish to proceed?</source>
         <translation>Dış bir adrese delege ediliyor!
 
 Delege edilmiş koinler bu cüzdan tarafından harcanamaz.
-Bu koinler owner adresinin olduğu cüzdan veya cihaz 
-tarafından harcanabilir. 
+Bu koinler owner adresinin olduğu cüzdan veya cihaz
+tarafından harcanabilir.
 
 Devam etmek istiyor musunuz?</translation>
     </message>
@@ -1114,50 +955,6 @@ kopyala</translation>
         <translation>Stake edilmiş TYM ve zTYM miktarı</translation>
     </message>
     <message>
-        <source>All</source>
-        <translation>Tümü</translation>
-    </message>
-    <message>
-        <source>Received</source>
-        <translation>Alındı</translation>
-    </message>
-    <message>
-        <source>Sent</source>
-        <translation>Gönderildi</translation>
-    </message>
-    <message>
-        <source>Mined</source>
-        <translation>Mined </translation>
-    </message>
-    <message>
-        <source>Minted</source>
-        <translation>Mint edildi </translation>
-    </message>
-    <message>
-        <source>MN reward</source>
-        <translation>MN Ödülü</translation>
-    </message>
-    <message>
-        <source>To yourself</source>
-        <translation>Kendine</translation>
-    </message>
-    <message>
-        <source>Cold stakes</source>
-        <translation>Soğuk Stakeler</translation>
-    </message>
-    <message>
-        <source>Hot stakes</source>
-        <translation>Sıcak Stakeler</translation>
-    </message>
-    <message>
-        <source>Delegated</source>
-        <translation>Delege edilmiş</translation>
-    </message>
-    <message>
-        <source>Delegations</source>
-        <translation>Delegasyonlar</translation>
-    </message>
-    <message>
         <source>Please wait until the wallet is fully synced to see your correct balance</source>
         <translation>Doğru bakiyenizi görmek için cüzdanınızın senkronizasyonunun tamamlanmasını bekleyiniz.</translation>
     </message>
@@ -1224,65 +1021,6 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
     </message>
 </context>
 <context>
-    <name>DenomGenerationDialog</name>
-    <message>
-        <source>Form</source>
-        <translation>Form</translation>
-    </message>
-    <message>
-        <source>Transaction Details</source>
-        <translation>İşlem Detayları</translation>
-    </message>
-    <message>
-        <source>This will unlock your wallet fully, so that anyone with access to it can spend until the wallet is closed or locked again.</source>
-        <translation>Bu cüzdanınızın kilidini kaldıracaktır, dolayısıyla erişimi olan herkes cüzdan kapatılana kadar veya tekrar kilitlenene kadar harcama yapabilir.</translation>
-    </message>
-    <message>
-        <source>5000</source>
-        <translation>5000</translation>
-    </message>
-    <message>
-        <source>100</source>
-        <translation>100</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>1000</source>
-        <translation>1000</translation>
-    </message>
-    <message>
-        <source>50</source>
-        <translation>50</translation>
-    </message>
-    <message>
-        <source>500</source>
-        <translation>500</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation>5</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>Select All</source>
-        <translation>Tümünü Seç</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>SAVE</source>
-        <translation>KAYDET</translation>
-    </message>
-</context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -1321,8 +1059,8 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>Gönderen adresini düzenle</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid TimelockCoin address.</source>
-        <translation>Girilen "%1" adresi geçerli bir TimelockCoin adresi değil.</translation>
+        <source>The entered address "%1" is not a valid timelockcoin address.</source>
+        <translation>Girilen "%1" adresi geçerli bir timelockcoin adresi değil.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1368,65 +1106,22 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
     </message>
 </context>
 <context>
-    <name>GovernancePage</name>
-    <message>
-        <source>Form</source>
-        <translation>Form</translation>
-    </message>
-    <message>
-        <source>GOVERNANCE</source>
-        <translation>YÖNETİM</translation>
-    </message>
-    <message>
-        <source>Update Proposals</source>
-        <translation>Teklifleri Güncelle</translation>
-    </message>
-    <message>
-        <source>Next super block:</source>
-        <translation>Sıradaki süper blok</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>Blocks to next super block:</source>
-        <translation>Sıradaki süper bloğa kadarki blok sayısı:</translation>
-    </message>
-    <message>
-        <source>Days to budget payout (estimate):</source>
-        <translation>Bütçe ödemesine kalan gün (tahmini):</translation>
-    </message>
-    <message>
-        <source>Allotted budget:</source>
-        <translation>Ayrılmış Bütçe:</translation>
-    </message>
-    <message>
-        <source>Budget left:</source>
-        <translation>Kalan Bütçe:</translation>
-    </message>
-    <message>
-        <source>Masternodes count:</source>
-        <translation>Masternode Sayısı:</translation>
-    </message>
-</context>
-<context>
     <name>HelpMessageDialog</name>
     <message>
         <source>version</source>
         <translation>versiyon</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin CORE</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About TimelockCoin Core</source>
-        <translation>TimelockCoin Core Hakkında </translation>
+        <source>About timelockcoin</source>
+        <translation>timelockcoin Hakkında </translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1476,16 +1171,16 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>Hoşgeldiniz</translation>
     </message>
     <message>
-        <source>Welcome to TimelockCoin Core.</source>
-        <translation>TimelockCoin Core'a hoşgeldiniz.</translation>
+        <source>Welcome to timelockcoin.</source>
+        <translation>timelockcoin'a hoşgeldiniz.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where TimelockCoin Core will store its data.</source>
-        <translation>Program ilk başlatıldığında TimelockCoin Core'un verilerini nerede saklayacağını seçebilirsiniz.</translation>
+        <source>As this is the first time the program is launched, you can choose where timelockcoin will store its data.</source>
+        <translation>Program ilk başlatıldığında timelockcoin'un verilerini nerede saklayacağını seçebilirsiniz.</translation>
     </message>
     <message>
-        <source>TimelockCoin Core will download and store a copy of the TimelockCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>TimelockCoin Core, TimelockCoin blok zincirinin bir kopyasını indirecek ve depolayacaktır. Bu dizinde en az %1GB veri saklanacak ve zamanla büyüyecektir. Ayrıca cüzdanınız da bu dizinde saklanır.</translation>
+        <source>timelockcoin will download and store a copy of the timelockcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>timelockcoin, timelockcoin blok zincirinin bir kopyasını indirecek ve depolayacaktır. Bu dizinde en az %1GB veri saklanacak ve zamanla büyüyecektir. Ayrıca cüzdanınız da bu dizinde saklanır.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1504,8 +1199,8 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>TAMAM</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1513,7 +1208,7 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
     </message>
     <message>
         <source>Error</source>
-        <translation>hata</translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <source>%1 GB of free space available</source>
@@ -1568,18 +1263,6 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <source>Form</source>
         <translation>Form</translation>
     </message>
-    <message>
-        <source>user_masternode</source>
-        <translation>kullanıcı_masternode</translation>
-    </message>
-    <message>
-        <source>Address: 88.26.164.88:51474</source>
-        <translation>Adres: 88.26.164.88:51474</translation>
-    </message>
-    <message>
-        <source>Jan. 19, 2019</source>
-        <translation>Ocak. 12,2019</translation>
-    </message>
 </context>
 <context>
     <name>MasterNodeWizardDialog</name>
@@ -1612,16 +1295,12 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>Adres</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a TimelockCoin Masternode you must dedicate 10.000 TYM (the unit of TimelockCoin) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Yeni bir Masternode yaratmak için ağa 10.000 TYM (TimelockCoin birimi) ayırmanız gerekmektedir (buna rağmen koinler hala size aittir ve sahipliğini kororsunuz). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;İstediğiniz zaman devre dışı bırakabilir ve koinlerinizin kilidini kaldırabilirsiniz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>Make sure you have this amount of coins.</source>
         <translation>Bu miktarda koininizin olduğundan emin olunuz.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 TYM will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;10.000 TYM'lik bir transfer &lt;/p&gt;&lt;p&gt;yeni ve boş bir adrese yapılacaktır.&lt;/p&gt;&lt;p&gt;Adres Masternode'unuz ismi ile etiketlenecektir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 1000 TYM will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1000 TYM'lik bir transfer &lt;/p&gt;&lt;p&gt;yeni ve boş bir adrese yapılacaktır.&lt;/p&gt;&lt;p&gt;Adres Masternode'unuz ismi ile etiketlenecektir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1660,20 +1339,12 @@ Cüzdanınız senkronize olduktan ve harcanmamış bakiyeniz yeterli miktarda on
         <translation>IP ve Port boş olamaz</translation>
     </message>
     <message>
-        <source>Invalid port number</source>
-        <translation>Geçersiz port numarası</translation>
-    </message>
-    <message>
         <source>Invalid masternode.conf file</source>
         <translation>Geçersiz masternode.conf dosyası</translation>
     </message>
     <message>
         <source>Error parsing masternode.conf file</source>
         <translation> masternode.conf dosyası çözümleme hatası</translation>
-    </message>
-    <message>
-        <source>Master node created!</source>
-        <translation>Masternode yaratıldı!</translation>
     </message>
     <message>
         <source>masternode.conf file doesn't exists</source>
@@ -1734,12 +1405,6 @@ and vote on the treasury system receiving a periodic reward.</source>
 </translation>
     </message>
     <message>
-        <source>Cannot start masternode, the collateral transaction has not been accepted by the network.
-Please wait few more minutes.</source>
-        <translation>Masternode başlatılamadı, teminat transferi henüz ağ tarafından kabul edilmedi
-Lütfen birkaç dakika bekleyiniz.</translation>
-    </message>
-    <message>
         <source>Remote Masternode Data</source>
         <translation>Uzak Masternode Bilgisi</translation>
     </message>
@@ -1752,7 +1417,7 @@ You will only have to paste the data in the timelockcoin.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </source>
-        <translation>Uzak bir sunucuda Masternode çalıştırabilmek için gereken bilgiyi 
+        <translation>Uzak bir sunucuda Masternode çalıştırabilmek için gereken bilgiyi
 panoya almak üzeresiniz.
 
 
@@ -1760,10 +1425,6 @@ Bilgiyi uzak sunucunuzdaki timelockcoin.conf dosyasına yapıştırmanız ve
  başlatmanız gerekecektir, ondan sonra bu kontrol cüzdanını kullanan
 Masternodu başlatın (Listeden Masternodu seçip "başlat" tuşuna basın).
 </translation>
-    </message>
-    <message>
-        <source>Masternode exported!, check your clipboard</source>
-        <translation>Masternode bilgisi dışarı alındı! Panoyu kontrol edin</translation>
     </message>
     <message>
         <source>Delete Masternode</source>
@@ -1792,8 +1453,8 @@ Emin misiniz?</translation>
         <translation> masternode.conf dosyası bulunamadı</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 TYM required.</source>
-        <translation>Masternode yaratmak için yetersiz bakiye, 10,000 TYM gerekmektedir.</translation>
+        <source>Not enough balance to create a masternode, 1000 TYM required.</source>
+        <translation>Masternode yaratmak için yetersiz bakiye, 1000 TYM gerekmektedir.</translation>
     </message>
     <message>
         <source>Error creating masternode</source>
@@ -1832,7 +1493,7 @@ Emin misiniz?</translation>
     </message>
     <message>
         <source>1 Inputs</source>
-        <translation>1 çıktı</translation>
+        <translation>1 girdi</translation>
     </message>
     <message>
         <source>Status:</source>
@@ -1966,8 +1627,8 @@ Emin misiniz?</translation>
         <translation>Doğrulanmamış değişikliğin harcamasını devre dışı bırakırsanız, bir işlemdeki değişiklik&lt;br/&gt;Bu işlem en az bir onay alıncaya kadar kullanılamaz.&lt;br/&gt;Bu aynı zamanda bakiyenizin nasıl hesaplandığını etkiler.</translation>
     </message>
     <message>
-        <source>Automatically open the TimelockCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönelticideki TimelockCoin istemci bağlantı noktasını otomatik olarak açın. Bu, yalnızca yönlendiriciniz UPnP'yi destekliyorsa ve etkinleştirilmişse çalışır.</translation>
+        <source>Automatically open the timelockcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönelticideki timelockcoin istemci bağlantı noktasını otomatik olarak açın. Bu, yalnızca yönlendiriciniz UPnP'yi destekliyorsa ve etkinleştirilmişse çalışır.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1986,12 +1647,12 @@ Emin misiniz?</translation>
         <translation>Uzman</translation>
     </message>
     <message>
-        <source>Automatically start TimelockCoin after logging in to the system.</source>
-        <translation>Sisteme giriş yaptıktan sonra otomatik olarak TimelockCoin'i başlatın.</translation>
+        <source>Automatically start timelockcoin after logging in to the system.</source>
+        <translation>Sisteme giriş yaptıktan sonra otomatik olarak timelockcoin'i başlatın.</translation>
     </message>
     <message>
-        <source>&amp;Start TimelockCoin on system login</source>
-        <translation>&amp; Sistem oturum açma işleminde TimelockCoin'i başlat</translation>
+        <source>&amp;Start timelockcoin on system login</source>
+        <translation>&amp; Sistem oturum açma işleminde timelockcoin'i başlat</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -2018,14 +1679,14 @@ Emin misiniz?</translation>
         <translation>&amp;Ağ</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting TimelockCoin.</source>
-        <translation>Kullanıcı arabirimi dili burada ayarlanabilir. Bu ayar, TimelockCoin yeniden başlatıldıktan sonra geçerli olur.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting timelockcoin.</source>
+        <translation>Kullanıcı arabirimi dili burada ayarlanabilir. Bu ayar, timelockcoin yeniden başlatıldıktan sonra geçerli olur.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations</source>
+https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations</source>
         <translation>Dil eksik veya çeviri tamamlanmamış mı? Katkıda bulunan çevirilere yardımcı olun:
-https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations</translation>
+https://www.transifex.com/timelockcoinvps-project/timelockcoinvps-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2068,8 +1729,8 @@ https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations
         <translation>Stake bölme eşiği</translation>
     </message>
     <message>
-        <source>Connect to the TimelockCoin network through a SOCKS5 proxy.</source>
-        <translation>Bir SOCKS5 proxy vasıtasıyla TimelockCoin ağına bağlanın.</translation>
+        <source>Connect to the timelockcoin network through a SOCKS5 proxy.</source>
+        <translation>Bir SOCKS5 proxy vasıtasıyla timelockcoin ağına bağlanın.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2213,10 +1874,10 @@ https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations
     </message>
 </context>
 <context>
-    <name>TimelockCoinGUI</name>
+    <name>timelockcoinGUI</name>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin CORE</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2243,8 +1904,8 @@ https://www.transifex.com/timelockcoin-project/timelockcoin-project-translations
         <translation>Uygulamayı sonlandır</translation>
     </message>
     <message>
-        <source>TimelockCoin Core client</source>
-        <translation>TimelockCoin Core istemci</translation>
+        <source>timelockcoin client</source>
+        <translation>timelockcoin istemci</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2287,15 +1948,8 @@ Adres: %4
 </translation>
     </message>
     <message>
-        <source>A fatal error occurred. TimelockCoin can no longer continue safely and will quit.</source>
-        <translation>Onarılamaz bir hata oluştu. TimelockCoin güvenli bir şekilde çalışamaz, kapanacaktır.</translation>
-    </message>
-</context>
-<context>
-    <name>PWidget</name>
-    <message>
-        <source>Wallet locked, you need to unlock it to perform this action</source>
-        <translation>Cüzdan kilitli, bu işlemi yapabilmek için cüzdanın kilidini açmalısınız.</translation>
+        <source>A fatal error occurred. timelockcoin can no longer continue safely and will quit.</source>
+        <translation>Onarılamaz bir hata oluştu. timelockcoin güvenli bir şekilde çalışamaz, kapanacaktır.</translation>
     </message>
 </context>
 <context>
@@ -2322,11 +1976,11 @@ Adres: %4
     </message>
     <message>
         <source>Cannot start timelockcoin: click-to-pay handler</source>
-        <translation>TimelockCoin başlatılamıyor: tıkla ve ödeme işleyicisi</translation>
+        <translation>timelockcoin başlatılamıyor: tıkla ve ödeme işleyicisi</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid TimelockCoin address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamaz! Bunun nedeni, geçersiz bir TimelockCoin adresi veya hatalı biçimlendirilmiş URI parametrelerinden kaynaklanabilir.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid timelockcoin address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamaz! Bunun nedeni, geçersiz bir timelockcoin adresi veya hatalı biçimlendirilmiş URI parametrelerinden kaynaklanabilir.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2521,74 +2175,6 @@ transaction history, making transactions untraceable </source>
     </message>
 </context>
 <context>
-    <name>ProposalFrame</name>
-    <message>
-        <source>Open proposal page in browser</source>
-        <translation>Teklif sayfasını tarayıcıda açın</translation>
-    </message>
-    <message>
-        <source> remaining payment(s).</source>
-        <translation>kalan ödeme(ler).</translation>
-    </message>
-    <message>
-        <source>Yes:</source>
-        <translation>Evet:</translation>
-    </message>
-    <message>
-        <source>Abstain:</source>
-        <translation>Çekimser:</translation>
-    </message>
-    <message>
-        <source>No:</source>
-        <translation>Hayır:</translation>
-    </message>
-    <message>
-        <source>A proposal URL can be used for phishing, scams and computer viruses. Open this link only if you trust the following URL.
-</source>
-        <translation>Bir teklif URL'si şifre avcılığı, dolandırıcılık, bilgisayar virüsü amaçlarıyla kullanılabilir. Linki sadece URL'ye güveniyorsanız açın.</translation>
-    </message>
-    <message>
-        <source>Open link</source>
-        <translation>Link'i aç</translation>
-    </message>
-    <message>
-        <source>Copy link</source>
-        <translation>Link'i kopyala</translation>
-    </message>
-    <message>
-        <source>Wallet Locked</source>
-        <translation>Cüzdan Kilitlendi</translation>
-    </message>
-    <message>
-        <source>You must unlock your wallet to vote.</source>
-        <translation>Oy verebilmek için cüzdanın kilitini açmalısınız.</translation>
-    </message>
-    <message>
-        <source>Do you want to vote %1 on</source>
-        <translation>%1 olarak onaylamak istiyor musunuz?</translation>
-    </message>
-    <message>
-        <source>using all your masternodes?</source>
-        <translation>tüm Masternode'larınızı kullanarak?</translation>
-    </message>
-    <message>
-        <source>Proposal Hash:</source>
-        <translation>Teklif Hash:</translation>
-    </message>
-    <message>
-        <source>Proposal URL:</source>
-        <translation>Teklif URL:</translation>
-    </message>
-    <message>
-        <source>Confirm Vote</source>
-        <translation>Oyu Onayla</translation>
-    </message>
-    <message>
-        <source>Vote Results</source>
-        <translation>Oy Sonuçları</translation>
-    </message>
-</context>
-<context>
     <name>QObject</name>
     <message>
         <source>Amount</source>
@@ -2619,10 +2205,6 @@ transaction history, making transactions untraceable </source>
         <translation>BLOOM</translation>
     </message>
     <message>
-        <source>ZK_BLOOM</source>
-        <translation>ZK_BLOOM</translation>
-    </message>
-    <message>
         <source>UNKNOWN</source>
         <translation>BİLİNMEYEN</translation>
     </message>
@@ -2639,8 +2221,8 @@ transaction history, making transactions untraceable </source>
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin CORE</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2659,10 +2241,66 @@ transaction history, making transactions untraceable </source>
         <translation>Masternode konfigürasyon dosyası okuma hatası: %1</translation>
     </message>
     <message>
-        <source>TimelockCoin Core didn't yet exit safely...</source>
-        <translation>TimelockCoin Core henüz güvenle kapanmadı..</translation>
+        <source>timelockcoin didn't yet exit safely...</source>
+        <translation>timelockcoin henüz güvenle kapanmadı..</translation>
     </message>
-</context>
+    <message>
+        <source>Cold Staking</source>
+        <translation>Soğuk Stakleme</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Bilinmeyen</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Tümü</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation>Kişiler</translation>
+    </message>
+    <message>
+        <source>Received</source>
+        <translation>Alındı</translation>
+    </message>
+    <message>
+        <source>Sent</source>
+        <translation>Gönderildi</translation>
+    </message>
+    <message>
+        <source>Mined</source>
+        <translation>Mined </translation>
+    </message>
+    <message>
+        <source>Minted</source>
+        <translation>Mint edildi </translation>
+    </message>
+    <message>
+        <source>MN reward</source>
+        <translation>MN Ödülü</translation>
+    </message>
+    <message>
+        <source>To yourself</source>
+        <translation>Kendine</translation>
+    </message>
+    <message>
+        <source>Cold stakes</source>
+        <translation>Soğuk Stakeler</translation>
+    </message>
+    <message>
+        <source>Hot stakes</source>
+        <translation>Sıcak Stakeler</translation>
+    </message>
+    <message>
+        <source>Delegated</source>
+        <translation>Delege edilmiş</translation>
+    </message>
+    <message>
+        <source>Delegations</source>
+        <translation>Delegasyonlar</translation>
+    </message>
+    </context>
 <context>
     <name>RPCConsole</name>
     <message>
@@ -2679,7 +2317,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <source>Name</source>
-        <translation>isim</translation>
+        <translation>İsim</translation>
     </message>
     <message>
         <source>Client name</source>
@@ -2734,8 +2372,8 @@ transaction history, making transactions untraceable </source>
         <translation>Block chain</translation>
     </message>
     <message>
-        <source>Open the TimelockCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Geçerli veri dizininden TimelockCoin hata ayıklama günlük dosyasını açın. Bu, büyük günlük dosyaları için birkaç saniye sürebilir.</translation>
+        <source>Open the timelockcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Geçerli veri dizininden timelockcoin hata ayıklama günlük dosyasını açın. Bu, büyük günlük dosyaları için birkaç saniye sürebilir.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2775,7 +2413,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <source>Sent</source>
-        <translation>Gitti</translation>
+        <translation>Gönderildi</translation>
     </message>
     <message>
         <source>&amp;Peers</source>
@@ -2959,7 +2597,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <source>Welcome to the TimelockCoin RPC console.</source>
-        <translation>TimelockCoin RPC konsola hoşgeldiniz</translation>
+        <translation>timelockcoin RPC konsola hoşgeldiniz</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -3081,8 +2719,8 @@ transaction history, making transactions untraceable </source>
         <translation>İşlem Detayları</translation>
     </message>
     <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
+        <source>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </source>
+        <translation>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </translation>
     </message>
     <message>
         <source>CANCEL</source>
@@ -3125,7 +2763,7 @@ transaction history, making transactions untraceable </source>
     </message>
     <message>
         <source>Scan the QR code or copy the address to receive TYM.</source>
-        <translation>TimelockCoin almak için QR kodunu okutun veya adresi kopyalayın</translation>
+        <translation>timelockcoin almak için QR kodunu okutun veya adresi kopyalayın</translation>
     </message>
     <message>
         <source>No address </source>
@@ -3234,8 +2872,8 @@ transaction history, making transactions untraceable </source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
+        <source>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </source>
+        <translation>M6tGR83SQbie1SW72hjcWJvFfip5krte2Z </translation>
     </message>
     <message>
         <source>COPY ADDRESS</source>
@@ -3305,8 +2943,16 @@ transaction history, making transactions untraceable </source>
         <translation>Özel fark adresi</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" TimelockCoin address</source>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" timelockcoin address</source>
         <translation>Giriş ve çıkış değerleri arasındaki kalan tutar "fark" TYM adresine gider</translation>
+    </message>
+    <message>
+        <source>SAVE</source>
+        <translation>KAYDET</translation>
+    </message>
+    <message>
+        <source>Invalid address</source>
+        <translation>Geçersiz adres</translation>
     </message>
 </context>
 <context>
@@ -3324,8 +2970,8 @@ transaction history, making transactions untraceable </source>
         <translation>İsteğiniz gibi transfer masrafını değiştirebilirsiniz, belirlediğiniz değere göre blockchaine yazılır veya yazılmaz. </translation>
     </message>
     <message>
-        <source>Recomended</source>
-        <translation>Tavsiye edilir</translation>
+        <source>Recommended</source>
+        <translation>önerilen</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3334,10 +2980,6 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>Custom</source>
         <translation>Özel</translation>
-    </message>
-    <message>
-        <source>Per kilobyte</source>
-        <translation>Kilobyte başına</translation>
     </message>
     <message>
         <source>CANCEL</source>
@@ -3350,10 +2992,6 @@ transaction history, making transactions untraceable </source>
     <message>
         <source>Customize Fee</source>
         <translation>Masrafı değiştir</translation>
-    </message>
-    <message>
-        <source>Customize the transaction fee, depending on the fee value your transaction will be included or not in the blockchain.</source>
-        <translation>İsteğiniz gibi transfer masrafını değiştirebilirsiniz, belirlediğiniz değere göre blockchaine yazılır veya yazılmaz. </translation>
     </message>
     <message>
         <source>Normal</source>
@@ -3371,7 +3009,7 @@ transaction history, making transactions untraceable </source>
         <source>SAVE</source>
         <translation>KAYDET</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>SendMultiRow</name>
     <message>
@@ -3483,11 +3121,11 @@ Bu koinler artık soğuk stakelenmeyecektir.</translation>
     </message>
     <message>
         <source>Spend Zerocoin</source>
-        <translation>Harca Zerocoin</translation>
+        <translation>Zerocoin Harca</translation>
     </message>
     <message>
         <source>zTYM is currently undergoing maintenance.</source>
-        <translation>zTYM halen bakım alıyor.</translation>
+        <translation>zTYM halen bakımda.</translation>
     </message>
     <message>
         <source>Coin control mint not found</source>
@@ -3502,7 +3140,7 @@ Bu koinler artık soğuk stakelenmeyecektir.</translation>
     <message>
         <source>Sending %1 to addresses:
 %2</source>
-        <translation>%1 adresinden 
+        <translation>%1 adresinden
 %2 adreslerine gönderiliyor</translation>
     </message>
     <message>
@@ -3532,10 +3170,6 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
     <message>
         <source>Address label update failed for address: %1</source>
         <translation>%1 adresi için adres etiketi güncellemesi başarısız oldu</translation>
-    </message>
-    <message>
-        <source>Invalid change address</source>
-        <translation>Geçersiz fark adresi</translation>
     </message>
     <message>
         <source>Invalid URI</source>
@@ -3623,10 +3257,6 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
         <translation>Yer</translation>
     </message>
     <message>
-        <source>Backup</source>
-        <translation>Yedek</translation>
-    </message>
-    <message>
         <source>Change Passphrase</source>
         <translation>Parolayı Değiştir</translation>
     </message>
@@ -3675,7 +3305,7 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
     </message>
     <message>
         <source>Clear</source>
-        <translation>temizle</translation>
+        <translation>Temizle</translation>
     </message>
     <message>
         <source>BIP38 Tool</source>
@@ -3805,11 +3435,7 @@ Paranıza erişiminizi kaybetmemek için yazmayı ve güvenli bir yerde saklamay
         <source>Error adding key to the wallet</source>
         <translation>Cüzdana anahtar ekleme hatası</translation>
     </message>
-    <message>
-        <source>Successfully added pivate key to the wallet</source>
-        <translation>Özel cüzdana anahtar başarıyla eklendi</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>SettingsConsoleWidget</name>
     <message>
@@ -3844,7 +3470,7 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <source>Welcome to the TimelockCoin RPC console.</source>
-        <translation>TimelockCoin RPC konsola hoşgeldiniz</translation>
+        <translation>timelockcoin RPC konsola hoşgeldiniz</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3911,13 +3537,56 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <source>default</source>
-        <translation>halihazırda</translation>
+        <translation>varsayılan</translation>
     </message>
     <message>
         <source>Options reset succeed</source>
         <translation>Opsiyonları sıfırlama başarılı</translation>
     </message>
 </context>
+<context>
+    <name>SettingsExportCSV</name>
+    <message>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <source>Where</source>
+        <translation>Yer</translation>
+    </message>
+    <message>
+        <source>Export Address List</source>
+        <translation>Adres listesini çıkart</translation>
+    </message>
+    <message>
+        <source>Confirmed</source>
+        <translation>Doğrulandı</translation>
+    </message>
+    <message>
+        <source>Watch-only</source>
+        <translation>Sadece izle</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Tarih</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation>Yaz</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Etiket</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Adres</translation>
+    </message>
+    <message>
+        <source>ID</source>
+        <translation>Kimlik</translation>
+    </message>
+    </context>
 <context>
     <name>SettingsFaqWidget</name>
     <message>
@@ -3933,16 +3602,16 @@ Verify that you have installed a predetermined text editor.</source>
         <translation>Butona Basın</translation>
     </message>
     <message>
-        <source>1) What is TimelockCoin?</source>
-        <translation>1)TimelockCoin nedir?</translation>
+        <source>1) What is timelockcoin?</source>
+        <translation>1)timelockcoin nedir?</translation>
     </message>
     <message>
         <source>2) Why are my TYM unspendable?</source>
         <translation>2) TYM'lerim neden harcanabilir değil?</translation>
     </message>
     <message>
-        <source>3) TimelockCoin privacy? What is Zerocoin (zTYM)?</source>
-        <translation>3)TimelockCoin gizliliği? Zerocoin (zTYM) nedir?</translation>
+        <source>3) timelockcoin privacy? What is Zerocoin (zTYM)?</source>
+        <translation>3)timelockcoin gizliliği? Zerocoin (zTYM) nedir?</translation>
     </message>
     <message>
         <source>4) Why are my zTYM unspendable?</source>
@@ -3951,7 +3620,7 @@ Verify that you have installed a predetermined text editor.</source>
     <message>
         <source>5) Why did my wallet convert the balance
     into zTYM automatically?</source>
-        <translation>5)Neden cüzdanım bakiyemi otomatik olarak 
+        <translation>5)Neden cüzdanım bakiyemi otomatik olarak
 zTYM'e dönüştürdü?</translation>
     </message>
     <message>
@@ -3971,34 +3640,34 @@ zTYM'e dönüştürdü?</translation>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is TimelockCoin?</source>
-        <translation>TimelockCoin Nedir?</translation>
+        <source>What is timelockcoin?</source>
+        <translation>timelockcoin Nedir?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           TimelockCoin is a form of digital online money using blockchain technology
+                           timelockcoin is a form of digital online money using blockchain technology
                            that can be easily transferred globally, instantly, and with near
-                           zero fees.  TimelockCoin incorporates market leading security &amp;
+                           zero fees.  timelockcoin incorporates market leading security &amp;
                            privacy and is also the first PoS (Proof of Stake) Cryptocurrency
                            to implement ZeroCoin(zTYM) and Zerocoin staking.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           TimelockCoin utilizes a Proof of Stake (PoS) consensus system algorithm,
-                           allowing all owners of TimelockCoin to participate in earning block rewards
+                           timelockcoin utilizes a Proof of Stake (PoS) consensus system algorithm,
+                           allowing all owners of timelockcoin to participate in earning block rewards
                            while securing the network with full node wallets, as well as to
                            run Masternodes to create and vote on proposals.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           TimelockCoin blockchain teknolojisini kullanan bir dijital online para birimidir
-                           global olarak anında ve sıfıra yakın ücretlerle transfer edilebilir 
-                           TimelockCoin sektördeki en ileri güvenlik ve gizliliğe sahip olmakla birlikte
-                          Zerocoin (zTYM) ve Zerocoin staking özelliklerini 
+                           timelockcoin blockchain teknolojisini kullanan bir dijital online para birimidir
+                           global olarak anında ve sıfıra yakın ücretlerle transfer edilebilir
+                           timelockcoin sektördeki en ileri güvenlik ve gizliliğe sahip olmakla birlikte
+                          Zerocoin (zTYM) ve Zerocoin staking özelliklerini
                           uygulayan ilk PoS (Proof of Stake) Kriptoparadır.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           TimelockCoin bir  Proof of Stake (PoS) konsensüs algoritma sistemi kullanmaktadır,
-bu sayede TimelockCoin sahipleri blok ödülü kazanımına katılabilmektedir
+                           timelockcoin bir  Proof of Stake (PoS) konsensüs algoritma sistemi kullanmaktadır,
+bu sayede timelockcoin sahipleri blok ödülü kazanımına katılabilmektedir
                            ağı diğer tam düğüm sahibi cüzdanlarla birlikte güvenli hale getirirler
                            ayrıca Masternode oluşturarak tekliflere oy verirler.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
@@ -4015,19 +3684,19 @@ bu sayede TimelockCoin sahipleri blok ödülü kazanımına katılabilmektedir
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Newly received TimelockCoin requires 6 confirmations on the network
+                           Newly received timelockcoin requires 6 confirmations on the network
                            to become eligible for spending which can take ~6 minutes.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Your TimelockCoin wallet also needs to be completely synchronized
+                           Your timelockcoin wallet also needs to be completely synchronized
                            to see and spend balances on the network.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Yeni alınmış TimelockCoin'lerin harcanabilr hale gelmesi için ağdan 6 onay 
+                           Yeni alınmış timelockcoin'lerin harcanabilr hale gelmesi için ağdan 6 onay
                            alması gerekmektedir, bu işlem yaklaşık olarak 6 dakika sürer.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           TimelockCoin cüzdanınızın ağdaki bakiyesini görebilmesi ve harcayabilmesi 
+                           timelockcoin cüzdanınızın ağdaki bakiyesini görebilmesi ve harcayabilmesi
                            için tamamen senkronize olması gerekmektedir.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
@@ -4037,27 +3706,27 @@ bu sayede TimelockCoin sahipleri blok ödülü kazanımına katılabilmektedir
         <translation>3</translation>
     </message>
     <message>
-        <source>TimelockCoin privacy? What is Zerocoin (zTYM)?</source>
-        <translation>TimelockCoin gizliliği? Zerocoin (zTYM) nedir?</translation>
+        <source>timelockcoin privacy? What is Zerocoin (zTYM)?</source>
+        <translation>timelockcoin gizliliği? Zerocoin (zTYM) nedir?</translation>
     </message>
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
                            zTYM is an optional privacy-centric method of coin mixing on the
-                           TimelockCoin blockchain. Basically all your transactions cannot be tracked
+                           timelockcoin blockchain. Basically all your transactions cannot be tracked
                            on to any block explorer. You can read more about the technicals in the
-                           &lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt;
-                           "TimelockCoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
+                           &lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt;
+                           "timelockcoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zTYM TimelockCoin blockchaini üzerinde koinleri karıştırmak için kullanılan 
+                           zTYM timelockcoin blockchaini üzerinde koinleri karıştırmak için kullanılan
 gizlilik-odaklı opsiyonel bir metoddur. Temel olarak işlemleriniz
  hiçbir tarayıcı tarafından takip edilemez. Teknik detayları
  hakkında daha çok bilgi almak için
-                           &lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt;
-                           "TimelockCoin Zerocoin (zTYM) Teknik Makalesi"&lt;/a&gt;.
+                           &lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt;
+                           "timelockcoin Zerocoin (zTYM) Teknik Makalesi"&lt;/a&gt;.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
     </message>
@@ -4096,29 +3765,29 @@ gizlilik-odaklı opsiyonel bir metoddur. Temel olarak işlemleriniz
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           By default the TimelockCoin wallet will convert 10% of your entire TYM
+                           By default the timelockcoin wallet will convert 10% of your entire TYM
                            balance to zTYM to assist the network. If you do not wish to
                            stake zTYM or take advantage of the privacy benefit it brings,
-                           you can disable the automatic minting in your TimelockCoin wallet by
+                           you can disable the automatic minting in your timelockcoin wallet by
                            going to Settings-&gt;Options and deselecting “Enable zTYM Automint”.
-                           If you are not making use of the TimelockCoin-QT or GUI you can simply open
+                           If you are not making use of the timelockcoin-QT or GUI you can simply open
                            your timelockcoin.conf file and add &lt;i&gt;enablezeromint=0&lt;/i&gt; Without the quotation
                            marks and restart your wallet to disable automint.&lt;/p&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            You can read more about zTYM in the
-                           &lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt; "TimelockCoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
+                           &lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt; "timelockcoin Zerocoin (zTYM) Technical Paper"&lt;/a&gt;.
                            If you would like to keep and stake your zTYM, please read the "How do I stake"
                            section of the FAQ below.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           TimelockCoin cüzdanınız ağa destek olmak için varsayılan olarak tüm TYM bakiyenizin 10% 'unu zTYM'e dönüştürecektir. Getirdiği gizlilik avantajını istemiyor veya zTYM stakelemek istemiyorsanız cüzdanınızın otomint özelliğini Ayarlar-&gt;Seçenekler içindeki “zTYM Otomint etkin” seçeneğini değiştirerek devredışı bırakabilirsiniz. TimelockCoinQT veya GUI kullanmıyorsanız, timelockcoin.conf dosyası içine  &lt;i&gt;enablezeromint=0&lt;/i&gt; ifadesini tırnak işareti olmadan girerek devredışı bırakabilirsiniz. &lt;/p&gt;
+                           timelockcoin cüzdanınız ağa destek olmak için varsayılan olarak tüm TYM bakiyenizin 10% 'unu zTYM'e dönüştürecektir. Getirdiği gizlilik avantajını istemiyor veya zTYM stakelemek istemiyorsanız cüzdanınızın otomint özelliğini Ayarlar-&gt;Seçenekler içindeki “zTYM Otomint etkin” seçeneğini değiştirerek devredışı bırakabilirsiniz. timelockcoinQT veya GUI kullanmıyorsanız, timelockcoin.conf dosyası içine  &lt;i&gt;enablezeromint=0&lt;/i&gt; ifadesini tırnak işareti olmadan girerek devredışı bırakabilirsiniz. &lt;/p&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            Teknik detayları hakkında daha çok bilgi almak için
-                           &lt;a style='color: #b088ff' href='https://TimelockCoin.org/zpiv/'&gt; "TimelockCoin Zerocoin (zTYM) Teknik Makalesi"&lt;/a&gt;.
-                           zTYM'lerinizi tutmak ve stakelemek istiyorsanız, lütfen SSS kısmındaki "Nasıl Stake yaparım" 
-kısmını okuyunuz. 
+                           &lt;a style='color: #B0B0B0' href='https://timelockcoin.trade/ztimelockcoin/'&gt; "timelockcoin Zerocoin (zTYM) Teknik Makalesi"&lt;/a&gt;.
+                           zTYM'lerinizi tutmak ve stakelemek istiyorsanız, lütfen SSS kısmındaki "Nasıl Stake yaparım"
+kısmını okuyunuz.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
     </message>
@@ -4133,19 +3802,19 @@ kısmını okuyunuz.
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zTYM can be spent and sent to any TimelockCoin address. The receiver will
-                           receive standard TimelockCoin but the origin of the TimelockCoin is anonymized by the zTYM Protocol.
+                           zTYM can be spent and sent to any timelockcoin address. The receiver will
+                           receive standard timelockcoin but the origin of the timelockcoin is anonymized by the zTYM Protocol.
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            If you want more zTYM you will need to mint your balance in the “Privacy” tab.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           zTYM herhangi bir TimelockCoin adresine gönderilerek harcanabilir.
-                           Alıcı standart TimelockCoin alacaktır fakat TimelockCoin kaynağı 
+                           zTYM herhangi bir timelockcoin adresine gönderilerek harcanabilir.
+                           Alıcı standart timelockcoin alacaktır fakat timelockcoin kaynağı
 zTYM Protokolü ile anonimleştirilmiş olacaktır.
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Daha fazla zTYM istiyorsanız, "Gizlilik" tabından bakiyenizi mintlemeniz gerekecektir. 
+                           Daha fazla zTYM istiyorsanız, "Gizlilik" tabından bakiyenizi mintlemeniz gerekecektir.
                            &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
                          </translation>
     </message>
@@ -4172,8 +3841,8 @@ zTYM Protokolü ile anonimleştirilmiş olacaktır.
     <message>
         <source>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           A masternode is a computer running a full node TimelockCoin core wallet with a
-                           requirement of 10,000 TYM secured collateral to provide extra services
+                           A masternode is a computer running a full node timelockcoin wallet with a
+                           requirement of 1000 TYM secured collateral to provide extra services
                            to the network and in return, receive a portion of the block reward
                            regularly.  These services include:
                            &lt;/p&gt;&lt;p align="justify"&gt;
@@ -4195,17 +3864,17 @@ zTYM Protokolü ile anonimleştirilmiş olacaktır.
                            Masternode Perks:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Participate in TimelockCoin Governance&lt;/li&gt;
+                           &lt;li&gt;Participate in timelockcoin Governance&lt;/li&gt;
                            &lt;li&gt;Earn Masternode Rewards&lt;/li&gt;
                            &lt;li&gt;Commodity option for future sale&lt;/li&gt;
-                           &lt;li&gt;Help secure the TimelockCoin network&lt;/li&gt;
+                           &lt;li&gt;Help secure the timelockcoin network&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
                            Requirements:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;10,000 TYM per single Masternode instance&lt;/li&gt;
+                           &lt;li&gt;1000 TYM per single Masternode instance&lt;/li&gt;
                            &lt;li&gt;Must be stored in a core wallet&lt;/li&gt;
                            &lt;li&gt;Need dedicated IP address&lt;/li&gt;
                            &lt;li&gt;Masternode wallet to remain online&lt;/li&gt;
@@ -4214,7 +3883,7 @@ zTYM Protokolü ile anonimleştirilmiş olacaktır.
                          </source>
         <translation>
                            &lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align="justify"&gt;
-                           Tam düğüm TimelockCoin core cüzdanını çalıştıran, gereken 10,000 TYM
+                           Tam düğüm timelockcoin cüzdanını çalıştıran, gereken 1000 TYM
                            teminat bakiyesini barındırarak ağa ekstra hizmetler sunan ve
                            karşılığında da her blok ödülünden düzenli olarak pay alan bir
                            bilgisayardır.Bu hizmetler aşağıdaki gibidir:
@@ -4229,25 +3898,25 @@ zTYM Protokolü ile anonimleştirilmiş olacaktır.
                            &lt;/ul&gt;
 
                            &lt;/p&gt;&lt;p align="justify"&gt;
-                           Bu tür hizmetler vermesi ile masternodlar her blok ödülünden belli 
-bir oranda pay alırlar. Bu masternode sahiplerine 
+                           Bu tür hizmetler vermesi ile masternodlar her blok ödülünden belli
+bir oranda pay alırlar. Bu masternode sahiplerine
 işletim maliyetleri sonrası pasif bir gelir sunar.
                             &lt;/p&gt;&lt;p align="justify"&gt;
 
                            Masternode Avantajları:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;TimelockCoin yönetimine katılın&lt;/li&gt;
+                           &lt;li&gt;timelockcoin yönetimine katılın&lt;/li&gt;
                            &lt;li&gt;Masternode Ödülleri kazanın&lt;/li&gt;
                            &lt;li&gt;İlerde satabileceğiniz bir varlık opsiyonu&lt;/li&gt;
-                           &lt;li&gt;TimelockCoin ağını güvenliğine destek olun&lt;/li&gt;
+                           &lt;li&gt;timelockcoin ağını güvenliğine destek olun&lt;/li&gt;
                            &lt;/ul&gt;
                            &lt;/p&gt;&lt;p align="justify"&gt;
 
                            Gereksinimler:
                            &lt;/p&gt;&lt;p align="justify"&gt;
                            &lt;ul&gt;
-                           &lt;li&gt;Her Masternod için ayrı 10,000 TYM
+                           &lt;li&gt;Her Masternod için ayrı 1000 TYM
                            &lt;li&gt;Core cüzdan içinde saklanmalıdır.&lt;/li&gt;
                            &lt;li&gt;Atanmış IP adresi gerekmektedir. &lt;/li&gt;
                            &lt;li&gt;Masternode cüzdanının online olması&lt;/li&gt;
@@ -4279,32 +3948,20 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Network Monitor</source>
         <translation>Ağ Gözlemcisi</translation>
     </message>
     <message>
         <source>Information</source>
-        <translation>bilgi</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
         <source>General</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <source>Client Version: </source>
-        <translation>Uygulama versionu</translation>
-    </message>
-    <message>
         <source>User Agent:</source>
         <translation>Kullanıcı Aracısı:</translation>
-    </message>
-    <message>
-        <source>Datadir: </source>
-        <translation>Bilgi Dizini:</translation>
     </message>
     <message>
         <source>Network</source>
@@ -4402,8 +4059,8 @@ işletim maliyetleri sonrası pasif bir gelir sunar.
         <translation>Komut onay parça sayısı</translation>
     </message>
     <message>
-        <source>Start TimelockCoin on system login</source>
-        <translation>Sistem açılışında TimelockCoin'i başlat</translation>
+        <source>Start timelockcoin on system login</source>
+        <translation>Sistem açılışında timelockcoin'i başlat</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4482,12 +4139,12 @@ Emin misiniz?
         <translation>CheckBox</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other TimelockCoin addresses after it matures.</source>
-        <translation>ÇokluGönder olgunlaşmış masternode ve staking ödüllerinizin 100% 'üne kadarını diğer TimelockCoin adreslerine otomatik olarak göndermenizi sağlar. </translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other timelockcoin addresses after it matures.</source>
+        <translation>ÇokluGönder olgunlaşmış masternode ve staking ödüllerinizin 100% 'üne kadarını diğer timelockcoin adreslerine otomatik olarak göndermenizi sağlar. </translation>
     </message>
     <message>
         <source>Active</source>
-        <translation>aktif</translation>
+        <translation>Aktif</translation>
     </message>
     <message>
         <source>Disable</source>
@@ -4524,7 +4181,7 @@ Emin misiniz?
     <message>
         <source>The entered address: %1 is invalid.
 Please check the address and try again.</source>
-        <translation>Girili adres: %1 geçersiz.
+        <translation>Girilmiş adres: %1 geçersiz.
 Lütfen adresi kontrol ediniz ve tekrar deneyiniz.</translation>
     </message>
     <message>
@@ -4582,7 +4239,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Clear</source>
-        <translation>temizle</translation>
+        <translation>Temizle</translation>
     </message>
     <message>
         <source>Sign/Verify Message</source>
@@ -4713,7 +4370,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Wallet</source>
-        <translation>cüzdan</translation>
+        <translation>Cüzdan</translation>
     </message>
     <message>
         <source>Customize the internal wallet options</source>
@@ -4800,7 +4457,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Recover transactions from blockchain (drop meta-data).</source>
-        <translation>İşlemleri blok zincirden kurtarın (meta verileri bırakın).</translation>
+        <translation>İşlemleri blok zincirini kullanarak kurtarın (meta verileri bırakın).</translation>
     </message>
     <message>
         <source>Upgrade wallet to latest format on startup. (Note: this is NOT an update of the wallet itself)</source>
@@ -4848,7 +4505,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>This needs quite some time and downloads a lot of data.&lt;br /&gt;&lt;br /&gt;</source>
-        <translation>Bu biraz zaman nalacak ve birçok veri indirecektir.&lt;br /&gt;&lt;br /&gt;</translation>
+        <translation>Bu biraz zaman alacak ve birçok veri indirecektir.&lt;br /&gt;&lt;br /&gt;</translation>
     </message>
     <message>
         <source>Your transactions and funds will be visible again after the download has completed.&lt;br /&gt;&lt;br /&gt;</source>
@@ -4870,16 +4527,12 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>Form</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
         <source>Wallet Data</source>
         <translation>Cüzdan Bilgisi</translation>
     </message>
     <message>
         <source>Wallet</source>
-        <translation>cüzdan</translation>
+        <translation>Cüzdan</translation>
     </message>
     <message>
         <source>Multisend</source>
@@ -4915,7 +4568,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Information</source>
-        <translation>bilgi</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
         <source>Console</source>
@@ -4934,8 +4587,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>SSS</translation>
     </message>
     <message>
-        <source>About TimelockCoin</source>
-        <translation>TimelockCoin Hakkında</translation>
+        <source>About timelockcoin</source>
+        <translation>timelockcoin Hakkında</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4947,7 +4600,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <source>Client restart required to activate changes.</source>
-        <translation>Değişiklikleri etkinleştirmek için istemci yeniden başlatılması gerekiyor.</translation>
+        <translation>Değişiklikleri etkinleştirmek için programın yeniden başlatılması gerekiyor.</translation>
     </message>
     <message>
         <source>Client will be shutdown, do you want to proceed?</source>
@@ -5001,8 +4654,8 @@ Emin misiniz?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>TimelockCoin Core is shutting down...</source>
-        <translation>TimelockCoin Core kapanıyor ...</translation>
+        <source>timelockcoin is shutting down...</source>
+        <translation>timelockcoin kapanıyor ...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -5031,15 +4684,15 @@ Emin misiniz?
         <translation>Yükleniyor...</translation>
     </message>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin Core</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
 </context>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>TimelockCoin Core</source>
-        <translation>TimelockCoin CORE</translation>
+        <source>timelockcoin</source>
+        <translation>timelockcoin</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -5054,8 +4707,8 @@ Emin misiniz?
         <translation>The Dash Core developers</translation>
     </message>
     <message>
-        <source>The TimelockCoin Core developers</source>
-        <translation>The TimelockCoin Core developers</translation>
+        <source>The timelockcoin developers</source>
+        <translation>The timelockcoin developers</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -5092,14 +4745,6 @@ Emin misiniz?
         <translation>Form</translation>
     </message>
     <message>
-        <source>480.0685 TYM</source>
-        <translation>480.0685 TYM</translation>
-    </message>
-    <message>
-        <source>1,000 zTYM</source>
-        <translation>1,000 zTYM</translation>
-    </message>
-    <message>
         <source>Available</source>
         <translation>Uygun</translation>
     </message>
@@ -5108,24 +4753,8 @@ Emin misiniz?
         <translation>Beklemede</translation>
     </message>
     <message>
-        <source>6.943 TYM</source>
-        <translation>6.943 TYM</translation>
-    </message>
-    <message>
         <source>Immature</source>
         <translation>Olgunlaşmamış</translation>
-    </message>
-    <message>
-        <source>10 TYM</source>
-        <translation>10 TYM</translation>
-    </message>
-    <message>
-        <source>60 zTYM</source>
-        <translation>60 zTYM</translation>
-    </message>
-    <message>
-        <source>10 zTYM</source>
-        <translation>10 zTYM</translation>
     </message>
     <message>
         <source>Wallet Unlocked for staking</source>
@@ -5140,14 +4769,6 @@ Emin misiniz?
         <translation>Adres kopyalandı</translation>
     </message>
     <message>
-        <source>Automint enabled</source>
-        <translation>Otomatik basım etkin</translation>
-    </message>
-    <message>
-        <source>Automint disabled</source>
-        <translation>Otomatik basım kapalı</translation>
-    </message>
-    <message>
         <source>Staking active</source>
         <translation>Stake etkin</translation>
     </message>
@@ -5155,33 +4776,25 @@ Emin misiniz?
         <source>Staking not active</source>
         <translation>Stake kapalı</translation>
     </message>
-    <message numerus="yes">
-        <source>%n active connection(s)</source>
-        <translation><numerusform>%n aktif bağlantı(lar) mevcut TimelockCoin ağına</numerusform><numerusform>%n aktif bağlantı(lar)</numerusform></translation>
-    </message>
-    <message>
-        <source>Synchronized</source>
-        <translation>Senkron</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n saat</numerusform><numerusform>%n saat</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n gün</numerusform><numerusform>%n gün</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n hafta</numerusform><numerusform>%n hafta</numerusform></translation>
-    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 ve %2</translation>
     </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n yıl</numerusform><numerusform>%n yıl</numerusform></translation>
+    <message>
+        <source>Backup Wallet</source>
+        <translation>Cüzdanı Yedekle</translation>
+    </message>
+    <message>
+        <source>Wallet Data (*.dat)</source>
+        <translation>Wallet Data (*.dat)</translation>
+    </message>
+    <message>
+        <source>Backup created</source>
+        <translation>Yedek oluşturuldu</translation>
+    </message>
+    <message>
+        <source>Backup creation failed</source>
+        <translation>Yedek oluşturma başarısız</translation>
     </message>
     </context>
 <context>
@@ -5193,10 +4806,6 @@ Emin misiniz?
 </context>
 <context>
     <name>TransactionDesc</name>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n blok daha için açık tut</numerusform><numerusform>%n blok daha için açık tut</numerusform></translation>
-    </message>
     <message>
         <source>Open until %1</source>
         <translation>Açık %1 e dek</translation>
@@ -5257,10 +4866,6 @@ Emin misiniz?
         <source>, has not been successfully broadcast yet</source>
         <translation>, henüz başarıyla yayınlanmamış</translation>
     </message>
-    <message numerus="yes">
-        <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, %n düğüm üzerinden yayın</numerusform><numerusform>, %n düğüm üzerinden yayın</numerusform></translation>
-    </message>
     <message>
         <source>Date</source>
         <translation>Tarih</translation>
@@ -5300,10 +4905,6 @@ Emin misiniz?
     <message>
         <source>Credit</source>
         <translation>Kredi</translation>
-    </message>
-    <message numerus="yes">
-        <source>matures in %n more block(s)</source>
-        <translation><numerusform>%n blok sonra olgunlaşacak</numerusform><numerusform>%n blok sonra olgunlaşacak</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -5382,15 +4983,11 @@ Emin misiniz?
     </message>
     <message>
         <source>Type</source>
-        <translation>yaz</translation>
+        <translation>Yaz</translation>
     </message>
     <message>
         <source>Address</source>
-        <translation>adres</translation>
-    </message>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n blok daha için açık </numerusform><numerusform>%n blok daha için açık </numerusform></translation>
+        <translation>Adres</translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -5437,10 +5034,6 @@ Emin misiniz?
         <translation>Tarafından alındı</translation>
     </message>
     <message>
-        <source>Received via Obfuscation</source>
-        <translation>Şaşırtma yoluyla Alınan</translation>
-    </message>
-    <message>
         <source>TYM Stake</source>
         <translation>TYM Stake</translation>
     </message>
@@ -5455,22 +5048,6 @@ Emin misiniz?
     <message>
         <source>Stake delegation</source>
         <translation>Stake delegasyonu</translation>
-    </message>
-    <message>
-        <source>Obfuscation Denominate</source>
-        <translation>Şaşırtmaca denominate</translation>
-    </message>
-    <message>
-        <source>Obfuscation Collateral Payment</source>
-        <translation>Soruna Katılma Teminat Ödemesi</translation>
-    </message>
-    <message>
-        <source>Obfuscation Make Collateral Inputs</source>
-        <translation>Şaşırtma yan girdiler yapar</translation>
-    </message>
-    <message>
-        <source>Obfuscation Create Denominations</source>
-        <translation>Obfuscation Oluşturma Adları</translation>
     </message>
     <message>
         <source>Converted TYM to zTYM</source>
@@ -5507,10 +5084,6 @@ Emin misiniz?
     <message>
         <source>Mined</source>
         <translation>Mined </translation>
-    </message>
-    <message>
-        <source>Obfuscated</source>
-        <translation>Şaşırtıldı </translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -5564,36 +5137,8 @@ Emin misiniz?
         <translation>İşlem Detayları</translation>
     </message>
     <message>
-        <source>ID:</source>
-        <translation>ID:</translation>
-    </message>
-    <message>
-        <source>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</source>
-        <translation>492526e7fa3c810b35016...40a5df85ee227ab00b1156994</translation>
-    </message>
-    <message>
-        <source>Sending to: </source>
-        <translation>Gönderiliyor: </translation>
-    </message>
-    <message>
-        <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
-        <translation>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </translation>
-    </message>
-    <message>
         <source>Total amount</source>
         <translation>Toplam Tutar:</translation>
-    </message>
-    <message>
-        <source>2 TYM</source>
-        <translation>2 TYM</translation>
-    </message>
-    <message>
-        <source>Coin inputs:</source>
-        <translation>Koin girdileri:</translation>
-    </message>
-    <message>
-        <source>1 Inputs</source>
-        <translation>1 girdi</translation>
     </message>
     <message>
         <source>Previous Transaction</source>
@@ -5604,52 +5149,32 @@ Emin misiniz?
         <translation>Çıktı Endeksi</translation>
     </message>
     <message>
-        <source>Fee:</source>
-        <translation>Ücret:</translation>
-    </message>
-    <message>
-        <source>0.0001 TYM</source>
-        <translation>0.0001 TYM</translation>
-    </message>
-    <message>
-        <source>Change address:</source>
-        <translation>Değişim Adresi</translation>
-    </message>
-    <message>
         <source>D7VFR83SQbie…BhjcWJtcfip5krte2Z </source>
         <translation>D7VFR83SQbie…BhjcWJtcfip5krte2Z </translation>
-    </message>
-    <message>
-        <source>Confirmations:</source>
-        <translation>Onaylar:</translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <source>Size:</source>
-        <translation>Büyüklük:</translation>
-    </message>
-    <message>
-        <source>2 kB</source>
-        <translation>2 kB</translation>
-    </message>
-    <message>
-        <source>Date:</source>
-        <translation>Tarih:</translation>
     </message>
     <message>
         <source>May 25, 2017</source>
         <translation>May 25, 2017</translation>
     </message>
     <message>
-        <source>Status:</source>
-        <translation>Durum:</translation>
+        <source>ID</source>
+        <translation>Kimlik</translation>
     </message>
     <message>
         <source>Spendable</source>
         <translation>Harcanabilir</translation>
+    </message>
+    <message>
+        <source>Confirmations</source>
+        <translation>Onaylar</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Durum</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation>Tarih</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -5711,29 +5236,6 @@ Emin misiniz?
     </message>
 </context>
 <context>
-    <name>WalletPasswordDialog</name>
-    <message>
-        <source>Dialog</source>
-        <translation>Diyalog</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
-    </message>
-    <message>
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</source>
-        <translation>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</translation>
-    </message>
-    <message>
-        <source>CANCEL</source>
-        <translation>İPTAL</translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation>TAMAM</translation>
-    </message>
-</context>
-<context>
     <name>WelcomeContentWidget</name>
     <message>
         <source>1</source>
@@ -5773,25 +5275,25 @@ Emin misiniz?
     </message>
     <message>
         <source>Welcome to
-TimelockCoin Core Wallet</source>
-        <translation>TimelockCoin Core Cüzdanı'na
+timelockcoin Wallet</source>
+        <translation>timelockcoin Cüzdanı'na
 Hoşgeldiniz</translation>
     </message>
     <message>
-        <source>TimelockCoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>TimelockCoin Proof of Stake tabanlı dünyadaki en yenilikçi blockchain teknolojisidir. Yüksek tecrübeye sahip yazılımcılar ve kriptograflardan oluşan bir ekip tarafından geliştirilmiştir.</translation>
+        <source>timelockcoin is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>timelockcoin Proof of Stake tabanlı dünyadaki en yenilikçi blockchain teknolojisidir. Yüksek tecrübeye sahip yazılımcılar ve kriptograflardan oluşan bir ekip tarafından geliştirilmiştir.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - TimelockCoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Manifestomuzda yazdığı gibi: Gizlilik, pazarlık yapılamayacak temel bir insan hakkıdır; kullanıcılarına istedikleri zaman ve istedikleri kişiyle verilerini paylaşma özgürlüğü verir - TimelockCoin özerkliğe inanır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - timelockcoin believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Manifestomuzda yazdığı gibi: Gizlilik, pazarlık yapılamayacak temel bir insan hakkıdır; kullanıcılarına istedikleri zaman ve istedikleri kişiyle verilerini paylaşma özgürlüğü verir - timelockcoin özerkliğe inanır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is TimelockCoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>Masternode ağı dağıtık yönetim ve hazine yönetimini sağlayan TimelockCoin blockchaini üzerindeki ikinci katmandır.</translation>
+        <source>The masternode network is timelockcoin's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>Masternode ağı dağıtık yönetim ve hazine yönetimini sağlayan timelockcoin blockchaini üzerindeki ikinci katmandır.</translation>
     </message>
     <message>
-        <source>How TimelockCoin respects your privacy?</source>
-        <translation>TimelockCoin gizliliğinize nasıl saygı duyar?</translation>
+        <source>How timelockcoin respects your privacy?</source>
+        <translation>timelockcoin gizliliğinize nasıl saygı duyar?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5803,7 +5305,7 @@ Hoşgeldiniz</translation>
     </message>
 </context>
 <context>
-    <name>ZPivControlDialog</name>
+    <name>ZTYMControlDialog</name>
     <message>
         <source>Select zTYM to Spend</source>
         <translation>Harcanacak zTYM'leri seçin</translation>
@@ -5817,8 +5319,8 @@ Hoşgeldiniz</translation>
         <translation>Butona Basın</translation>
     </message>
     <message>
-        <source>zPiv</source>
-        <translation>zPiv</translation>
+        <source>zTYM</source>
+        <translation>zTYM</translation>
     </message>
     <message>
         <source>0.00 </source>
@@ -5868,12 +5370,8 @@ Hoşgeldiniz</translation>
         <translation>JSON-RPC bağlantılarını dinlemek için verilen adrese bağlanın. IPv6 için [host]: port gösterimini kullanın. Bu seçenek birden çok kez belirtilebilir (varsayılan: tüm arabirimlere bağlanır)</translation>
     </message>
     <message>
-        <source>Calculated accumulator checkpoint is not what is recorded by block index</source>
-        <translation>Hesaplanan akümülatör kontrol noktası, blok indeksiyle kaydedilen kontrol noktası değildir.</translation>
-    </message>
-    <message>
-        <source>Cannot obtain a lock on data directory %s. TimelockCoin Core is probably already running.</source>
-        <translation>Veri dizini %s üzerinde bir kilit elde edemiyor. TimelockCoin Core muhtemelen zaten çalışıyor.</translation>
+        <source>Cannot obtain a lock on data directory %s. timelockcoin is probably already running.</source>
+        <translation>Veri dizini %s üzerinde bir kilit elde edemiyor. timelockcoin muhtemelen zaten çalışıyor.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -5898,14 +5396,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
         <translation>MIT yazılım lisansı altında dağıtılmıştır, eşlik eden KOPYALAMA dosyasına bakın veya &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
-    </message>
-    <message>
-        <source>Enable automatic Zerocoin minting from specific addresses (0-1, default: %u)</source>
-        <translation>Belirli bir adresten otomatik zTYM minting yapılmasını etkinleştir (0-1, varsayılan: %u)</translation>
-    </message>
-    <message>
-        <source>Enable automatic wallet backups triggered after each zTYM minting (0-1, default: %u)</source>
-        <translation>Her zTYM mintleme sonrası otomatik cüzdan yedeklemesini aktifleştir (0-1, varsayılan:%u)</translation>
     </message>
     <message>
         <source>Enable cold staking functionality (0-1, default: %u). Disabled if staking=0</source>
@@ -6012,10 +5502,6 @@ Hoşgeldiniz</translation>
         <translation>Uyumsuz davranan eşleri tekrar bağlanmaktan saniye cinsinden uzak tutma süresi (varsayılan: %u)</translation>
     </message>
     <message>
-        <source>Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>Gizleme özelliği gönderilecek tutarın kesin bölümlemelerini kullanır, sadece daha fazla koin anonimleştirmeniz gerekiyor.</translation>
-    </message>
-    <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
         <translation>Hata ayıklama bilgisini dışarı aktar (varsayılan: %u, sağlamak&lt;category&gt;  opsiyoneldir)</translation>
     </message>
@@ -6068,20 +5554,8 @@ Hoşgeldiniz</translation>
         <translation>Ağ versiyon dizisi toplam uzunluğu(%i) maksimum uzunluğu aşıyor(%i). Yorumların büyüklüğünü veya sayısını azaltın.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. TimelockCoin Core is probably already running.</source>
-        <translation>Bu bilgisayarda %s 'e bağlanılamıyor. TimelockCoin Core muhtemelen zaten çalışıyor.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
-        <translation>Bu işlem için gereken yeterli bölünmüş gizleme fonu bulunamadı.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 TYM.</source>
-        <translation>10000 TYM'e eşit olmayan bu işlem için gereken yeterli bölünmemiş gizleme fonu bulunamadı.</translation>
-    </message>
-    <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 TYM.</source>
-        <translation>10000 TYM'e eşit olmayan bu işlem için yeterli bakiye tespit edilemedi</translation>
+        <source>Unable to bind to %s on this computer. timelockcoin is probably already running.</source>
+        <translation>Bu bilgisayarda %s 'e bağlanılamıyor. timelockcoin muhtemelen zaten çalışıyor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -6096,12 +5570,8 @@ Hoşgeldiniz</translation>
         <translation>Uyarı: paytxfee değeri çok yüksek ayarlanmış! Bu para gönderirken ödeyeceğiniz transfer ücretidir.</translation>
     </message>
     <message>
-        <source>Warning: Peers are being disconnected due time differences. Please check that your computer's date and time are correct! If your clock is wrong TimelockCoin Core will not work properly.</source>
-        <translation>Uyarı: Zaman farkı sebebiyle eşlerin bağlantısı koptı. Bilgisayarınızın tarih ve saat ayarlarının doğruluğunu kontrol edin! Saatiniz yanlış ise TimelockCoin Core düzgün çalışmayacaktır. </translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong TimelockCoin Core will not work properly.</source>
-        <translation>Uyarı: Bilgisayarınızın tarih ve saat ayarlarının doğruluğunu kontrol edin! Saatiniz yanlış ise TimelockCoin Core düzgün çalışmayacaktır. </translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong timelockcoin will not work properly.</source>
+        <translation>Uyarı: Bilgisayarınızın tarih ve saat ayarlarının doğruluğunu kontrol edin! Saatiniz yanlış ise timelockcoin düzgün çalışmayacaktır. </translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -6164,10 +5634,6 @@ Hoşgeldiniz</translation>
         <translation>Bağlanmak için bir düğüm ekle ve bağlantıyı açık tut</translation>
     </message>
     <message>
-        <source>Adding Wrapped Serials supply...</source>
-        <translation>Paketlenmiş seri temini ekleniyor...</translation>
-    </message>
-    <message>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>DNS lookup ile -addnode, -seednode ve -connect işlemlerine izin ver</translation>
     </message>
@@ -6192,28 +5658,8 @@ Hoşgeldiniz</translation>
         <translation>Blok oluşturma seçenekleri:</translation>
     </message>
     <message>
-        <source>Calculating missing accumulators...</source>
-        <translation>Eksik toplayıcılar hesaplanıyor...</translation>
-    </message>
-    <message>
         <source>Cannot downgrade wallet</source>
         <translation>Cüzdan alt versiyona düşürülemiyor</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -bind address: '%s'</source>
-        <translation>Bind adres: '%s' çözümlenemiyor</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -externalip address: '%s'</source>
-        <translation>Dış IP adresi: '%s' çözümlenemiyor</translation>
-    </message>
-    <message>
-        <source>Cannot resolve -whitebind address: '%s'</source>
-        <translation>Whitebind address: '%s' çözümlenemiyor</translation>
-    </message>
-    <message>
-        <source>CoinSpend: failed check</source>
-        <translation>KoinHarcama: kontrol başarısız</translation>
     </message>
     <message>
         <source>Connect only to the specified node(s)</source>
@@ -6240,8 +5686,8 @@ Hoşgeldiniz</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The TimelockCoin Core Developers</source>
-        <translation>Copyright (C) 2015-%i The TimelockCoin Core Developers</translation>
+        <source>Copyright (C) 2015-%i The timelockcoin developers</source>
+        <translation>Copyright (C) 2015-%i The timelockcoin developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -6250,10 +5696,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Could not parse masternode.conf</source>
         <translation>masternode.conf çözümlenemedi</translation>
-    </message>
-    <message>
-        <source>Couldn't generate the accumulator witness</source>
-        <translation>Toplayıcı tanığı -accumulator witness - oluşturulamadı</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>
@@ -6288,10 +5730,6 @@ Hoşgeldiniz</translation>
         <translation>Yükleme tamamlandı</translation>
     </message>
     <message>
-        <source>Enable automatic Zerocoin minting (0-1, default: %u)</source>
-        <translation>zTYM minting yapılmasını etkinleştir (0-1, varsayılan: %u)</translation>
-    </message>
-    <message>
         <source>Enable publish hash transaction (locked via SwiftX) in &lt;address&gt;</source>
         <translation>&lt;address&gt;içindeki hash transfer yayınlamayı etkinleştir (SwiftX ile kilitlenmiş)</translation>
     </message>
@@ -6324,8 +5762,8 @@ Hoşgeldiniz</translation>
         <translation>Wallet.dat yüklenirken hata oluştu: Cüzdan dosyası bozuk</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of TimelockCoin Core</source>
-        <translation>Wallet.dat yüklenirken hata oluştu: Cüzdan daha yeni bir TimelockCoin Core versiyonuna ihtiyaç duyuyor</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of timelockcoin</source>
+        <translation>Wallet.dat yüklenirken hata oluştu: Cüzdan daha yeni bir timelockcoin versiyonuna ihtiyaç duyuyor</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -6341,7 +5779,7 @@ Hoşgeldiniz</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>hata</translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -6358,10 +5796,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Error: Wallet locked, unable to create transaction!</source>
         <translation>Hata: Cüzdan kilitli, transfer yaratılamıyor!</translation>
-    </message>
-    <message>
-        <source>Failed to calculate accumulator checkpoint</source>
-        <translation>Toplayıcı kontrol noktası hesaplanamadı</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -6413,11 +5847,11 @@ Hoşgeldiniz</translation>
     </message>
     <message>
         <source>Information</source>
-        <translation>bilgi</translation>
+        <translation>Bilgi</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. TimelockCoin Core is shutting down.</source>
-        <translation>Sağlama kontrolü başlatımı başarısız. TimelockCoin Core kapatılıyor.</translation>
+        <source>Initialization sanity check failed. timelockcoin is shutting down.</source>
+        <translation>Sağlama kontrolü başlatımı başarısız. timelockcoin kapatılıyor.</translation>
     </message>
     <message>
         <source>Insufficient funds</source>
@@ -6432,28 +5866,8 @@ Hoşgeldiniz</translation>
         <translation>Geçersiz onion veya hostname: !%s!</translation>
     </message>
     <message>
-        <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Maxtxfee=&lt;amount&gt;: '%s' için geçersiz tutar</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Minrelaytxfee=&lt;amount&gt;: '%s' için geçersiz tutar</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Mintxfee=&lt;amount&gt;: '%s'  için geçersiz tutar</translation>
-    </message>
-    <message>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s' (must be at least %s)</source>
         <translation>Paytxfee=&lt;amount&gt;: '%s' için geçersiz tutar (en az %s olmalıdır)</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: '%s'</source>
-        <translation>Paytxfee=&lt;amount&gt;: '%s' için geçersiz tutar</translation>
-    </message>
-    <message>
-        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation>Reservebalance=&lt;amount&gt; için geçersiz tutar</translation>
     </message>
     <message>
         <source>Invalid amount</source>
@@ -6472,20 +5886,8 @@ Hoşgeldiniz</translation>
         <translation>masternode.conf dosyasında geçersiz port tespit edildi</translation>
     </message>
     <message>
-        <source>Percentage of automatically minted Zerocoin  (1-100, default: %u)</source>
-        <translation>Otomatik olarak mint edilen Zerocoin yüzdesi (1-100, varsayılan: %u)</translation>
-    </message>
-    <message>
         <source>Recalculating TYM supply...</source>
         <translation>TYM tedariği tekrar hesaplanıyor...</translation>
-    </message>
-    <message>
-        <source>Recalculating minted ZTYM...</source>
-        <translation>Mint edilmiş zTYM'ler tekrar hesaplanıyor...</translation>
-    </message>
-    <message>
-        <source>Recalculating spent ZTYM...</source>
-        <translation>Harcanmış zTYM'ler tekrar hesaplanıyor...</translation>
     </message>
     <message>
         <source>Reindex the TYM and zTYM money supply statistics</source>
@@ -6502,10 +5904,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Selected coins value is less than payment target</source>
         <translation>Seçili koinlerin değeri hedeflenen ödeme tutarından düşük</translation>
-    </message>
-    <message>
-        <source>Support the zerocoin light node protocol (default: %u)</source>
-        <translation>Zerocoin light node protocolünü destekle (varsayılan: %u)</translation>
     </message>
     <message>
         <source>SwiftX options:</source>
@@ -6532,8 +5930,8 @@ Hoşgeldiniz</translation>
 </translation>
     </message>
     <message>
-        <source>Disable all TimelockCoin specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>TimelockCoin spesifik tüm fonksiyonaliteyi devre dışı bırak (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, varsayılan: %u)</translation>
+        <source>Disable all timelockcoin specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>timelockcoin spesifik tüm fonksiyonaliteyi devre dışı bırak (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, varsayılan: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -6542,10 +5940,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
         <translation>İşlem reddedildi! Bu, cüzdanındaki koinlerin bir kısmının harcanması durumunda olabilir; mesela, wallet.dat dosyasının bir kopyasını kullandıysanız ve koinlerinizi harcamış fakat cüzdana harcanmış olarak işaretlenmemişse ortaya çıkabilir.</translation>
-    </message>
-    <message>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Hata: Bu işlem en az %s kadar bir transfer üzreti gerektirir, sebebi tutar, karmaşıklık veya son alınmış tutar kullanımı olabilir!</translation>
     </message>
     <message>
         <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
@@ -6562,14 +5956,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>In rare cases, a spend with 7 coins exceeds our maximum allowable transaction size, please retry spend using 6 or less coins</source>
         <translation>Bazı nadir durumlarda 7 koin bulunan bir harcama maksimum izin verilmiş işlem büyüklüğü sınırını aşar, lütfen 6 veya daha az koin ile tekrar deneyin</translation>
-    </message>
-    <message>
-        <source>Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)</source>
-        <translation>Otomatik mint edilmiş Zerocoin için tercih edilen bölümler (1/5/10/50/100/500/1000/5000), tercih yoksa 0. varsayılan: %u)</translation>
-    </message>
-    <message>
-        <source>Specify custom backup path to add a copy of any automatic zTYM backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
-        <translation>Otomatik bir zTYM yedek kopyası eklemek için bir yedekleme özel yolu belirleyin. Eğer dizin olarak belirlerseniz her yedek zaman damgası adı ile dosyalanır. Dosya olarak belirlerseniz, her yedeklemede üstüne yazar. Eğer yedek yolu da belirlenmişse, 4 yedek oluşur.</translation>
     </message>
     <message>
         <source>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</source>
@@ -6590,10 +5976,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Cannot create public spend input</source>
         <translation>Açık harcama girişi oluşturulamıyor</translation>
-    </message>
-    <message>
-        <source>CoinSpend: Accumulator witness does not verify</source>
-        <translation>KoinHarcama: Toplayıcı şahidi -Accumulator witness- onaylamıyor</translation>
     </message>
     <message>
         <source>Display the stake modifier calculations in the debug.log file.</source>
@@ -6630,10 +6012,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Error: No valid utxo!</source>
         <translation>Hata: Geçerli utxo yok!</translation>
-    </message>
-    <message>
-        <source>Failed to create mint</source>
-        <translation>Mint oluşturulamadı</translation>
     </message>
     <message>
         <source>Failed to find Zerocoins in wallet.dat</source>
@@ -6698,10 +6076,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Loading sporks...</source>
         <translation>Sporklar yükleniyor...</translation>
-    </message>
-    <message>
-        <source>Loading wallet... (%3.2f %%)</source>
-        <translation>Cüzdan yükleniyor... (%3.2f%%)</translation>
     </message>
     <message>
         <source>Loading wallet...</source>
@@ -6828,14 +6202,6 @@ Hoşgeldiniz</translation>
         <translation>Blok zinciri dizinini mevcut blk000 ?? dat dosyalarından yeniden oluştur.</translation>
     </message>
     <message>
-        <source>Receive and display P2P network alerts (default: %u)</source>
-        <translation>P2P ağ uyarılarını al ve göster (varsayılan:%u)</translation>
-    </message>
-    <message>
-        <source>Reindex the accumulator database</source>
-        <translation>Toplayıcı veritabanını tekrar endeksle</translation>
-    </message>
-    <message>
         <source>Relay and mine data carrier transactions (default: %u)</source>
         <translation>Bilgi taşıyan işlemleri mine et ve aktar (varsayılan: %u)</translation>
     </message>
@@ -6852,14 +6218,6 @@ Hoşgeldiniz</translation>
         <translation>Yeniden taranıyor...</translation>
     </message>
     <message>
-        <source>ResetMintZerocoin finished: </source>
-        <translation>ResetMintZerocoin tamamlandı: </translation>
-    </message>
-    <message>
-        <source>ResetSpentZerocoin finished: </source>
-        <translation>ResetSpentZerocoin tamamlandı: </translation>
-    </message>
-    <message>
         <source>Run a thread to flush wallet periodically (default: %u)</source>
         <translation>Cüzdanı periyodik olarak düzenlemek için bir işlem çalıştır (varsayılan: %u)</translation>
     </message>
@@ -6870,10 +6228,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Send transactions as zero-fee transactions if possible (default: %u)</source>
         <translation>Mümkünse transferleri sıfır-maliyetli olarak gönder (varsayılan: %u)</translation>
-    </message>
-    <message>
-        <source>Session timed out.</source>
-        <translation>Oturum zaman aşımına uğradı</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
@@ -6918,10 +6272,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Program başlatılırken debug.log dosyasını sıkıştır. (varsayılan: 1 debug olmadığında)</translation>
-    </message>
-    <message>
-        <source>Signing timed out.</source>
-        <translation>İmzalama zaman aşımına uğradı</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -6980,10 +6330,6 @@ Hoşgeldiniz</translation>
         <translation>Eşzamanlama tamamlandı</translation>
     </message>
     <message>
-        <source>Synchronization pending...</source>
-        <translation>Eşzamanlama bekleniyor</translation>
-    </message>
-    <message>
         <source>Synchronizing budgets...</source>
         <translation>Bütçe eşzamanlanıyor..</translation>
     </message>
@@ -7002,14 +6348,6 @@ Hoşgeldiniz</translation>
     <message>
         <source>Syncing zTYM wallet...</source>
         <translation>zTYM cüzdanı eşzamanlanıyor..</translation>
-    </message>
-    <message>
-        <source>The coin spend has been used</source>
-        <translation>Koin harcaması kullanıldı</translation>
-    </message>
-    <message>
-        <source>The transaction did not verify</source>
-        <translation>Bu ödeme onaylanmadı</translation>
     </message>
     <message>
         <source>This help message</source>
@@ -7132,8 +6470,8 @@ Hoşgeldiniz</translation>
         <translation>Cüzdan %s bilgi dizini %s dışında bulunuyor</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart TimelockCoin Core to complete</source>
-        <translation>Cüzdanın tekrar yazılması gerekiyor: tamamlamak için TimelockCoin Core uygulamasını tekrar başlatın.</translation>
+        <source>Wallet needed to be rewritten: restart timelockcoin to complete</source>
+        <translation>Cüzdanın tekrar yazılması gerekiyor: tamamlamak için timelockcoin uygulamasını tekrar başlatın.</translation>
     </message>
     <message>
         <source>Wallet options:</source>

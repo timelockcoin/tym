@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,7 +27,8 @@ public:
     ~ExpandableButton();
 
     void setButtonClassStyle(const char *name, const QVariant &value, bool forceUpdate = false);
-    void setButtonText(const QString _text);
+    void setButtonText(const QString& _text);
+    void setNoIconText(const QString& _text);
     void setIcon(QString path);
 
     bool isChecked();
@@ -37,12 +38,12 @@ public:
     }
     void setSmall();
     void setExpanded();
-signals:
+Q_SIGNALS:
     void Mouse_Pressed();
     void Mouse_Hover();
     void Mouse_HoverLeave();
 
-public slots:
+public Q_SLOTS:
     void setText2(QString text2);
 
     QString getText(){
@@ -53,16 +54,14 @@ protected:
     virtual void enterEvent(QEvent *);
     virtual void leaveEvent(QEvent *);
 
-    //virtual void mouseMoveEvent(QMouseEvent *ev);
-    virtual void mousePressEvent(QMouseEvent *ev);
-
-private slots:
+private Q_SLOTS:
 
     void on_pushButton_clicked(bool checked);
 
-    void mousePressEvent();
+    void innerMousePressEvent();
 private:
     Ui::ExpandableButton *ui;
+    QString notExpandedText;
     QString text;
     std::atomic<bool> isAnimating;
     QPropertyAnimation *animation = nullptr;

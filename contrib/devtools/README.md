@@ -25,7 +25,7 @@ git diff -U0 HEAD~1.. | ./contrib/devtools/clang-format-diff.py -p1 -i -v
 copyright\_header.py
 ====================
 
-Provides utilities for managing copyright headers of `The TimelockCoin
+Provides utilities for managing copyright headers of `The timelockcoin
 developers` in repository source files. It has three subcommands:
 
 ```
@@ -44,31 +44,31 @@ Specifying `verbose` will list the full filenames of files of each category.
 
 copyright\_header.py update \<base\_directory\> [verbose]
 ---------------------------------------------------------
-Updates all the copyright headers of `The TimelockCoin developers` which were
+Updates all the copyright headers of `The timelockcoin developers` which were
 changed in a year more recent than is listed. For example:
 ```
-// Copyright (c) <firstYear>-<lastYear> The TimelockCoin developers
+// Copyright (c) <firstYear>-<lastYear> The timelockcoin developers
 ```
 will be updated to:
 ```
-// Copyright (c) <firstYear>-<lastModifiedYear> The TimelockCoin developers
+// Copyright (c) <firstYear>-<lastModifiedYear> The timelockcoin developers
 ```
 where `<lastModifiedYear>` is obtained from the `git log` history.
 
 This subcommand also handles copyright headers that have only a single year. In
 those cases:
 ```
-// Copyright (c) <year> The TimelockCoin developers
+// Copyright (c) <year> The timelockcoin developers
 ```
 will be updated to:
 ```
-// Copyright (c) <year>-<lastModifiedYear> The TimelockCoin developers
+// Copyright (c) <year>-<lastModifiedYear> The timelockcoin developers
 ```
 where the update is appropriate.
 
 copyright\_header.py insert \<file\>
 ------------------------------------
-Inserts a copyright header for `The TimelockCoin developers` at the top of the
+Inserts a copyright header for `The timelockcoin developers` at the top of the
 file in either Python or C++ style as determined by the file extension. If the
 file is a Python file and it has  `#!` starting the first line, the header is
 inserted in the line below it.
@@ -78,7 +78,7 @@ The copyright dates will be set to be `<year_introduced>-<current_year>` where
 `<year_introduced>` is equal to `<current_year>`, it will be set as a single
 year rather than two hyphenated years.
 
-If the file already has a copyright for `The TimelockCoin developers`, the
+If the file already has a copyright for `The timelockcoin developers`, the
 script will exit.
 
 gen-manpages.sh
@@ -105,7 +105,7 @@ For example:
   ./github-merge.py 3077
 
 (in any git repository) will help you merge pull request #3077 for the
-TimelockCoin-Project/TimelockCoin repository.
+timelockcoinvps-project/timelockcoin repository.
 
 What it does:
 * Fetch master and the pull request.
@@ -123,9 +123,9 @@ couldn't mess with the sources.
 
 Setup
 ---------
-Configuring the github-merge tool for the TimelockCoin repository is done in the following way:
+Configuring the github-merge tool for the timelockcoin repository is done in the following way:
 
-    git config githubmerge.repository TimelockCoin-Project/TimelockCoin
+    git config githubmerge.repository timelockcoinvps-project/timelockcoin
     git config githubmerge.testcmd "make -j4 check" (adapt to whatever you want to use for testing)
     git config --global user.signingkey mykeyid
 
@@ -158,7 +158,7 @@ for further details.
 optimize-pngs.py
 ================
 
-A script to optimize png files in the TimelockCoin
+A script to optimize png files in the timelockcoin
 repository (requires pngcrush).
 
 security-check.py and test-security-check.py

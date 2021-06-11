@@ -1,13 +1,13 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef MASTERNODEWIZARDDIALOG_H
 #define MASTERNODEWIZARDDIALOG_H
 
-#include <QDialog>
 #include "walletmodel.h"
+#include "qt/timelockcoin/focuseddialog.h"
 #include "qt/timelockcoin/snackbar.h"
 #include "masternodeconfig.h"
 #include "qt/timelockcoin/pwidget.h"
@@ -19,7 +19,7 @@ class MasterNodeWizardDialog;
 class QPushButton;
 }
 
-class MasterNodeWizardDialog : public QDialog, public PWidget::Translator
+class MasterNodeWizardDialog : public FocusedDialog, public PWidget::Translator
 {
     Q_OBJECT
 
@@ -33,8 +33,8 @@ public:
     bool isOk = false;
     CMasternodeConfig::CMasternodeEntry* mnEntry = nullptr;
 
-private slots:
-    void onNextClicked();
+private Q_SLOTS:
+    void accept() override;
     void onBackClicked();
 private:
     Ui::MasterNodeWizardDialog *ui;

@@ -1,5 +1,5 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,7 +16,7 @@
 
 class AddressViewDelegate;
 class TooltipMenu;
-class TimelockCoinGUI;
+class timelockcoinGUI;
 class WalletModel;
 
 namespace Ui {
@@ -32,19 +32,21 @@ class AddressesWidget : public PWidget
     Q_OBJECT
 
 public:
-    explicit AddressesWidget(TimelockCoinGUI* parent);
+    explicit AddressesWidget(timelockcoinGUI* parent);
     ~AddressesWidget();
 
     void loadWalletModel() override;
     void onNewContactClicked();
 
-private slots:
+private Q_SLOTS:
     void handleAddressClicked(const QModelIndex &index);
     void onStoreContactClicked();
     void onEditClicked();
     void onDeleteClicked();
     void onCopyClicked();
     void onAddContactShowHideClicked();
+    void onSortChanged(int idx);
+    void onSortOrderChanged(int idx);
 
     void changeTheme(bool isLightTheme, QString &theme) override;
 private:
@@ -60,7 +62,12 @@ private:
     // Cached index
     QModelIndex index;
 
+    // Cached sort type and order
+    AddressTableModel::ColumnIndex sortType = AddressTableModel::Label;
+    Qt::SortOrder sortOrder = Qt::AscendingOrder;
+
     void updateListView();
+    void sortAddresses();
 };
 
 #endif // ADDRESSESWIDGET_H

@@ -1,4 +1,5 @@
-// Copyright (c) 2019-2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -50,6 +51,10 @@ public:
     bool isMNInactive(QString mnAlias);
     // Masternode is active if it's in PRE_ENABLED OR ENABLED state
     bool isMNActive(QString mnAlias);
+    // Masternode collateral has enough confirmations
+    bool isMNCollateralMature(QString mnAlias);
+    // Validate string representing a masternode IP address
+    static bool validateMNIP(const QString& addrStr);
 
 
 private:

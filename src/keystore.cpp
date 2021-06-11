@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -86,32 +86,6 @@ bool CBasicKeyStore::HaveWatchOnly() const
 {
     LOCK(cs_KeyStore);
     return (!setWatchOnly.empty());
-}
-
-bool CBasicKeyStore::AddMultiSig(const CScript& dest)
-{
-    LOCK(cs_KeyStore);
-    setMultiSig.insert(dest);
-    return true;
-}
-
-bool CBasicKeyStore::RemoveMultiSig(const CScript& dest)
-{
-    LOCK(cs_KeyStore);
-    setMultiSig.erase(dest);
-    return true;
-}
-
-bool CBasicKeyStore::HaveMultiSig(const CScript& dest) const
-{
-    LOCK(cs_KeyStore);
-    return setMultiSig.count(dest) > 0;
-}
-
-bool CBasicKeyStore::HaveMultiSig() const
-{
-    LOCK(cs_KeyStore);
-    return (!setMultiSig.empty());
 }
 
 bool CBasicKeyStore::HaveKey(const CKeyID& address) const

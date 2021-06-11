@@ -1,0 +1,16 @@
+# http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-1.0.html
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=TYM_Coin Daemon SNAP
+Comment=testnet
+GenericName=TYM_Coin Digital Currency Daemon Client testnet network
+Exec=timelockcoin_coin-core.daemon-testnet %u
+Terminal=true
+Type=Application
+Icon=${SNAP}/share/pixmaps/timelockcoin_coin_testnet.png
+MimeType=x-scheme-handler/timelockcoin;
+Categories=X-Office;X-Finance;
+Keywords=internet;timelockcoin_coin;ztimelockcoin;core;wallet;daemon;testnet;snap;launchpad;crypto;digital;currency;coin;token;zerocoin;
+Version=1.0
+Name[en_IN]=timelockcoind_testnet.desktop

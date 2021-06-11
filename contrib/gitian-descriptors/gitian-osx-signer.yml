@@ -8,7 +8,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/timelockcoin-project/timelockcoin-detached-sigs.git"
+- "url": "https://github.com/timelockcoinvps-project/timelockcoin-detached-sigs.git"
   "dir": "signature"
 files:
 - "timelockcoin-osx-unsigned.tar.gz"

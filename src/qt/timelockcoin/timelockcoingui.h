@@ -1,10 +1,10 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef TimelockCoin_CORE_NEW_GUI_TimelockCoinGUI_H
-#define TimelockCoin_CORE_NEW_GUI_TimelockCoinGUI_H
+#ifndef timelockcoin_CORE_NEW_GUI_timelockcoinGUI_H
+#define timelockcoin_CORE_NEW_GUI_timelockcoinGUI_H
 
 #if defined(HAVE_CONFIG_H)
 #include "config/timelockcoin-config.h"
@@ -21,7 +21,6 @@
 #include "qt/timelockcoin/send.h"
 #include "qt/timelockcoin/receivewidget.h"
 #include "qt/timelockcoin/addresseswidget.h"
-#include "qt/timelockcoin/privacywidget.h"
 #include "qt/timelockcoin/coldstakingwidget.h"
 #include "qt/timelockcoin/masternodeswidget.h"
 #include "qt/timelockcoin/snackbar.h"
@@ -36,18 +35,18 @@ class WalletModel;
 
 
 /**
-  TimelockCoin GUI main class. This class represents the main window of the TimelockCoin UI. It communicates with both the client and
+  timelockcoin GUI main class. This class represents the main window of the timelockcoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class TimelockCoinGUI : public QMainWindow
+class timelockcoinGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
     static const QString DEFAULT_WALLET;
 
-    explicit TimelockCoinGUI(const NetworkStyle* networkStyle, QWidget* parent = 0);
-    ~TimelockCoinGUI();
+    explicit timelockcoinGUI(const NetworkStyle* networkStyle, QWidget* parent = 0);
+    ~timelockcoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -58,19 +57,20 @@ public:
     void resizeEvent(QResizeEvent *event) override;
     void showHide(bool show);
     int getNavWidth();
-signals:
+Q_SIGNALS:
     void themeChanged(bool isLightTheme, QString& theme);
     void windowResizeEvent(QResizeEvent* event);
-public slots:
+public Q_SLOTS:
     void changeTheme(bool isLightTheme);
     void goToDashboard();
     void goToSend();
     void goToReceive();
     void goToAddresses();
-    void goToPrivacy();
     void goToMasterNodes();
     void goToColdStaking();
     void goToSettings();
+    void goToSettingsInfo();
+    void openNetworkMonitor();
 
     void connectActions();
 
@@ -131,7 +131,6 @@ private:
     SendWidget *sendWidget = nullptr;
     ReceiveWidget *receiveWidget = nullptr;
     AddressesWidget *addressesWidget = nullptr;
-    PrivacyWidget *privacyWidget = nullptr;
     MasterNodesWidget *masterNodesWidget = nullptr;
     ColdStakingWidget *coldStakingWidget = nullptr;
     SettingsWidget* settingsWidget = nullptr;
@@ -163,22 +162,26 @@ private:
     /** Disconnect core signals from GUI client */
     void unsubscribeFromCoreSignals();
 
-private slots:
+public Q_SLOTS:
+    /** called by a timer to check if fRequestShutdown has been set **/
+    void detectShutdown();
+
+private Q_SLOTS:
     /** Show window if hidden, unminimize when minimized, rise when obscured or show if hidden and fToggleHidden is true */
     void showNormalIfMinimized(bool fToggleHidden = false);
 
     /** Simply calls showNormalIfMinimized(true) for use in SLOT() macro */
     void toggleHidden();
 
-    /** called by a timer to check if fRequestShutdown has been set **/
-    void detectShutdown();
-
 #ifndef Q_OS_MAC
     /** Handle tray icon clicked */
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);
+#else
+    /** Handle macOS Dock icon clicked */
+     void macosDockIconActivated();
 #endif
 
-signals:
+Q_SIGNALS:
     /** Signal raised when a URI was entered or dragged to the GUI */
     void receivedURI(const QString& uri);
     /** Restart handling */
@@ -187,4 +190,4 @@ signals:
 };
 
 
-#endif //TimelockCoin_CORE_NEW_GUI_TimelockCoinGUI_H
+#endif //timelockcoin_CORE_NEW_GUI_timelockcoinGUI_H

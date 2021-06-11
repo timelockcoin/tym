@@ -1,12 +1,12 @@
 [Desktop Entry]
 Version=1.0
-Name=TimelockCoin Core
-Comment=TimelockCoin P2P Cryptocurrency
+Name=timelockcoin
+Comment=timelockcoin P2P Cryptocurrency
 Exec=timelockcoin-qt %u
 Terminal=false
 Type=Application
 Icon=timelockcoin128
 MimeType=x-scheme-handler/timelockcoin;
 Categories=Office;Finance;
-StartupWMClass=TimelockCoin-qt
-Name[en_US]=timelockcoin-qt.desktop
+StartupWMClass=timelockcoin-qt
+Name[en_IN]=timelockcoin-qt.desktop

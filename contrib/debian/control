@@ -28,22 +28,22 @@ Build-Depends: debhelper,
  libzmq3-dev,
  dh-systemd
 Standards-Version: 3.9.2
-Homepage: http://www.timelockcoin.org
-Vcs-Git: git://github.com/TimelockCoin-Project/TimelockCoin.git
-Vcs-Browser: http://github.com/TimelockCoin-Project/TimelockCoin
+Homepage: http://www.timelockcoin.trade
+Vcs-Git: git://github.com/timelockcoinvps-project/timelockcoin.git
+Vcs-Browser: http://github.com/timelockcoinvps-project/timelockcoin
 
 Package: timelockcoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- TimelockCoin is a free open source peer-to-peer electronic cash system that
+ timelockcoin is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
  Full transaction history is stored locally at each client.  This
- requires 10+ GB of space, slowly growing.
+ requires 18.5+ GB of space, slowly growing.
  .
  This package provides the daemon, timelockcoind, and the CLI tool
  timelockcoin-cli to interact with the daemon.
@@ -52,13 +52,13 @@ Package: timelockcoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- TimelockCoin is a free open source peer-to-peer electronic cash system that
+ timelockcoin is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
  Full transaction history is stored locally at each client.  This
- requires 10+ GB of space, slowly growing.
+ requires 18.5+ GB of space, slowly growing.
  .
- This package provides TimelockCoin-Qt, a GUI for TimelockCoin based on Qt.
+ This package provides timelockcoin-Qt, a GUI for timelockcoin based on Qt.

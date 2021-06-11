@@ -1,10 +1,10 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef TimelockCoin_PAIRRESULT_H
-#define TimelockCoin_PAIRRESULT_H
+#ifndef timelockcoin_PAIRRESULT_H
+#define timelockcoin_PAIRRESULT_H
 
 
 class PairResult {
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif //TimelockCoin_PAIRRESULT_H
+#endif //timelockcoin_PAIRRESULT_H

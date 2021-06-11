@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
 // Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +13,7 @@
 #include <QCheckBox>
 
 class WalletModel;
-class TimelockCoinGUI;
+class timelockcoinGUI;
 
 namespace Ui
 {
@@ -45,8 +45,6 @@ public:
         ToggleLock,     /** Toggle wallet lock state */
         ChangePass,     /** Change passphrase */
         Send_TYM,       /** Send TYM */
-        Send_zTYM,      /** Send zTYM */
-        Mint_zTYM,      /** Mint zTYM */
         BIP_38,         /** BIP38 menu */
         Multi_Sig,      /** Multi-Signature dialog */
         Sign_Message,   /** Sign/verify message dialog */
@@ -67,13 +65,14 @@ private:
     bool fCapsLock;
     SecureString newpassCache = "";
 
+    void updateWarningsLabel();
     void run(int type) override;
     void onError(QString error, int type) override;
     QCheckBox *btnWatch;
 
     void initWatch(QWidget *parent);
 
-private slots:
+private Q_SLOTS:
     void onWatchClicked();
     void textChanged();
     void warningMessage();

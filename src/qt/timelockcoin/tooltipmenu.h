@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@
 #include <QWidget>
 #include <QModelIndex>
 
-class TimelockCoinGUI;
+class timelockcoinGUI;
 class WalletModel;
 
 namespace Ui {
@@ -26,7 +26,7 @@ class TooltipMenu : public PWidget
     Q_OBJECT
 
 public:
-    explicit TooltipMenu(TimelockCoinGUI* _window, QWidget *parent = nullptr);
+    explicit TooltipMenu(timelockcoinGUI* _window, QWidget *parent = nullptr);
     ~TooltipMenu() override;
 
     void setIndex(const QModelIndex &index);
@@ -41,13 +41,13 @@ public:
     void setEditBtnVisible(bool visible);
     void setLastBtnVisible(bool visible);
 
-signals:
+Q_SIGNALS:
     void onDeleteClicked();
     void onCopyClicked();
     void onEditClicked();
     void onLastClicked();
 
-private slots:
+private Q_SLOTS:
     void deleteClicked();
     void copyClicked();
     void editClicked();

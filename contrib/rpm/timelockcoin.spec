@@ -20,22 +20,22 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://timelockcoin.org/
-Source0:	https://timelockcoin.org/bin/timelockcoin-core-%{version}/timelockcoin-%{version}.tar.gz
+URL:		https://timelockcoin.trade/
+Source0:	https://timelockcoin.trade/bin/timelockcoin-core-%{version}/timelockcoin-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
-Source10:	https://raw.githubusercontent.com/timelockcoin-project/timelockcoin/v%{version}/contrib/debian/examples/timelockcoin.conf
+Source10:	https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/v%{version}/contrib/debian/examples/timelockcoin.conf
 
 #man pages
-Source20:	https://raw.githubusercontent.com/timelockcoin-project/timelockcoin/v%{version}/doc/man/timelockcoind.1
-Source21:	https://raw.githubusercontent.com/timelockcoin-project/timelockcoin/v%{version}/doc/man/timelockcoin-cli.1
-Source22:	https://raw.githubusercontent.com/timelockcoin-project/timelockcoin/v%{version}/doc/man/timelockcoin-qt.1
+Source20:	https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/v%{version}/doc/man/timelockcoind.1
+Source21:	https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/v%{version}/doc/man/timelockcoin-cli.1
+Source22:	https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/v%{version}/doc/man/timelockcoin-qt.1
 
 #selinux
-Source30:	https://raw.githubusercontent.com/timelockcoin-project/timelockcoin/v%{version}/contrib/rpm/timelockcoin.te
+Source30:	https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/v%{version}/contrib/rpm/timelockcoin.te
 # Source31 - what about timelockcoin-tx and bench_timelockcoin ???
-Source31:	https://raw.githubusercontent.com/timelockcoin-project/timelockcoin/v%{version}/contrib/rpm/timelockcoin.fc
-Source32:	https://raw.githubusercontent.com/timelockcoin-project/timelockcoin/v%{version}/contrib/rpm/timelockcoin.if
+Source31:	https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/v%{version}/contrib/rpm/timelockcoin.fc
+Source32:	https://raw.githubusercontent.com/timelockcoinvps-project/timelockcoin/v%{version}/contrib/rpm/timelockcoin.if
 
 Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg
 
@@ -311,8 +311,7 @@ rm -f %{buildroot}%{_bindir}/test_*
 
 %check
 make check
-srcdir=src test/timelockcoin-util-test.py
-test/functional/test_runner.py --extended
+srcdir=src
 
 %post libs -p /sbin/ldconfig
 

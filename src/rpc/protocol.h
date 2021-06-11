@@ -1,18 +1,19 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2017-2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOIN_RPCPROTOCOL_H
 #define BITCOIN_RPCPROTOCOL_H
 
+#include "fs.h"
+
 #include <list>
 #include <map>
 #include <stdint.h>
 #include <string>
-#include <boost/filesystem.hpp>
 
 #include <univalue.h>
 
@@ -21,14 +22,14 @@ enum HTTPStatusCode {
     HTTP_OK                    = 200,
     HTTP_BAD_REQUEST           = 400,
     HTTP_UNAUTHORIZED          = 401,
-    HTTP_FORTYMDEN             = 403,
+    HTTP_FORBIDDEN             = 403,
     HTTP_NOT_FOUND             = 404,
     HTTP_BAD_METHOD            = 405,
     HTTP_INTERNAL_SERVER_ERROR = 500,
     HTTP_SERVICE_UNAVAILABLE   = 503,
 };
 
-//! TimelockCoin RPC error codes
+//! timelockcoin RPC error codes
 enum RPCErrorCode {
     //! Standard JSON-RPC 2.0 errors
     RPC_INVALID_REQUEST     = -32600,
@@ -39,7 +40,7 @@ enum RPCErrorCode {
 
     //! General application defined errors
     RPC_MISC_ERROR                      = -1, //! std::exception thrown in command handling
-    RPC_FORTYMDEN_BY_SAFE_MODE          = -2, //! Server is in safe mode, and command is not allowed in safe mode
+    RPC_FORBIDDEN_BY_SAFE_MODE          = -2, //! Server is in safe mode, and command is not allowed in safe mode
     RPC_TYPE_ERROR                      = -3, //! Unexpected type was passed as parameter
     RPC_INVALID_ADDRESS_OR_KEY          = -5, //! Invalid address or key
     RPC_OUT_OF_MEMORY                   = -7, //! Ran out of memory during operation
@@ -57,7 +58,7 @@ enum RPCErrorCode {
     RPC_TRANSACTION_ALREADY_IN_CHAIN    = RPC_VERIFY_ALREADY_IN_CHAIN,
 
     //! P2P client errors
-    RPC_CLIENT_NOT_CONNECTED            = -9, //! TimelockCoin is not connected
+    RPC_CLIENT_NOT_CONNECTED            = -9, //! timelockcoin is not connected
     RPC_CLIENT_IN_INITIAL_DOWNLOAD      = -10, //! Still downloading initial blocks
     RPC_CLIENT_NODE_ALREADY_ADDED       = -23, //! Node is already added
     RPC_CLIENT_NODE_NOT_ADDED           = -24, //! Node has not been added before
@@ -82,7 +83,7 @@ std::string JSONRPCReply(const UniValue& result, const UniValue& error, const Un
 UniValue JSONRPCError(int code, const std::string& message);
 
 /** Get name of RPC authentication cookie file */
-boost::filesystem::path GetAuthCookieFile();
+fs::path GetAuthCookieFile();
 /** Generate a new RPC authentication cookie and write it to disk */
 bool GenerateAuthCookie(std::string *cookie_out);
 /** Read the RPC authentication cookie from disk */

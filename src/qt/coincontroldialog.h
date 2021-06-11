@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
-// Copyright (c) 2017-2020 The TimelockCoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -44,21 +45,20 @@ class CoinControlDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit CoinControlDialog(QWidget* parent = nullptr, bool fMultisigEnabled = false);
+    explicit CoinControlDialog(QWidget* parent = nullptr, bool _forDelegation = false);
     ~CoinControlDialog();
 
     void setModel(WalletModel* model);
     void updateDialogLabels();
+    void updateLabels();
     void updateView();
     void refreshDialog();
+    void clearPayAmounts();
+    void addPayAmount(const CAmount& amount);
 
-    // static because also called from sendcoinsdialog
-    static void updateLabels(WalletModel*, QDialog*);
     static QString getPriorityLabel(double dPriority, double mempoolEstimatePriority);
 
-    static QList<CAmount> payAmounts;
     static CCoinControl* coinControl;
-    static int nSplitBlockDummy;
 
 private:
     Ui::CoinControlDialog* ui;
@@ -66,7 +66,9 @@ private:
     WalletModel* model;
     int sortColumn;
     Qt::SortOrder sortOrder;
-    bool fMultisigEnabled;
+    bool forDelegation;
+    QList<CAmount> payAmounts{};
+    unsigned int nSelectableInputs{0};
 
     QMenu* contextMenu;
     QTreeWidgetItem* contextMenuItem;
@@ -74,6 +76,7 @@ private:
     QAction* lockAction;
     QAction* unlockAction;
 
+    void updatePushButtonSelectAll(bool checked);
     void sortView(int, Qt::SortOrder);
     void inform(const QString& text);
 
@@ -89,7 +92,7 @@ private:
     };
     friend class CCoinControlWidgetItem;
 
-private slots:
+private Q_SLOTS:
     void showMenu(const QPoint&);
     void copyAmount();
     void copyLabel();

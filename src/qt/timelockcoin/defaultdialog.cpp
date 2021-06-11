@@ -1,13 +1,14 @@
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "qt/timelockcoin/defaultdialog.h"
 #include "qt/timelockcoin/forms/ui_defaultdialog.h"
 #include "guiutil.h"
+
 DefaultDialog::DefaultDialog(QWidget *parent) :
-    QDialog(parent),
+    FocusedDialog(parent),
     ui(new Ui::DefaultDialog)
 {
     ui->setupUi(this);
@@ -19,11 +20,7 @@ DefaultDialog::DefaultDialog(QWidget *parent) :
     ui->frame->setProperty("cssClass", "container-dialog");
 
     // Text
-    ui->labelTitle->setText("Dialog Title");
     ui->labelTitle->setProperty("cssClass", "text-title-dialog");
-
-
-    ui->labelMessage->setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
     ui->labelMessage->setProperty("cssClass", "text-main-grey");
 
     // Buttons
@@ -31,24 +28,30 @@ DefaultDialog::DefaultDialog(QWidget *parent) :
     ui->btnEsc->setProperty("cssClass", "ic-close");
 
     ui->btnCancel->setProperty("cssClass", "btn-dialog-cancel");
-    ui->btnSave->setText("OK");
     ui->btnSave->setProperty("cssClass", "btn-primary");
 
-    connect(ui->btnEsc, SIGNAL(clicked()), this, SLOT(close()));
-    connect(ui->btnCancel, SIGNAL(clicked()), this, SLOT(close()));
-    connect(ui->btnSave, &QPushButton::clicked, [this](){this->isOk = true; accept();});
+    connect(ui->btnEsc, &QPushButton::clicked, this, &DefaultDialog::close);
+    connect(ui->btnCancel, &QPushButton::clicked, this, &DefaultDialog::close);
+    connect(ui->btnSave, &QPushButton::clicked, this, &DefaultDialog::accept);
 }
 
-void DefaultDialog::setText(QString title, QString message, QString okBtnText, QString cancelBtnText){
-    if(!okBtnText.isNull()) ui->btnSave->setText(okBtnText);
-    if(!cancelBtnText.isNull()){
+void DefaultDialog::setText(const QString& title, const QString& message, const QString& okBtnText, const QString& cancelBtnText)
+{
+    if (!okBtnText.isNull()) ui->btnSave->setText(okBtnText);
+    if (!cancelBtnText.isNull()) {
         ui->btnCancel->setVisible(true);
         ui->btnCancel->setText(cancelBtnText);
-    }else{
+    } else {
         ui->btnCancel->setVisible(false);
     }
-    if(!message.isNull()) ui->labelMessage->setText(message);
-    if(!title.isNull()) ui->labelTitle->setText(title);
+    if (!message.isNull()) ui->labelMessage->setText(message);
+    if (!title.isNull()) ui->labelTitle->setText(title);
+}
+
+void DefaultDialog::accept()
+{
+    this->isOk = true;
+    QDialog::accept();
 }
 
 DefaultDialog::~DefaultDialog()

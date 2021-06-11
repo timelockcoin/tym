@@ -1,5 +1,5 @@
 // Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +11,7 @@
 #include "qt/timelockcoin/pwidget.h"
 #include "qt/timelockcoin/furabstractlistitemdelegate.h"
 
-class TimelockCoinGUI;
+class timelockcoinGUI;
 
 namespace Ui {
 class SettingsMultisendWidget;
@@ -49,7 +49,7 @@ public:
     void loadWalletModel() override;
     void changeTheme(bool isLightTheme, QString &theme) override;
 
-private slots:
+private Q_SLOTS:
     void onAddRecipientClicked();
     void clearAll();
     void checkBoxChanged();

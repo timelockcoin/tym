@@ -1,6 +1,6 @@
 // Copyright (c) 2014 The Bitcoin developers
-// Copyright (c) 2019 The PIVX developers
-// Copyright (c) 2020 The TimelockCoin developers
+// Copyright (c) 2019-2020 The PIVX developers
+// Copyright (c) 2020-2021 The TimelockCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -75,5 +75,9 @@ inline int64_t abs64(int64_t n) { return (n >= 0 ? n : -n); }
 int64_t GetTimeOffset();
 int64_t GetAdjustedTime();
 void AddTimeData(const CNetAddr& ip, int64_t nTime, int nOffsetLimit);
+
+// Time Protocol V2
+int64_t GetTimeSlot(const int64_t nTime);
+int64_t GetCurrentTimeSlot();
 
 #endif // BITCOIN_TIMEDATA_H

@@ -1,13 +1,13 @@
-TimelockCoin Core
+timelockcoin
 =============
 
 Setup
 ---------------------
-[TimelockCoin Core](http://timelockcoin.org/wallet) is the original TimelockCoin client and it builds the backbone of the network. However, it downloads and stores the entire history of TimelockCoin transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[timelockcoin](https://timelockcoin.trade/#wallets) is the original timelockcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of timelockcoin transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run TimelockCoin Core on your native platform.
+The following are some helpful notes on how to run timelockcoin on your native platform.
 
 ### Unix
 
@@ -22,18 +22,18 @@ Unpack the files into a directory, and then run timelockcoin-qt.exe.
 
 ### macOS
 
-Drag TimelockCoin-Qt to your applications folder, and then run TimelockCoin-Qt.
+Drag timelockcoin-Qt to your applications folder, and then run timelockcoin-Qt.
 
 ### Need Help?
 
-* See the documentation at the [TimelockCoin Wiki](https://github.com/TimelockCoin-Project/TimelockCoin/wiki)
+* See the documentation at the [timelockcoin Wiki](https://github.com/timelockcoinvps-project/timelockcoin/wiki)
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [TimelockCoin Forum](http://forum.timelockcoin.org/).
-* Join our Discord server [Discord Server](https://discord.timelockcoin.org)
+* Ask for help on [timelockcoin Helpdesk](https://timelockcoin.com/).
+* Join our Discord server [Discord Server](https://discord.gg/RpBXAnvp7k)
 
 Building
 ---------------------
-The following are developer notes on how to build TimelockCoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build timelockcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -43,7 +43,7 @@ The following are developer notes on how to build TimelockCoin Core on your nati
 
 Development
 ---------------------
-The TimelockCoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The timelockcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -56,8 +56,7 @@ The TimelockCoin repo's [root README](/README.md) contains relevant information 
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [TimelockCoin](http://forum.timelockcoin.org/) forum.
-* Join the [TimelockCoin Discord](https://discord.timelockcoin.org).
+* Join the [timelockcoin Discord](https://discord.gg/RpBXAnvp7k).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
