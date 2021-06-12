@@ -12,7 +12,7 @@ More information at [timelockcoin.com](http://www.timelockcoin.com).
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Total Coin Supply</td><td>50,000,000 TYM</td></tr>
+<tr><td>Total Coin Supply</td><td>20,000,000 TYM</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
 <tr><td>Premine</td><td>750,000 TYM*</td></tr>
 <tr><td>RPC PORT</td><td>4403</td></tr>
